@@ -1,0 +1,11 @@
+{
+	"id": "org.apache.cordova.webos",
+	"version": "0.0.1",
+	"vendor": "LG",
+	"type": "web",
+	"main": "index.html",
+	"title": "PhoneGap Explorer",
+	"icon": "img/icon-64x64.png",
+	"splashicon": "img/icon-256x256.png",
+	"uiRevision": 2
+}
