@@ -26,17 +26,14 @@ window.CompassView = Backbone.View.extend({
         if (this.watchId) {
             showAlert('You are already watching', 'Compass')
         } else {
-            this.geoWatchId = navigator.geolocation.watchPosition();
-            this.watchId = navigator.compass.watchHeading(this.successHandler, this.errorHandler, { filter: 1 });
+            this.watchId = navigator.compass.watchHeading(this.successHandler, this.errorHandler, {});
         }
         return false;
     },
 
     clearHandler: function () {
         if (this.watchId) {
-            navigator.geolocation.clearWatch(this.geoWatchId);
             navigator.compass.clearWatch(this.watchId);
-            delete(this.geoWatchId);
             delete(this.watchId);
         } else {
             showAlert('Nothing to clear', 'Compass');
@@ -75,9 +72,6 @@ window.CompassView = Backbone.View.extend({
     close: function() {
         if (this.watchId) {
             navigator.compass.clearWatch(this.watchId);
-        }
-        if (this.geoWatchId) {
-            navigator.geolocation.clearWatch(this.geoWatchId);
         }
     }
 

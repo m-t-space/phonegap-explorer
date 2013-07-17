@@ -26,7 +26,7 @@ window.AccelerometerView = Backbone.View.extend({
         if (this.watchId) {
             showAlert("You are already watching", "Accelerometer");
         } else {
-            this.watchId = navigator.accelerometer.watchAcceleration(this.successHandler, this.errorHandler, { frequency: $('#watchFrequency').val() });
+            this.watchId = navigator.accelerometer.watchAcceleration(this.successHandler, this.errorHandler, { frequency: $('#watchFrequency').val()*1 });
         }
         return false;
     },
