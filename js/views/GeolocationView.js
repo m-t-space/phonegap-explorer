@@ -17,7 +17,7 @@ window.GeolocationView = Backbone.View.extend({
     },
 
     getPosition: function() {
-        navigator.geolocation.getCurrentPosition(this.successHandler, this.errorHandler);
+        navigator.geolocation.getCurrentPosition(this.successHandler, this.errorHandler, {enableHighAccuracy: true});
         return false;
     },
 
@@ -25,7 +25,7 @@ window.GeolocationView = Backbone.View.extend({
         if (this.watchId) {
             showAlert('You are already watching', 'Geolocation')
         } else {
-            this.watchId = navigator.geolocation.watchPosition(this.successHandler, this.errorHandler);
+            this.watchId = navigator.geolocation.watchPosition(this.successHandler, this.errorHandler, {enableHighAccuracy: true});
         }
         return false;
     },

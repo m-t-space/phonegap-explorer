@@ -29,8 +29,8 @@
 </head>
 <body>
         <div id="wrapper">
-            <div id="content">
-                <h1><a name="Compass">Compass</a></h1>
+<div id="content">
+				<h1><a name="Compass">Compass</a></h1>
 
 <blockquote>
   <p>Obtains the direction that the device is pointing.</p>
@@ -65,55 +65,46 @@
 
 <h3>Android</h3>
 
-<h4>app/res/xml/plugins.xml</h4>
+<h4>app/res/xml/config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;plugin name="<a href="cordova_compass_compass.md.html#Compass">Compass</a>" value="org.apache.cordova.CompassListener" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_compass_compass.md.html#Compass"><span class="atv">Compass</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.CompassListener"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>Bada</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <h3>BlackBerry WebWorks</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <h3>iOS</h3>
 
-<h4>App/Supporting Files/Cordova.plist</h4>
+<h4>config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;key&gt;Plugins&lt;/key&gt;
-&lt;dict&gt;
-    &lt;key&gt;<a href="cordova_compass_compass.md.html#Compass">Compass</a>&lt;/key&gt;
-    &lt;string&gt;CDVLocation&lt;/string&gt;
-&lt;/dict&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_compass_compass.md.html#Compass"><span class="atv">Compass</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"CDVLocation"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>webOS</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <h3>Windows Phone</h3>
 
 <h4>Properties/WPAppManifest.xml</h4>
 
-<pre class="prettyprint"><code>&lt;Capabilities&gt;
-    &lt;Capability Name="ID_CAP_SENSORS" /&gt;
-&lt;/Capabilities&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;Capabilities&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;Capability</span><span class="pln"> </span><span class="atn">Name</span><span class="pun">=</span><span class="atv">"ID_CAP_SENSORS"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;/Capabilities&gt;</span><span class="pln"><br></span></code></pre>
 
 <p>Reference: <a class="external" href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
+
+<h3>Tizen</h3>
+
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="compass.getCurrentHeading">compass.getCurrentHeading</a></h1>
 
 <p>Get the current compass heading.</p>
 
-<pre class="prettyprint"><code>navigator.<a href="cordova_compass_compass.md.html#compass.getCurrentHeading">compass.getCurrentHeading</a>(<a href="cordova_compass_compass.md.html#compassSuccess">compassSuccess</a>, <a href="cordova_compass_compass.md.html#compassError">compassError</a>, <a href="cordova_compass_compass.md.html#compassOptions">compassOptions</a>);
-</code></pre>
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_compass_compass.md.html#compass.getCurrentHeading"><span class="pln">compass</span><span class="pun">.</span><span class="pln">getCurrentHeading</span></a><span class="pun">(</span><a href="cordova_compass_compass.md.html#compassSuccess"><span class="pln">compassSuccess</span></a><span class="pun">,</span><span class="pln"> </span><a href="cordova_compass_compass.md.html#compassError"><span class="pln">compassError</span></a><span class="pun">,</span><span class="pln"> </span><a href="cordova_compass_compass.md.html#compassOptions"><span class="pln">compassOptions</span></a><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="compass.getCurrentHeading_description">Description</a>
@@ -130,75 +121,30 @@
 <ul>
 <li>Android</li>
 <li>iPhone</li>
-<li>Windows Phone 7 ( Mango ) if available in hardware</li>
+<li>Windows Phone 7 and 8 ( if available in hardware )</li>
 <li>Bada 1.2 &amp; 2.x</li>
 <li>webOS</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="compass.getCurrentHeading_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function onSuccess(heading) {
-    alert('Heading: ' + heading.magneticHeading);
-};
-
-function onError(error) {
-    alert('<a href="cordova_compass_compass.md.html#CompassError">CompassError</a>: ' + error.code);
-};
-
-navigator.<a href="cordova_compass_compass.md.html#compass.getCurrentHeading">compass.getCurrentHeading</a>(onSuccess, onError);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">heading</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'Heading: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> heading</span><span class="pun">.</span><span class="pln">magneticHeading</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'</span><a href="cordova_compass_compass.md.html#CompassError"><span class="str">CompassError</span></a><span class="str">: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br>navigator</span><span class="pun">.</span><a href="cordova_compass_compass.md.html#compass.getCurrentHeading"><span class="pln">compass</span><span class="pun">.</span><span class="pln">getCurrentHeading</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="compass.getCurrentHeading_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_compass_compass.md.html#Compass">Compass</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        navigator.<a href="cordova_compass_compass.md.html#compass.getCurrentHeading">compass.getCurrentHeading</a>(onSuccess, onError);
-    }
-
-    // onSuccess: Get the current heading
-    //
-    function onSuccess(heading) {
-        alert('Heading: ' + heading.magneticHeading);
-    }
-
-    // onError: Failed to get the heading
-    //
-    function onError(<a href="cordova_compass_compass.md.html#compassError">compassError</a>) {
-        alert('<a href="cordova_compass_compass.md.html#Compass">Compass</a> Error: ' + <a href="cordova_compass_compass.md.html#compassError">compassError</a>.code);
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;getCurrentHeading&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_compass_compass.md.html#Compass"><span class="pln">Compass</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_compass_compass.md.html#compass.getCurrentHeading"><span class="pln">compass</span><span class="pun">.</span><span class="pln">getCurrentHeading</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSuccess: Get the current heading</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">heading</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'Heading: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> heading</span><span class="pun">.</span><span class="pln">magneticHeading</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onError: Failed to get the heading</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><a href="cordova_compass_compass.md.html#compassError"><span class="pln">compassError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'</span><a href="cordova_compass_compass.md.html#Compass"><span class="str">Compass</span></a><span class="str"> Error: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_compass_compass.md.html#compassError"><span class="pln">compassError</span></a><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><span class="pln">getCurrentHeading</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="compass.watchHeading">compass.watchHeading</a></h1>
 
 <p>At a regular interval, get the compass heading in degrees.</p>
 
-<pre class="prettyprint"><code>var watchID = navigator.<a href="cordova_compass_compass.md.html#compass.watchHeading">compass.watchHeading</a>(<a href="cordova_compass_compass.md.html#compassSuccess">compassSuccess</a>, <a href="cordova_compass_compass.md.html#compassError">compassError</a>, [<a href="cordova_compass_compass.md.html#compassOptions">compassOptions</a>]);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> watchID </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_compass_compass.md.html#compass.watchHeading"><span class="pln">compass</span><span class="pun">.</span><span class="pln">watchHeading</span></a><span class="pun">(</span><a href="cordova_compass_compass.md.html#compassSuccess"><span class="pln">compassSuccess</span></a><span class="pun">,</span><span class="pln"> </span><a href="cordova_compass_compass.md.html#compassError"><span class="pln">compassError</span></a><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><a href="cordova_compass_compass.md.html#compassOptions"><span class="pln">compassOptions</span></a><span class="pun">]);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="compass.watchHeading_description">Description</a>
@@ -217,94 +163,23 @@ navigator.<a href="cordova_compass_compass.md.html#compass.getCurrentHeading">co
 <ul>
 <li>Android</li>
 <li>iPhone</li>
-<li>Windows Phone 7 ( Mango ) if available in hardware</li>
+<li>Windows Phone 7 and 8 ( if available in hardware )</li>
 <li>Bada 1.2 &amp; 2.x</li>
 <li>webOS</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="compass.watchHeading_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function onSuccess(heading) {
-    var element = document.getElementById('heading');
-    element.innerHTML = 'Heading: ' + heading.magneticHeading;
-};
-
-function onError(<a href="cordova_compass_compass.md.html#compassError">compassError</a>) {
-        alert('<a href="cordova_compass_compass.md.html#Compass">Compass</a> error: ' + <a href="cordova_compass_compass.md.html#compassError">compassError</a>.code);
-};
-
-var options = { frequency: 3000 };  // Update every 3 seconds
-
-var watchID = navigator.<a href="cordova_compass_compass.md.html#compass.watchHeading">compass.watchHeading</a>(onSuccess, onError, options);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">heading</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'heading'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; element</span><span class="pun">.</span><span class="pln">innerHTML </span><span class="pun">=</span><span class="pln"> </span><span class="str">'Heading: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> heading</span><span class="pun">.</span><span class="pln">magneticHeading</span><span class="pun">;</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><a href="cordova_compass_compass.md.html#compassError"><span class="pln">compassError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'</span><a href="cordova_compass_compass.md.html#Compass"><span class="str">Compass</span></a><span class="str"> error: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_compass_compass.md.html#compassError"><span class="pln">compassError</span></a><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> frequency</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3000</span><span class="pln"> </span><span class="pun">};</span><span class="pln"> &nbsp;</span><span class="com">// Update every 3 seconds</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> watchID </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_compass_compass.md.html#compass.watchHeading"><span class="pln">compass</span><span class="pun">.</span><span class="pln">watchHeading</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="compass.watchHeading_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_compass_compass.md.html#Compass">Compass</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // The watch id references the current `watchHeading`
-    var watchID = null;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        startWatch();
-    }
-
-    // Start watching the compass
-    //
-    function startWatch() {
-
-        // Update compass every 3 seconds
-        var options = { frequency: 3000 };
-
-        watchID = navigator.<a href="cordova_compass_compass.md.html#compass.watchHeading">compass.watchHeading</a>(onSuccess, onError, options);
-    }
-
-    // Stop watching the compass
-    //
-    function stopWatch() {
-        if (watchID) {
-            navigator.<a href="cordova_compass_compass.md.html#compass.clearWatch">compass.clearWatch</a>(watchID);
-            watchID = null;
-        }
-    }
-
-    // onSuccess: Get the current heading
-    //
-    function onSuccess(heading) {
-        var element = document.getElementById('heading');
-        element.innerHTML = 'Heading: ' + heading.magneticHeading;
-    }
-
-    // onError: Failed to get the heading
-    //
-    function onError(<a href="cordova_compass_compass.md.html#compassError">compassError</a>) {
-        alert('<a href="cordova_compass_compass.md.html#Compass">Compass</a> error: ' + <a href="cordova_compass_compass.md.html#compassError">compassError</a>.code);
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div id="heading"&gt;Waiting for heading...&lt;/div&gt;
-    &lt;button onclick="startWatch();"&gt;Start Watching&lt;/button&gt;
-    &lt;button onclick="stopWatch();"&gt;Stop Watching&lt;/button&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_compass_compass.md.html#Compass"><span class="pln">Compass</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// The watch id references the current `watchHeading`</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> watchID </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; startWatch</span><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Start watching the compass</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> startWatch</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// Update compass every 3 seconds</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> frequency</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3000</span><span class="pln"> </span><span class="pun">};</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; watchID </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_compass_compass.md.html#compass.watchHeading"><span class="pln">compass</span><span class="pun">.</span><span class="pln">watchHeading</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Stop watching the compass</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> stopWatch</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">watchID</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_compass_compass.md.html#compass.clearWatch"><span class="pln">compass</span><span class="pun">.</span><span class="pln">clearWatch</span></a><span class="pun">(</span><span class="pln">watchID</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; watchID </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSuccess: Get the current heading</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">heading</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'heading'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; element</span><span class="pun">.</span><span class="pln">innerHTML </span><span class="pun">=</span><span class="pln"> </span><span class="str">'Heading: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> heading</span><span class="pun">.</span><span class="pln">magneticHeading</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onError: Failed to get the heading</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><a href="cordova_compass_compass.md.html#compassError"><span class="pln">compassError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'</span><a href="cordova_compass_compass.md.html#Compass"><span class="str">Compass</span></a><span class="str"> error: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_compass_compass.md.html#compassError"><span class="pln">compassError</span></a><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"heading"</span><span class="tag">&gt;</span><span class="pln">Waiting for heading...</span><span class="tag">&lt;/div&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">startWatch</span><span class="pun">();</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Start Watching</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">stopWatch</span><span class="pun">();</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Stop Watching</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="compass.watchHeading_ios_quirks">iOS Quirks</a>
@@ -319,8 +194,7 @@ var watchID = navigator.<a href="cordova_compass_compass.md.html#compass.watchHe
 
 <p>Stop watching the compass referenced by the watch ID parameter.</p>
 
-<pre class="prettyprint"><code>navigator.<a href="cordova_compass_compass.md.html#compass.clearWatch">compass.clearWatch</a>(watchID);
-</code></pre>
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_compass_compass.md.html#compass.clearWatch"><span class="pln">compass</span><span class="pun">.</span><span class="pln">clearWatch</span></a><span class="pun">(</span><span class="pln">watchID</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <ul>
 <li>
@@ -333,88 +207,23 @@ var watchID = navigator.<a href="cordova_compass_compass.md.html#compass.watchHe
 <ul>
 <li>Android</li>
 <li>iPhone</li>
-<li>Windows Phone 7 ( Mango ) if available in hardware</li>
+<li>Windows Phone 7 and 8 ( if available in hardware )</li>
 <li>Bada 1.2 &amp; 2.x</li>
 <li>webOS</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="compass.clearWatch_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>var watchID = navigator.<a href="cordova_compass_compass.md.html#compass.watchHeading">compass.watchHeading</a>(onSuccess, onError, options);
-
-// ... later on ...
-
-navigator.<a href="cordova_compass_compass.md.html#compass.clearWatch">compass.clearWatch</a>(watchID);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> watchID </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_compass_compass.md.html#compass.watchHeading"><span class="pln">compass</span><span class="pun">.</span><span class="pln">watchHeading</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br><br></span><span class="com">// ... later on ...</span><span class="pln"><br><br>navigator</span><span class="pun">.</span><a href="cordova_compass_compass.md.html#compass.clearWatch"><span class="pln">compass</span><span class="pun">.</span><span class="pln">clearWatch</span></a><span class="pun">(</span><span class="pln">watchID</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="compass.clearWatch_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_compass_compass.md.html#Compass">Compass</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // The watch id references the current `watchHeading`
-    var watchID = null;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        startWatch();
-    }
-
-    // Start watching the compass
-    //
-    function startWatch() {
-
-        // Update compass every 3 seconds
-        var options = { frequency: 3000 };
-
-        watchID = navigator.<a href="cordova_compass_compass.md.html#compass.watchHeading">compass.watchHeading</a>(onSuccess, onError, options);
-    }
-
-    // Stop watching the compass
-    //
-    function stopWatch() {
-        if (watchID) {
-            navigator.<a href="cordova_compass_compass.md.html#compass.clearWatch">compass.clearWatch</a>(watchID);
-            watchID = null;
-        }
-    }
-
-    // onSuccess: Get the current heading
-    //
-    function onSuccess(heading) {
-        var element = document.getElementById('heading');
-        element.innerHTML = 'Heading: ' + heading.magneticHeading;
-    }
-
-    // onError: Failed to get the heading
-    //
-    function onError(<a href="cordova_compass_compass.md.html#compassError">compassError</a>) {
-        alert('<a href="cordova_compass_compass.md.html#Compass">Compass</a> error: ' + <a href="cordova_compass_compass.md.html#compassError">compassError</a>.code);
-    }
-
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div id="heading"&gt;Waiting for heading...&lt;/div&gt;
-    &lt;button onclick="startWatch();"&gt;Start Watching&lt;/button&gt;
-    &lt;button onclick="stopWatch();"&gt;Stop Watching&lt;/button&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_compass_compass.md.html#Compass"><span class="pln">Compass</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// The watch id references the current `watchHeading`</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> watchID </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; startWatch</span><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Start watching the compass</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> startWatch</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// Update compass every 3 seconds</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> frequency</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3000</span><span class="pln"> </span><span class="pun">};</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; watchID </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_compass_compass.md.html#compass.watchHeading"><span class="pln">compass</span><span class="pun">.</span><span class="pln">watchHeading</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Stop watching the compass</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> stopWatch</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">watchID</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_compass_compass.md.html#compass.clearWatch"><span class="pln">compass</span><span class="pun">.</span><span class="pln">clearWatch</span></a><span class="pun">(</span><span class="pln">watchID</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; watchID </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSuccess: Get the current heading</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">heading</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'heading'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; element</span><span class="pun">.</span><span class="pln">innerHTML </span><span class="pun">=</span><span class="pln"> </span><span class="str">'Heading: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> heading</span><span class="pun">.</span><span class="pln">magneticHeading</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onError: Failed to get the heading</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><a href="cordova_compass_compass.md.html#compassError"><span class="pln">compassError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'</span><a href="cordova_compass_compass.md.html#Compass"><span class="str">Compass</span></a><span class="str"> error: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_compass_compass.md.html#compassError"><span class="pln">compassError</span></a><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"heading"</span><span class="tag">&gt;</span><span class="pln">Waiting for heading...</span><span class="tag">&lt;/div&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">startWatch</span><span class="pun">();</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Start Watching</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">stopWatch</span><span class="pun">();</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Stop Watching</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="compass.watchHeadingFilter">compass.watchHeadingFilter</a></h1>
@@ -431,10 +240,7 @@ navigator.<a href="cordova_compass_compass.md.html#compass.clearWatch">compass.c
 
 <p>onSuccess callback function that provides the compass heading information via a <a href="cordova_compass_compass.md.html#compassHeading">compassHeading</a> object.</p>
 
-<pre class="prettyprint"><code>function(heading) {
-    // Do something
-}
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pun">(</span><span class="pln">heading</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// Do something</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="compassSuccess_parameters">Parameters</a>
@@ -449,10 +255,7 @@ navigator.<a href="cordova_compass_compass.md.html#compass.clearWatch">compass.c
 <a name="compassSuccess_example">Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function onSuccess(heading) {
-    alert('Heading: ' + heading.magneticHeading);
-};
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">heading</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'Heading: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> heading</span><span class="pun">.</span><span class="pln">magneticHeading</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="compassError">compassError</a></h1>
@@ -463,9 +266,7 @@ navigator.<a href="cordova_compass_compass.md.html#compass.clearWatch">compass.c
 <a name="compassError_example">Example</a>
 </h2>
 
-<p>function(<a href="cordova_compass_compass.md.html#CompassError">CompassError</a>) {
-    // Handle the error
-}</p>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pun">(</span><a href="cordova_compass_compass.md.html#CompassError"><span class="typ">CompassError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// Handle the error</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="compassOptions">compassOptions</a></h1>
@@ -490,7 +291,7 @@ navigator.<a href="cordova_compass_compass.md.html#compass.clearWatch">compass.c
 <li>filter is not supported.</li>
 </ul>
 <h2>
-<a name="compassOptions_windows_phone_7_quirks">Windows Phone 7 Quirks</a>
+<a name="compassOptions_windows_phone_7_and_8_quirks">Windows Phone 7 and 8 Quirks</a>
 </h2>
 
 <ul>
@@ -498,6 +299,13 @@ navigator.<a href="cordova_compass_compass.md.html#compass.clearWatch">compass.c
 </ul>
 <h2>
 <a name="compassOptions_bada_quirks">Bada Quirks</a>
+</h2>
+
+<ul>
+<li>filter is not supported.</li>
+</ul>
+<h2>
+<a name="compassOptions_tizen_quirks">Tizen Quirks</a>
 </h2>
 
 <ul>
@@ -578,7 +386,7 @@ back with respect to the current orientation.</li>
 
 <p>The <code><a href="cordova_compass_compass.md.html#CompassError">CompassError</a></code> object is returned to the user through the <code><a href="cordova_compass_compass.md.html#compassError">compassError</a></code> callback function when an error occurs.</p>
 
-            </div>
+</div>
         </div>
 
         <script type="text/javascript" src="../lib/iscroll.js"></script>

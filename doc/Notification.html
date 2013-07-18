@@ -29,8 +29,8 @@
 </head>
 <body>
         <div id="wrapper">
-            <div id="content">
-                <h1><a name="Notification">Notification</a></h1>
+<div id="content">
+				<h1><a name="Notification">Notification</a></h1>
 
 <blockquote>
   <p>Visual, audible, and tactile device notifications.</p>
@@ -43,6 +43,7 @@
 <ul>
 <li><a href="cordova_notification_notification.md.html#notification.alert">notification.alert</a></li>
 <li><a href="cordova_notification_notification.md.html#notification.confirm">notification.confirm</a></li>
+<li><a href="cordova_notification_notification.md.html#notification.prompt">notification.prompt</a></li>
 <li><a href="cordova_notification_notification.md.html#notification.beep">notification.beep</a></li>
 <li><a href="cordova_notification_notification.md.html#notification.vibrate">notification.vibrate</a></li>
 </ul>
@@ -52,65 +53,54 @@
 
 <h3>Android</h3>
 
-<h4>app/res/xml/plugins.xml</h4>
+<h4>app/res/xml/config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;plugin name="<a href="cordova_notification_notification.md.html#Notification">Notification</a>" value="org.apache.cordova.<a href="cordova_notification_notification.md.html#Notification">Notification</a>"/&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_notification_notification.md.html#Notification"><span class="atv">Notification</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.</span><a href="cordova_notification_notification.md.html#Notification"><span class="atv">Notification</span></a><span class="atv">"</span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h4>app/AndroidManifest.xml</h4>
 
-<pre class="prettyprint"><code>&lt;uses-permission android:name="android.permission.VIBRATE" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.VIBRATE"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>Bada</h3>
 
 <h4>manifest.xml</h4>
 
-<pre class="prettyprint"><code>&lt;Privilege&gt;
-    &lt;Name&gt;SYSTEM_SERVICE&lt;/Name&gt;
-&lt;/Privilege&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;Privilege&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;Name&gt;</span><span class="pln">SYSTEM_SERVICE</span><span class="tag">&lt;/Name&gt;</span><span class="pln"><br></span><span class="tag">&lt;/Privilege&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>BlackBerry WebWorks</h3>
 
 <h4>www/plugins.xml</h4>
 
-<pre class="prettyprint"><code>&lt;plugin name="<a href="cordova_notification_notification.md.html#Notification">Notification</a>" value="org.apache.cordova.notification.<a href="cordova_notification_notification.md.html#Notification">Notification</a>" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_notification_notification.md.html#Notification"><span class="atv">Notification</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.notification.</span><a href="cordova_notification_notification.md.html#Notification"><span class="atv">Notification</span></a><span class="atv">"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h4>www/config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;feature id="blackberry.ui.dialog" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;feature</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"blackberry.ui.dialog"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>iOS</h3>
 
-<h4>App/Supporting Files/Cordova.plist</h4>
+<h4>config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;key&gt;Plugins&lt;/key&gt;
-&lt;dict&gt;
-    &lt;key&gt;<a href="cordova_notification_notification.md.html#Notification">Notification</a>&lt;/key&gt;
-    &lt;string&gt;CDVNotification&lt;/string&gt;
-&lt;/dict&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_notification_notification.md.html#Notification"><span class="atv">Notification</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"CDVNotification"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>webOS</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <h3>Windows Phone</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
+
+<h3>Tizen</h3>
+
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="notification.alert">notification.alert</a></h1>
 
 <p>Shows a custom alert or dialog box.</p>
 
-<pre class="prettyprint"><code>navigator.<a href="cordova_notification_notification.md.html#notification.alert">notification.alert</a>(message, alertCallback, [title], [buttonName])
-</code></pre>
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.alert"><span class="pln">notification</span><span class="pun">.</span><span class="pln">alert</span></a><span class="pun">(</span><span class="pln">message</span><span class="pun">,</span><span class="pln"> alertCallback</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="pln">title</span><span class="pun">],</span><span class="pln"> </span><span class="pun">[</span><span class="pln">buttonName</span><span class="pun">])</span><span class="pln"><br></span></code></pre>
 
 <ul>
 <li>
@@ -136,82 +126,31 @@
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iPhone</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.x</li>
 <li>webOS</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="notification.alert_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>// Android / BlackBerry WebWorks (OS 5.0 and higher) / iPhone
-//
-function alertDismissed() {
-    // do something
-}
-
-navigator.<a href="cordova_notification_notification.md.html#notification.alert">notification.alert</a>(
-    'You are the winner!',  // message
-    alertDismissed,         // callback
-    'Game Over',            // title
-    'Done'                  // buttonName
-);
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// Android / BlackBerry WebWorks (OS 5.0 and higher) / iPhone / Tizen</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="kwd">function</span><span class="pln"> alertDismissed</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// do something</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br>navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.alert"><span class="pln">notification</span><span class="pun">.</span><span class="pln">alert</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">'You are the winner!'</span><span class="pun">,</span><span class="pln"> &nbsp;</span><span class="com">// message</span><span class="pln"><br>&nbsp; &nbsp; alertDismissed</span><span class="pun">,</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// callback</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">'Game Over'</span><span class="pun">,</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// title</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">'Done'</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// buttonName</span><span class="pln"><br></span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="notification.alert_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_notification_notification.md.html#Notification">Notification</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        // Empty
-    }
-
-    // alert dialog dismissed
-    function alertDismissed() {
-        // do something
-    }
-
-    // Show a custom alert
-    //
-    function showAlert() {
-        navigator.<a href="cordova_notification_notification.md.html#notification.alert">notification.alert</a>(
-            'You are the winner!',  // message
-            alertDismissed,         // callback
-            'Game Over',            // title
-            'Done'                  // buttonName
-        );
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;&lt;a href="#" onclick="showAlert(); return false;"&gt;Show Alert&lt;/a&gt;&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_notification_notification.md.html#Notification"><span class="pln">Notification</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// Empty</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// alert dialog dismissed</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> alertDismissed</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// do something</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Show a custom alertDismissed</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> showAlert</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.alert"><span class="pln">notification</span><span class="pun">.</span><span class="pln">alert</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'You are the winner!'</span><span class="pun">,</span><span class="pln"> &nbsp;</span><span class="com">// message</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alertDismissed</span><span class="pun">,</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// callback</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Game Over'</span><span class="pun">,</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// title</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Done'</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// buttonName</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">showAlert</span><span class="pun">();</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Show Alert</span><span class="tag">&lt;/a&gt;&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
-<a name="notification.alert_windows_phone_7_quirks">Windows Phone 7 Quirks</a>
+<a name="notification.alert_windows_phone_7_and_8_quirks">Windows Phone 7 and 8 Quirks</a>
 </h2>
 
 <ul>
-<li>Ignores button names, always uses 'OK'</li>
 <li>There is no built in browser alert, so if you want to just write alert('foo'); you can assign window.alert = navigator.<a href="cordova_notification_notification.md.html#notification.alert">notification.alert</a>;</li>
-<li>alert + confirm calls are non-blocking, and result is only available asyncronously.</li>
+<li>alert + confirm calls are non-blocking, and result is only available asynchronously.</li>
 </ul>
 <h2>
 <a name="notification.alert_bada_2_x_quirks">Bada 2.x Quirks</a>
@@ -225,14 +164,13 @@ navigator.<a href="cordova_notification_notification.md.html#notification.alert"
 
 <p>Shows a customizable confirmation dialog box.</p>
 
-<pre class="prettyprint"><code>navigator.<a href="cordova_notification_notification.md.html#notification.confirm">notification.confirm</a>(message, confirmCallback, [title], [buttonLabels])
-</code></pre>
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.confirm"><span class="pln">notification</span><span class="pun">.</span><span class="pln">confirm</span></a><span class="pun">(</span><span class="pln">message</span><span class="pun">,</span><span class="pln"> confirmCallback</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="pln">title</span><span class="pun">],</span><span class="pln"> </span><span class="pun">[</span><span class="pln">buttonLabels</span><span class="pun">])</span><span class="pln"><br></span></code></pre>
 
 <ul>
 <li>
 <strong>message:</strong> Dialog message (<code>String</code>)</li>
 <li>
-<strong>confirmCallback:</strong> - Callback to invoke with index of button pressed (1, 2 or 3). (<code>Function</code>)</li>
+<strong>confirmCallback:</strong> - Callback to invoke with index of button pressed (1, 2 or 3) or when the dialog is dismissed without a button press (0), (<code>Function</code>)</li>
 <li>
 <strong>title:</strong> Dialog title (<code>String</code>) (Optional, Default: "Confirm")</li>
 <li>
@@ -260,88 +198,34 @@ navigator.<a href="cordova_notification_notification.md.html#notification.alert"
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iPhone</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.x</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="notification.confirm_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>// process the confirmation dialog result
-function onConfirm(buttonIndex) {
-    alert('You selected button ' + buttonIndex);
-}
-
-// Show a custom confirmation dialog
-//
-function showConfirm() {
-    navigator.<a href="cordova_notification_notification.md.html#notification.confirm">notification.confirm</a>(
-        'You are the winner!',  // message
-        onConfirm,              // callback to invoke with index of button pressed
-        'Game Over',            // title
-        'Restart,Exit'          // buttonLabels
-    );
-}
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// process the confirmation dialog result</span><span class="pln"><br></span><span class="kwd">function</span><span class="pln"> onConfirm</span><span class="pun">(</span><span class="pln">buttonIndex</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'You selected button '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> buttonIndex</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// Show a custom confirmation dialog</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="kwd">function</span><span class="pln"> showConfirm</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.confirm"><span class="pln">notification</span><span class="pun">.</span><span class="pln">confirm</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'You are the winner!'</span><span class="pun">,</span><span class="pln"> &nbsp;</span><span class="com">// message</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; onConfirm</span><span class="pun">,</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// callback to invoke with index of button pressed</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Game Over'</span><span class="pun">,</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// title</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Restart,Exit'</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// buttonLabels</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="notification.confirm_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_notification_notification.md.html#Notification">Notification</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        // Empty
-    }
-
-    // process the confirmation dialog result
-    function onConfirm(buttonIndex) {
-        alert('You selected button ' + buttonIndex);
-    }
-
-    // Show a custom confirmation dialog
-    //
-    function showConfirm() {
-        navigator.<a href="cordova_notification_notification.md.html#notification.confirm">notification.confirm</a>(
-            'You are the winner!',  // message
-            onConfirm,              // callback to invoke with index of button pressed
-            'Game Over',            // title
-            'Restart,Exit'          // buttonLabels
-        );
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;&lt;a href="#" onclick="showConfirm(); return false;"&gt;Show Confirm&lt;/a&gt;&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_notification_notification.md.html#Notification"><span class="pln">Notification</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// Empty</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// process the confirmation dialog result</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onConfirm</span><span class="pun">(</span><span class="pln">buttonIndex</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'You selected button '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> buttonIndex</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Show a custom confirmation dialog</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> showConfirm</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.confirm"><span class="pln">notification</span><span class="pun">.</span><span class="pln">confirm</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'You are the winner!'</span><span class="pun">,</span><span class="pln"> &nbsp;</span><span class="com">// message</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; onConfirm</span><span class="pun">,</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// callback to invoke with index of button pressed</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Game Over'</span><span class="pun">,</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// title</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Restart,Exit'</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// buttonLabels</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">showConfirm</span><span class="pun">();</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Show Confirm</span><span class="tag">&lt;/a&gt;&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
-<a name="notification.confirm_windows_phone_7_quirks">Windows Phone 7 Quirks</a>
+<a name="notification.confirm_windows_phone_7_and_8_quirks">Windows Phone 7 and 8 Quirks</a>
 </h2>
 
 <ul>
-<li>Ignores button names, always <code>'OK|Cancel'</code>.</li>
 <li>There is no built-in browser function for <code>window.confirm</code>
 <ul>
 <li>You can bind <code>window.confirm</code> by assigning <code>window.confirm = navigator.<a href="cordova_notification_notification.md.html#notification.confirm">notification.confirm</a>;</code>.</li>
 </ul>
 </li>
-<li>Calls to <code>alert</code> and <code>confirm</code> are non-blocking and result is only available asyncronously.</li>
+<li>Calls to <code>alert</code> and <code>confirm</code> are non-blocking and result is only available asynchronously.</li>
 </ul>
 <h2>
 <a name="notification.confirm_bada_2_x_quirks">Bada 2.x Quirks</a>
@@ -359,12 +243,76 @@ function showConfirm() {
 <li>Ignore button names, always <code>'OK|Cancel'</code>.</li>
 </ul>
 <hr>
+<h1><a name="notification.prompt">notification.prompt</a></h1>
+
+<p>Shows a customizable prompt dialog box.</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.prompt"><span class="pln">notification</span><span class="pun">.</span><span class="pln">prompt</span></a><span class="pun">(</span><span class="pln">message</span><span class="pun">,</span><span class="pln"> promptCallback</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="pln">title</span><span class="pun">],</span><span class="pln"> </span><span class="pun">[</span><span class="pln">buttonLabels</span><span class="pun">])</span><span class="pln"><br></span></code></pre>
+
+<ul>
+<li>
+<strong>message:</strong> Dialog message (<code>String</code>)</li>
+<li>
+<strong>promptCallback:</strong> - Callback to invoke when a button is pressed (<code>Function</code>)</li>
+<li>
+<strong>title:</strong> Dialog title (<code>String</code>) (Optional, Default: "Prompt")</li>
+<li>
+<strong>buttonLabels:</strong> Array of strings for the button labels (<code>Array</code>) (Optional, Default: ["OK","Cancel"])</li>
+</ul>
+<h2>
+<a name="notification.prompt_description">Description</a>
+</h2>
+
+<p>Function <code><a href="cordova_notification_notification.md.html#notification.prompt">notification.prompt</a></code> displays a native dialog box that is more customizable than the browser's <code>prompt</code> function.</p>
+
+<h2>
+<a name="notification.prompt_promptcallback">promptCallback</a>
+</h2>
+
+<p>The <code>promptCallback</code> is called when the user has pressed one of the buttons on the prompt dialog box.</p>
+
+<p>The callback takes the argument <code>results</code> which contains the following properties:</p>
+
+<ul>
+<li>
+<strong>buttonIndex:</strong> (<code>Number</code>), which is the index of the pressed button. It's important to note that the index uses one-based indexing, so the value will be <code>1</code>, <code>2</code>, <code>3</code>, etc.</li>
+<li>
+<strong>input1:</strong> (<code>String</code>), which is the text entered in the prompt dialog box.</li>
+</ul>
+<h2>
+<a name="notification.prompt_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>iPhone</li>
+</ul>
+<h2>
+<a name="notification.prompt_quick_example">Quick Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="com">// process the promp dialog results</span><span class="pln"><br></span><span class="kwd">function</span><span class="pln"> onPrompt</span><span class="pun">(</span><span class="pln">results</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"You selected button number "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> results</span><span class="pun">.</span><span class="pln">buttonIndex </span><span class="pun">+</span><span class="pln"> </span><span class="str">" and entered "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> results</span><span class="pun">.</span><span class="pln">input1</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// Show a custom prompt dialog</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="kwd">function</span><span class="pln"> showPrompt</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.prompt"><span class="pln">notification</span><span class="pun">.</span><span class="pln">prompt</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Please enter your name'</span><span class="pun">,</span><span class="pln"> &nbsp;</span><span class="com">// message</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; onPrompt</span><span class="pun">,</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// callback to invoke</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Registration'</span><span class="pun">,</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// title</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">[</span><span class="str">'Ok'</span><span class="pun">,</span><span class="str">'Exit'</span><span class="pun">]</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// buttonLabels</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="notification.prompt_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_notification_notification.md.html#Notification"><span class="pln">Notification</span></a><span class="pln"> Prompt Dialog Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// Empty</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// process the promptation dialog result</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onPrompt</span><span class="pun">(</span><span class="pln">results</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"You selected button number "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> results</span><span class="pun">.</span><span class="pln">buttonIndex </span><span class="pun">+</span><span class="pln"> </span><span class="str">" and entered "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> results</span><span class="pun">.</span><span class="pln">input1</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Show a custom prompt dialog</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> showPrompt</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.prompt"><span class="pln">notification</span><span class="pun">.</span><span class="pln">prompt</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Please enter your name'</span><span class="pun">,</span><span class="pln"> &nbsp;</span><span class="com">// message</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; onPrompt</span><span class="pun">,</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// callback to invoke</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Registration'</span><span class="pun">,</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// title</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">[</span><span class="str">'Ok'</span><span class="pun">,</span><span class="str">'Exit'</span><span class="pun">]</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// buttonLabels</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">showPrompt</span><span class="pun">();</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Show Prompt</span><span class="tag">&lt;/a&gt;&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="notification.prompt_android_quirks">Android Quirks</a>
+</h2>
+
+<ul>
+<li>Android supports up to a maximum of 3 buttons.  Additional button labels over 3 are ignored.</li>
+<li>On Android 3.0 and later, the buttons will be displayed in reverse order for devices using the Holo theme.</li>
+</ul>
+<hr>
 <h1><a name="notification.beep">notification.beep</a></h1>
 
 <p>The device will play a beep sound.</p>
 
-<pre class="prettyprint"><code>navigator.<a href="cordova_notification_notification.md.html#notification.beep">notification.beep</a>(times);
-</code></pre>
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.beep"><span class="pln">notification</span><span class="pun">.</span><span class="pln">beep</span></a><span class="pun">(</span><span class="pln">times</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <ul>
 <li>
@@ -378,70 +326,21 @@ function showConfirm() {
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iPhone</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.x</li>
+<li>Tizen</li>
 </ul>
 <h2>
 <a name="notification.beep_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>// Beep twice!
-navigator.<a href="cordova_notification_notification.md.html#notification.beep">notification.beep</a>(2);
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// Beep twice!</span><span class="pln"><br>navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.beep"><span class="pln">notification</span><span class="pun">.</span><span class="pln">beep</span></a><span class="pun">(</span><span class="lit">2</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="notification.beep_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_notification_notification.md.html#Notification">Notification</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        // Empty
-    }
-
-    // Show a custom alert
-    //
-    function showAlert() {
-        navigator.<a href="cordova_notification_notification.md.html#notification.alert">notification.alert</a>(
-            'You are the winner!',  // message
-            'Game Over',            // title
-            'Done'                  // buttonName
-        );
-    }
-
-    // Beep three times
-    //
-    function playBeep() {
-        navigator.<a href="cordova_notification_notification.md.html#notification.beep">notification.beep</a>(3);
-    }
-
-    // Vibrate for 2 seconds
-    //
-    function vibrate() {
-        navigator.<a href="cordova_notification_notification.md.html#notification.vibrate">notification.vibrate</a>(2000);
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;&lt;a href="#" onclick="showAlert(); return false;"&gt;Show Alert&lt;/a&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;a href="#" onclick="playBeep(); return false;"&gt;Play Beep&lt;/a&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;a href="#" onclick="vibrate(); return false;"&gt;Vibrate&lt;/a&gt;&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_notification_notification.md.html#Notification"><span class="pln">Notification</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// Empty</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Show a custom alert</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> showAlert</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.alert"><span class="pln">notification</span><span class="pun">.</span><span class="pln">alert</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'You are the winner!'</span><span class="pun">,</span><span class="pln"> &nbsp;</span><span class="com">// message</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Game Over'</span><span class="pun">,</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// title</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Done'</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// buttonName</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Beep three times</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> playBeep</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.beep"><span class="pln">notification</span><span class="pun">.</span><span class="pln">beep</span></a><span class="pun">(</span><span class="lit">3</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Vibrate for 2 seconds</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> vibrate</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.vibrate"><span class="pln">notification</span><span class="pun">.</span><span class="pln">vibrate</span></a><span class="pun">(</span><span class="lit">2000</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">showAlert</span><span class="pun">();</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Show Alert</span><span class="tag">&lt;/a&gt;&lt;/p&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">playBeep</span><span class="pun">();</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Play Beep</span><span class="tag">&lt;/a&gt;&lt;/p&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">vibrate</span><span class="pun">();</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Vibrate</span><span class="tag">&lt;/a&gt;&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="notification.beep_android_quirks">Android Quirks</a>
@@ -465,19 +364,26 @@ navigator.<a href="cordova_notification_notification.md.html#notification.beep">
 </li>
 </ul>
 <h2>
-<a name="notification.beep_windows_phone_7_quirks">Windows Phone 7 Quirks</a>
+<a name="notification.beep_windows_phone_7_and_8_quirks">Windows Phone 7 and 8 Quirks</a>
 </h2>
 
 <ul>
-<li>WP7 Cordova lib includes a generic beep file that is used.</li>
+<li>Cordova lib includes a generic beep file that is used. </li>
+</ul>
+<h2>
+<a name="notification.beep_tizen_quirks">Tizen Quirks</a>
+</h2>
+
+<ul>
+<li>Tizen implements beep by playing an audio file via the media API.</li>
+<li>This beep file must be short, named <code>beep.wav</code> and has to be located in a 'sounds' sub-directory of the application root directory.</li>
 </ul>
 <hr>
 <h1><a name="notification.vibrate">notification.vibrate</a></h1>
 
 <p>Vibrates the device for the specified amount of time.</p>
 
-<pre class="prettyprint"><code>navigator.<a href="cordova_notification_notification.md.html#notification.vibrate">notification.vibrate</a>(milliseconds)
-</code></pre>
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.vibrate"><span class="pln">notification</span><span class="pun">.</span><span class="pln">vibrate</span></a><span class="pun">(</span><span class="pln">milliseconds</span><span class="pun">)</span><span class="pln"><br></span></code></pre>
 
 <ul>
 <li>
@@ -491,71 +397,20 @@ navigator.<a href="cordova_notification_notification.md.html#notification.beep">
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iPhone</li>
-<li>Windows Phone 7</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.x</li>
 </ul>
 <h2>
 <a name="notification.vibrate_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>// Vibrate for 2.5 seconds
-//
-navigator.<a href="cordova_notification_notification.md.html#notification.vibrate">notification.vibrate</a>(2500);
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// Vibrate for 2.5 seconds</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br>navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.vibrate"><span class="pln">notification</span><span class="pun">.</span><span class="pln">vibrate</span></a><span class="pun">(</span><span class="lit">2500</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="notification.vibrate_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_notification_notification.md.html#Notification">Notification</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        // Empty
-    }
-
-    // Show a custom alert
-    //
-    function showAlert() {
-        navigator.<a href="cordova_notification_notification.md.html#notification.alert">notification.alert</a>(
-            'You are the winner!',  // message
-            'Game Over',            // title
-            'Done'                  // buttonName
-        );
-    }
-
-    // Beep three times
-    //
-    function playBeep() {
-        navigator.<a href="cordova_notification_notification.md.html#notification.beep">notification.beep</a>(3);
-    }
-
-    // Vibrate for 2 seconds
-    //
-    function vibrate() {
-        navigator.<a href="cordova_notification_notification.md.html#notification.vibrate">notification.vibrate</a>(2000);
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;&lt;a href="#" onclick="showAlert(); return false;"&gt;Show Alert&lt;/a&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;a href="#" onclick="playBeep(); return false;"&gt;Play Beep&lt;/a&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;a href="#" onclick="vibrate(); return false;"&gt;Vibrate&lt;/a&gt;&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_notification_notification.md.html#Notification"><span class="pln">Notification</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// Empty</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Show a custom alert</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> showAlert</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.alert"><span class="pln">notification</span><span class="pun">.</span><span class="pln">alert</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'You are the winner!'</span><span class="pun">,</span><span class="pln"> &nbsp;</span><span class="com">// message</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Game Over'</span><span class="pun">,</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// title</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Done'</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// buttonName</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Beep three times</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> playBeep</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.beep"><span class="pln">notification</span><span class="pun">.</span><span class="pln">beep</span></a><span class="pun">(</span><span class="lit">3</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Vibrate for 2 seconds</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> vibrate</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.vibrate"><span class="pln">notification</span><span class="pun">.</span><span class="pln">vibrate</span></a><span class="pun">(</span><span class="lit">2000</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">showAlert</span><span class="pun">();</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Show Alert</span><span class="tag">&lt;/a&gt;&lt;/p&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">playBeep</span><span class="pun">();</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Play Beep</span><span class="tag">&lt;/a&gt;&lt;/p&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">vibrate</span><span class="pun">();</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Vibrate</span><span class="tag">&lt;/a&gt;&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="notification.vibrate_iphone_quirks">iPhone Quirks</a>
@@ -565,9 +420,7 @@ navigator.<a href="cordova_notification_notification.md.html#notification.vibrat
 <li>
 <p><strong>time:</strong> Ignores the time and vibrates for a pre-set amount of time.</p>
 
-<pre class="prettyprint"><code>navigator.<a href="cordova_notification_notification.md.html#notification.vibrate">notification.vibrate</a>();
-navigator.<a href="cordova_notification_notification.md.html#notification.vibrate">notification.vibrate</a>(2500);   // 2500 is ignored
-</code></pre>
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.vibrate"><span class="pln">notification</span><span class="pun">.</span><span class="pln">vibrate</span></a><span class="pun">();</span><span class="pln"><br>navigator</span><span class="pun">.</span><a href="cordova_notification_notification.md.html#notification.vibrate"><span class="pln">notification</span><span class="pun">.</span><span class="pln">vibrate</span></a><span class="pun">(</span><span class="lit">2500</span><span class="pun">);</span><span class="pln"> &nbsp; </span><span class="com">// 2500 is ignored</span><span class="pln"><br></span></code></pre>
 </li>
 </ul>
 </div>

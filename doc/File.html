@@ -29,8 +29,8 @@
 </head>
 <body>
         <div id="wrapper">
-            <div id="content">
-                <h1><a name="File">File</a></h1>
+<div id="content">
+				<h1><a name="File">File</a></h1>
 
 <blockquote>
   <p>This API is based on the W3C <a class="external" href="http://www.w3.org/TR/FileAPI"></a><a href="cordova_file_file.md.html#File">File</a> API. An API to read, write and navigate file system hierarchies.</p>
@@ -63,66 +63,41 @@
 
 <h3>Android</h3>
 
-<h4>app/res/xml/plugins.xml</h4>
+<h4>app/res/xml/config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;plugin name="<a href="cordova_file_file.md.html#File">File</a>" value="org.apache.cordova.FileUtils" /&gt;
-&lt;plugin name="<a href="cordova_file_file.md.html#FileTransfer">FileTransfer</a>" value="org.apache.cordova.<a href="cordova_file_file.md.html#FileTransfer">FileTransfer</a>" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_file_file.md.html#File"><span class="atv">File</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.FileUtils"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_file_file.md.html#FileTransfer"><span class="atv">FileTransfer</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.</span><a href="cordova_file_file.md.html#FileTransfer"><span class="atv">FileTransfer</span></a><span class="atv">"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h4>app/AndroidManifest.xml</h4>
 
-<pre class="prettyprint"><code>&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.WRITE_EXTERNAL_STORAGE"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>Bada</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <h3>BlackBerry WebWorks</h3>
 
 <h4>www/plugins.xml</h4>
 
-<pre class="prettyprint"><code>&lt;plugin name="<a href="cordova_file_file.md.html#File">File</a>" value="org.apache.cordova.file.FileManager" /&gt;
-&lt;plugin name="<a href="cordova_file_file.md.html#FileTransfer">FileTransfer</a>" value="org.apache.cordova.http.<a href="cordova_file_file.md.html#FileTransfer">FileTransfer</a>" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_file_file.md.html#File"><span class="atv">File</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.file.FileManager"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_file_file.md.html#FileTransfer"><span class="atv">FileTransfer</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.http.</span><a href="cordova_file_file.md.html#FileTransfer"><span class="atv">FileTransfer</span></a><span class="atv">"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h4>www/config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;feature id="blackberry.io.file" required="true" version="1.0.0.0" /&gt;
-&lt;feature id="blackberry.utils"   required="true" version="1.0.0.0" /&gt;
-&lt;feature id="blackberry.io.dir"  required="true" version="1.0.0.0" /&gt;
-&lt;rim:permissions&gt;
-    &lt;rim:permit&gt;access_shared&lt;/rim:permit&gt;
-&lt;/rim:permissions&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;feature</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"blackberry.io.file"</span><span class="pln"> </span><span class="atn">required</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">version</span><span class="pun">=</span><span class="atv">"1.0.0.0"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;feature</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"blackberry.utils"</span><span class="pln"> &nbsp; </span><span class="atn">required</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">version</span><span class="pun">=</span><span class="atv">"1.0.0.0"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;feature</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"blackberry.io.dir"</span><span class="pln"> &nbsp;</span><span class="atn">required</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">version</span><span class="pun">=</span><span class="atv">"1.0.0.0"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;rim:permissions&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;rim:permit&gt;</span><span class="pln">access_shared</span><span class="tag">&lt;/rim:permit&gt;</span><span class="pln"><br></span><span class="tag">&lt;/rim:permissions&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>iOS</h3>
 
-<h4>App/Supporting Files/Cordova.plist</h4>
+<h4>config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;key&gt;Plugins&lt;/key&gt;
-&lt;dict&gt;
-    &lt;key&gt;<a href="cordova_file_file.md.html#File">File</a>&lt;/key&gt;
-    &lt;string&gt;CDVFile&lt;/string&gt;
-&lt;/dict&gt;
-
-&lt;key&gt;Plugins&lt;/key&gt;
-&lt;dict&gt;
-    &lt;key&gt;<a href="cordova_file_file.md.html#FileTransfer">FileTransfer</a>&lt;/key&gt;
-    &lt;string&gt;CDVFileTransfer&lt;/string&gt;
-&lt;/dict&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_file_file.md.html#File"><span class="atv">File</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"CDVFile"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_file_file.md.html#FileTransfer"><span class="atv">FileTransfer</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"CDVFileTransfer"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>webOS</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <h3>Windows Phone</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="File">File</a></h1>
@@ -151,6 +126,14 @@
 </li>
 </ul>
 <h2>
+<a name="File_methods">Methods</a>
+</h2>
+
+<ul>
+<li>
+<strong>slice</strong>: Select only a portion of the file to be read.</li>
+</ul>
+<h2>
 <a name="File_details">Details</a>
 </h2>
 
@@ -164,7 +147,38 @@
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows 8</li>
+</ul>
+<h2>
+<a name="File_slice">slice</a>
+</h2>
+
+<p>Return a new <a href="cordova_file_file.md.html#File">File</a> object, for which <a href="cordova_file_file.md.html#FileReader">FileReader</a> will return only the specified portion of the file.
+Negative values for <strong>start</strong> or <strong>end</strong> are measured from the end of the file.
+The indexes are always relative to the current slice (see the full example).</p>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+<li>
+<strong>start</strong> - The index of the first byte to read, inclusive.</li>
+<li>
+<strong>end</strong> - The index of the byte after the last one to read.</li>
+</ul>
+<p><strong>Quick Example</strong></p>
+
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> slicedFile </span><span class="pun">=</span><span class="pln"> file</span><span class="pun">.</span><span class="pln">slice</span><span class="pun">(</span><span class="lit">10</span><span class="pun">,</span><span class="pln"> </span><span class="lit">30</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<p><strong>Full Example</strong></p>
+
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> slice1 </span><span class="pun">=</span><span class="pln"> file</span><span class="pun">.</span><span class="pln">slice</span><span class="pun">(</span><span class="lit">100</span><span class="pun">,</span><span class="pln"> </span><span class="lit">400</span><span class="pun">);</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> slice2 </span><span class="pun">=</span><span class="pln"> slice1</span><span class="pun">.</span><span class="pln">slice</span><span class="pun">(</span><span class="lit">20</span><span class="pun">,</span><span class="pln"> </span><span class="lit">35</span><span class="pun">);</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> slice3 </span><span class="pun">=</span><span class="pln"> file</span><span class="pun">.</span><span class="pln">slice</span><span class="pun">(</span><span class="lit">120</span><span class="pun">,</span><span class="pln"> </span><span class="lit">135</span><span class="pun">);</span><span class="pln"><br></span><span class="com">// slice2 and slice3 are equivalent.</span><span class="pln"><br></span></code></pre>
+
+<p><strong>Supported Platforms:</strong></p>
+
+<ul>
+<li>Android</li>
+<li>iOS</li>
 </ul>
 <hr>
 <h1><a name="FileReader">FileReader</a></h1>
@@ -208,17 +222,21 @@
 
 <ul>
 <li>
-<strong>abort</strong>: Aborts reading file. </li>
+<strong>abort</strong>: Aborts reading file.</li>
 <li>
 <strong>readAsDataURL</strong>: Read file and return data as a base64 encoded data url.</li>
 <li>
 <strong>readAsText</strong>: Reads text file.</li>
+<li>
+<strong>readAsBinaryString</strong>: Reads file as binary and returns a binary string.</li>
+<li>
+<strong>readAsArrayBuffer</strong>: Reads file as an ArrayBuffer.</li>
 </ul>
 <h2>
 <a name="FileReader_details">Details</a>
 </h2>
 
-<p>The <code><a href="cordova_file_file.md.html#FileReader">FileReader</a></code> object is a way to read files from the devices file system.  Files can be read as text or as a base64 data encoded string.  Users register their own event listners to receive the loadstart, progress, load, loadend, error and abort events.</p>
+<p>The <code><a href="cordova_file_file.md.html#FileReader">FileReader</a></code> object is a way to read files from the devices file system.  Files can be read as text or as a base64 data encoded string.  Users register their own event listeners to receive the loadstart, progress, load, loadend, error and abort events.</p>
 
 <h2>
 <a name="FileReader_supported_platforms">Supported Platforms</a>
@@ -228,7 +246,8 @@
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="FileReader_read_as_data_url">Read As Data URL </a>
@@ -241,21 +260,7 @@
 <a name="FileReader_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function win(file) {
-    var reader = new <a href="cordova_file_file.md.html#FileReader">FileReader</a>();
-    reader.onloadend = function(evt) {
-        console.log("read success");
-        console.log(evt.target.result);
-    };
-    reader.readAsDataURL(file);
-};
-
-var fail = function(evt) {
-    console.log(error.code);
-};
-
-entry.file(win, fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> win</span><span class="pun">(</span><span class="pln">file</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> reader </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#FileReader"><span class="typ">FileReader</span></a><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; reader</span><span class="pun">.</span><span class="pln">onloadend </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"read success"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">.</span><span class="pln">target</span><span class="pun">.</span><span class="pln">result</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br>&nbsp; &nbsp; reader</span><span class="pun">.</span><span class="pln">readAsDataURL</span><span class="pun">(</span><span class="pln">file</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> fail </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br>entry</span><span class="pun">.</span><span class="pln">file</span><span class="pun">(</span><span class="pln">win</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="FileReader_read_as_text">Read As Text</a>
@@ -271,110 +276,19 @@ entry.file(win, fail);
 <a name="FileReader_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function win(file) {
-    var reader = new <a href="cordova_file_file.md.html#FileReader">FileReader</a>();
-    reader.onloadend = function(evt) {
-        console.log("read success");
-        console.log(evt.target.result);
-    };
-    reader.readAsText(file);
-};
-
-var fail = function(evt) {
-    console.log(error.code);
-};
-
-entry.file(win, fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> win</span><span class="pun">(</span><span class="pln">file</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> reader </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#FileReader"><span class="typ">FileReader</span></a><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; reader</span><span class="pun">.</span><span class="pln">onloadend </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"read success"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">.</span><span class="pln">target</span><span class="pun">.</span><span class="pln">result</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br>&nbsp; &nbsp; reader</span><span class="pun">.</span><span class="pln">readAsText</span><span class="pun">(</span><span class="pln">file</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> fail </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br>entry</span><span class="pun">.</span><span class="pln">file</span><span class="pun">(</span><span class="pln">win</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="FileReader_abort_quick_example">Abort Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function win(file) {
-    var reader = new <a href="cordova_file_file.md.html#FileReader">FileReader</a>();
-    reader.onloadend = function(evt) {
-        console.log("read success");
-        console.log(evt.target.result);
-    };
-    reader.readAsText(file);
-    reader.abort();
-};
-
-function fail(error) {
-    console.log(error.code);
-}
-
-entry.file(win, fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> win</span><span class="pun">(</span><span class="pln">file</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> reader </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#FileReader"><span class="typ">FileReader</span></a><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; reader</span><span class="pun">.</span><span class="pln">onloadend </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"read success"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">.</span><span class="pln">target</span><span class="pun">.</span><span class="pln">result</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br>&nbsp; &nbsp; reader</span><span class="pun">.</span><span class="pln">readAsText</span><span class="pun">(</span><span class="pln">file</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; reader</span><span class="pun">.</span><span class="pln">abort</span><span class="pun">();</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br>entry</span><span class="pun">.</span><span class="pln">file</span><span class="pun">(</span><span class="pln">win</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="FileReader_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_file_file.md.html#FileReader">FileReader</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    function onLoad() {
-        document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-    }
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        window.requestFileSystem(<a href="cordova_file_file.md.html#LocalFileSystem">LocalFileSystem</a>.PERSISTENT, 0, gotFS, fail);
-    }
-
-    function gotFS(fileSystem) {
-        fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
-    }
-
-    function gotFileEntry(fileEntry) {
-        fileEntry.file(gotFile, fail);
-    }
-
-    function gotFile(file){
-        readDataUrl(file);
-        readAsText(file);
-    }
-
-    function readDataUrl(file) {
-        var reader = new <a href="cordova_file_file.md.html#FileReader">FileReader</a>();
-        reader.onloadend = function(evt) {
-            console.log("Read as data URL");
-            console.log(evt.target.result);
-        };
-        reader.readAsDataURL(file);
-    }
-
-    function readAsText(file) {
-        var reader = new <a href="cordova_file_file.md.html#FileReader">FileReader</a>();
-        reader.onloadend = function(evt) {
-            console.log("Read as text");
-            console.log(evt.target.result);
-        };
-        reader.readAsText(file);
-    }
-
-    function fail(evt) {
-        console.log(evt.target.error.code);
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;Read <a href="cordova_file_file.md.html#File">File</a>&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_file_file.md.html#FileReader"><span class="pln">FileReader</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onLoad</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; window</span><span class="pun">.</span><span class="pln">requestFileSystem</span><span class="pun">(</span><a href="cordova_file_file.md.html#LocalFileSystem"><span class="typ">LocalFileSystem</span></a><span class="pun">.</span><span class="pln">PERSISTENT</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> gotFS</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> gotFS</span><span class="pun">(</span><span class="pln">fileSystem</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; fileSystem</span><span class="pun">.</span><span class="pln">root</span><span class="pun">.</span><span class="pln">getFile</span><span class="pun">(</span><span class="str">"readme.txt"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln"> gotFileEntry</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> gotFileEntry</span><span class="pun">(</span><span class="pln">fileEntry</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; fileEntry</span><span class="pun">.</span><span class="pln">file</span><span class="pun">(</span><span class="pln">gotFile</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> gotFile</span><span class="pun">(</span><span class="pln">file</span><span class="pun">){</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; readDataUrl</span><span class="pun">(</span><span class="pln">file</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; readAsText</span><span class="pun">(</span><span class="pln">file</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> readDataUrl</span><span class="pun">(</span><span class="pln">file</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> reader </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#FileReader"><span class="typ">FileReader</span></a><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; reader</span><span class="pun">.</span><span class="pln">onloadend </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Read as data URL"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">.</span><span class="pln">target</span><span class="pun">.</span><span class="pln">result</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; reader</span><span class="pun">.</span><span class="pln">readAsDataURL</span><span class="pun">(</span><span class="pln">file</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> readAsText</span><span class="pun">(</span><span class="pln">file</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> reader </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#FileReader"><span class="typ">FileReader</span></a><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; reader</span><span class="pun">.</span><span class="pln">onloadend </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Read as text"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">.</span><span class="pln">target</span><span class="pun">.</span><span class="pln">result</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; reader</span><span class="pun">.</span><span class="pln">readAsText</span><span class="pun">(</span><span class="pln">file</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">.</span><span class="pln">target</span><span class="pun">.</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><span class="pln">Read </span><a href="cordova_file_file.md.html#File"><span class="pln">File</span></a><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="FileReader_ios_quirks">iOS Quirks</a>
@@ -384,6 +298,36 @@ entry.file(win, fail);
 <li>
 <strong>encoding</strong> parameter is not supported, UTF8 encoding is always used.</li>
 </ul>
+<h2>
+<a name="FileReader_read_as_binary_string">Read As Binary String</a>
+</h2>
+
+<p>Currently supported on iOS and Android only.</p>
+
+<p><strong>Parameters:</strong>
+- file - the file object to read</p>
+
+<h2>
+<a name="FileReader_quick_example">Quick Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> win</span><span class="pun">(</span><span class="pln">file</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> reader </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#FileReader"><span class="typ">FileReader</span></a><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; reader</span><span class="pun">.</span><span class="pln">onloadend </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"read success"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">.</span><span class="pln">target</span><span class="pun">.</span><span class="pln">result</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br>&nbsp; &nbsp; reader</span><span class="pun">.</span><span class="pln">readAsBinaryString</span><span class="pun">(</span><span class="pln">file</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> fail </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br>entry</span><span class="pun">.</span><span class="pln">file</span><span class="pun">(</span><span class="pln">win</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="FileReader_read_as_array_buffer">Read As Array Buffer</a>
+</h2>
+
+<p>Currently supported on iOS and Android only.</p>
+
+<p><strong>Parameters:</strong>
+- file - the file object to read</p>
+
+<h2>
+<a name="FileReader_quick_example">Quick Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> win</span><span class="pun">(</span><span class="pln">file</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> reader </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#FileReader"><span class="typ">FileReader</span></a><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; reader</span><span class="pun">.</span><span class="pln">onloadend </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"read success"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Uint8Array</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">.</span><span class="pln">target</span><span class="pun">.</span><span class="pln">result</span><span class="pun">));</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br>&nbsp; &nbsp; reader</span><span class="pun">.</span><span class="pln">readAsArrayBuffer</span><span class="pun">(</span><span class="pln">file</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> fail </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br>entry</span><span class="pun">.</span><span class="pln">file</span><span class="pun">(</span><span class="pln">win</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
 <hr>
 <h1><a name="FileWriter">FileWriter</a></h1>
 
@@ -412,7 +356,7 @@ entry.file(win, fail);
 <strong>onwritestart:</strong> Called when the write starts. . <em>(Function)</em>
 </li>
 <li>
-<strong>onprogress:</strong> Called while writing the file, reports progress (progess.loaded/progress.total). <em>(Function)</em> -NOT SUPPORTED</li>
+<strong>onprogress:</strong> Called while writing the file, reports progress (progress.loaded/progress.total). <em>(Function)</em> -NOT SUPPORTED</li>
 <li>
 <strong>onwrite:</strong> Called when the request has completed successfully.  <em>(Function)</em>
 </li>
@@ -456,153 +400,44 @@ entry.file(win, fail);
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="FileWriter_seek_quick_example">Seek Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function win(writer) {
-    // fast forwards file pointer to end of file
-    writer.seek(writer.length);
-};
-
-var fail = function(evt) {
-    console.log(error.code);
-};
-
-entry.createWriter(win, fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> win</span><span class="pun">(</span><span class="pln">writer</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// fast forwards file pointer to end of file</span><span class="pln"><br>&nbsp; &nbsp; writer</span><span class="pun">.</span><span class="pln">seek</span><span class="pun">(</span><span class="pln">writer</span><span class="pun">.</span><span class="pln">length</span><span class="pun">);</span><span class="pln"> <br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> fail </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br>entry</span><span class="pun">.</span><span class="pln">createWriter</span><span class="pun">(</span><span class="pln">win</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="FileWriter_truncate_quick_example">Truncate Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function win(writer) {
-    writer.truncate(10);
-};
-
-var fail = function(evt) {
-    console.log(error.code);
-};
-
-entry.createWriter(win, fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> win</span><span class="pun">(</span><span class="pln">writer</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; writer</span><span class="pun">.</span><span class="pln">truncate</span><span class="pun">(</span><span class="lit">10</span><span class="pun">);</span><span class="pln"> &nbsp; &nbsp;<br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> fail </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br>entry</span><span class="pun">.</span><span class="pln">createWriter</span><span class="pun">(</span><span class="pln">win</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="FileWriter_write_quick_example">Write Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function win(writer) {
-    writer.onwrite = function(evt) {
-        console.log("write success");
-    };
-    writer.write("some sample text");
-};
-
-var fail = function(evt) {
-    console.log(error.code);
-};
-
-entry.createWriter(win, fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> win</span><span class="pun">(</span><span class="pln">writer</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; writer</span><span class="pun">.</span><span class="pln">onwrite </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"write success"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br>&nbsp; &nbsp; writer</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"some sample text"</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> fail </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br>entry</span><span class="pun">.</span><span class="pln">createWriter</span><span class="pun">(</span><span class="pln">win</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="FileWriter_append_quick_example">Append Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function win(writer) {
-    writer.onwrite = function(evt) {
-        console.log("write success");
-    };
-    writer.seek(writer.length);
-    writer.write("appended text");
-};
-
-var fail = function(evt) {
-    console.log(error.code);
-};
-
-entry.createWriter(win, fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> win</span><span class="pun">(</span><span class="pln">writer</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; writer</span><span class="pun">.</span><span class="pln">onwrite </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"write success"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br>&nbsp; &nbsp; writer</span><span class="pun">.</span><span class="pln">seek</span><span class="pun">(</span><span class="pln">writer</span><span class="pun">.</span><span class="pln">length</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; writer</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"appended text"</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> fail </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br>entry</span><span class="pun">.</span><span class="pln">createWriter</span><span class="pun">(</span><span class="pln">win</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="FileWriter_abort_quick_example">Abort Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function win(writer) {
-    writer.onwrite = function(evt) {
-        console.log("write success");
-    };
-    writer.write("some sample text");
-    writer.abort();
-};
-
-var fail = function(evt) {
-    console.log(error.code);
-};
-
-entry.createWriter(win, fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> win</span><span class="pun">(</span><span class="pln">writer</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; writer</span><span class="pun">.</span><span class="pln">onwrite </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"write success"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br>&nbsp; &nbsp; writer</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"some sample text"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; writer</span><span class="pun">.</span><span class="pln">abort</span><span class="pun">();</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> fail </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br>entry</span><span class="pun">.</span><span class="pln">createWriter</span><span class="pun">(</span><span class="pln">win</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="FileWriter_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_file_file.md.html#FileWriter">FileWriter</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        window.requestFileSystem(<a href="cordova_file_file.md.html#LocalFileSystem">LocalFileSystem</a>.PERSISTENT, 0, gotFS, fail);
-    }
-
-    function gotFS(fileSystem) {
-        fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
-    }
-
-    function gotFileEntry(fileEntry) {
-        fileEntry.createWriter(gotFileWriter, fail);
-    }
-
-    function gotFileWriter(writer) {
-        writer.onwriteend = function(evt) {
-            console.log("contents of file now 'some sample text'");
-            writer.truncate(11);
-            writer.onwriteend = function(evt) {
-                console.log("contents of file now 'some sample'");
-                writer.seek(4);
-                writer.write(" different text");
-                writer.onwriteend = function(evt){
-                    console.log("contents of file now 'some different text'");
-                }
-            };
-        };
-        writer.write("some sample text");
-    }
-
-    function fail(error) {
-        console.log(error.code);
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;Write <a href="cordova_file_file.md.html#File">File</a>&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_file_file.md.html#FileWriter"><span class="pln">FileWriter</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; window</span><span class="pun">.</span><span class="pln">requestFileSystem</span><span class="pun">(</span><a href="cordova_file_file.md.html#LocalFileSystem"><span class="typ">LocalFileSystem</span></a><span class="pun">.</span><span class="pln">PERSISTENT</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> gotFS</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> gotFS</span><span class="pun">(</span><span class="pln">fileSystem</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; fileSystem</span><span class="pun">.</span><span class="pln">root</span><span class="pun">.</span><span class="pln">getFile</span><span class="pun">(</span><span class="str">"readme.txt"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">create</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> exclusive</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">},</span><span class="pln"> gotFileEntry</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> gotFileEntry</span><span class="pun">(</span><span class="pln">fileEntry</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; fileEntry</span><span class="pun">.</span><span class="pln">createWriter</span><span class="pun">(</span><span class="pln">gotFileWriter</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> gotFileWriter</span><span class="pun">(</span><span class="pln">writer</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; writer</span><span class="pun">.</span><span class="pln">onwriteend </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"contents of file now 'some sample text'"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; writer</span><span class="pun">.</span><span class="pln">truncate</span><span class="pun">(</span><span class="lit">11</span><span class="pun">);</span><span class="pln"> &nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; writer</span><span class="pun">.</span><span class="pln">onwriteend </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"contents of file now 'some sample'"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; writer</span><span class="pun">.</span><span class="pln">seek</span><span class="pun">(</span><span class="lit">4</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; writer</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">" different text"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; writer</span><span class="pun">.</span><span class="pln">onwriteend </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">){</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"contents of file now 'some different text'"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; writer</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"some sample text"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><span class="pln">Write </span><a href="cordova_file_file.md.html#File"><span class="pln">File</span></a><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="FileSystem">FileSystem</a></h1>
@@ -635,61 +470,21 @@ entry.createWriter(win, fail);
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="FileSystem_file_system_quick_example">
 File System Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function onSuccess(fileSystem) {
-    console.log(fileSystem.name);
-    console.log(fileSystem.root.name);
-}
-
-// request the persistent file system
-window.requestFileSystem(<a href="cordova_file_file.md.html#LocalFileSystem">LocalFileSystem</a>.PERSISTENT, 0, onSuccess, null);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">fileSystem</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">fileSystem</span><span class="pun">.</span><span class="pln">name</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">fileSystem</span><span class="pun">.</span><span class="pln">root</span><span class="pun">.</span><span class="pln">name</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// request the persistent file system</span><span class="pln"><br>window</span><span class="pun">.</span><span class="pln">requestFileSystem</span><span class="pun">(</span><a href="cordova_file_file.md.html#LocalFileSystem"><span class="typ">LocalFileSystem</span></a><span class="pun">.</span><span class="pln">PERSISTENT</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> onSuccess</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="FileSystem_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_file_file.md.html#File">File</a> System Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        window.requestFileSystem(<a href="cordova_file_file.md.html#LocalFileSystem">LocalFileSystem</a>.PERSISTENT, 0, onFileSystemSuccess, fail);
-    }
-
-    function onFileSystemSuccess(fileSystem) {
-        console.log(fileSystem.name);
-        console.log(fileSystem.root.name);
-    }
-
-    function fail(evt) {
-        console.log(evt.target.error.code);
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;<a href="cordova_file_file.md.html#File">File</a> System&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_file_file.md.html#File"><span class="pln">File</span></a><span class="pln"> System Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; window</span><span class="pun">.</span><span class="pln">requestFileSystem</span><span class="pun">(</span><a href="cordova_file_file.md.html#LocalFileSystem"><span class="typ">LocalFileSystem</span></a><span class="pun">.</span><span class="pln">PERSISTENT</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> onFileSystemSuccess</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onFileSystemSuccess</span><span class="pun">(</span><span class="pln">fileSystem</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">fileSystem</span><span class="pun">.</span><span class="pln">name</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">fileSystem</span><span class="pun">.</span><span class="pln">root</span><span class="pun">.</span><span class="pln">name</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">.</span><span class="pln">target</span><span class="pun">.</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><a href="cordova_file_file.md.html#File"><span class="pln">File</span></a><span class="pln"> System</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="FileEntry">FileEntry</a></h1>
@@ -753,7 +548,8 @@ window.requestFileSystem(<a href="cordova_file_file.md.html#LocalFileSystem">Loc
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="FileEntry_getmetadata">getMetadata</a>
@@ -773,17 +569,7 @@ window.requestFileSystem(<a href="cordova_file_file.md.html#LocalFileSystem">Loc
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>function success(metadata) {
-    console.log("Last Modified: " + metadata.modificationTime);
-}
-
-function fail(error) {
-    alert(error.code);
-}
-
-// Request the metadata object for this entry
-entry.getMetadata(success, fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> success</span><span class="pun">(</span><span class="pln">metadata</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Last Modified: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> metadata</span><span class="pun">.</span><span class="pln">modificationTime</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// Request the metadata object for this entry</span><span class="pln"><br>entry</span><span class="pun">.</span><span class="pln">getMetadata</span><span class="pun">(</span><span class="pln">success</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="FileEntry_setmetadata">setMetadata</a>
@@ -807,23 +593,17 @@ entry.getMetadata(success, fail);
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>function success() {
-    console.log("The metadata was successfully set.");
-}
-
-function fail() {
-    alert("There was an error in setting the metadata");
-}
-
-// Set the metadata
-entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1});
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> success</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"The metadata was successfully set."</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"There was an error in setting the metadata"</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// Set the metadata</span><span class="pln"><br>entry</span><span class="pun">.</span><span class="pln">setMetadata</span><span class="pun">(</span><span class="pln">success</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="str">"com.apple.MobileBackup"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">});</span><span class="pln"><br></span></code></pre>
 
 <p><strong>iOS Quirk</strong></p>
 
 <ul>
 <li>only the <strong>"com.apple.MobileBackup"</strong> extended attribute is supported. Set the value to <strong>1</strong> to NOT enable the file to be backed up by iCloud. Set the value to <strong>0</strong> to re-enable the file to be backed up by iCloud.</li>
 </ul>
+<p><strong>Quick Example</strong></p>
+
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> setFileMetadata</span><span class="pun">(</span><span class="pln">localFileSystem</span><span class="pun">,</span><span class="pln"> filePath</span><span class="pun">,</span><span class="pln"> metadataKey</span><span class="pun">,</span><span class="pln"> metadataValue</span><span class="pun">)</span><span class="pln"> <br></span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> onSetMetadataWin </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"success setting metadata"</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> onSetMetadataFail </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"error setting metadata"</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> onGetFileWin </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">parent</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> data </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{};</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; data</span><span class="pun">[</span><span class="pln">metadataKey</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> metadataValue</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; parent</span><span class="pun">.</span><span class="pln">setMetadata</span><span class="pun">(</span><span class="pln">onSetMetadataWin</span><span class="pun">,</span><span class="pln"> onSetMetadataFail</span><span class="pun">,</span><span class="pln"> data</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> onGetFileFail </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"error getting file"</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> onFSWin </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">fileSystem</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; fileSystem</span><span class="pun">.</span><span class="pln">root</span><span class="pun">.</span><span class="pln">getFile</span><span class="pun">(</span><span class="pln">filePath</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">create</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> exclusive</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">},</span><span class="pln"> onGetFileWin</span><span class="pun">,</span><span class="pln"> onGetFileFail</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> onFSFail </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">.</span><span class="pln">target</span><span class="pun">.</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; window</span><span class="pun">.</span><span class="pln">requestFileSystem</span><span class="pun">(</span><span class="pln">localFileSystem</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> onFSWin</span><span class="pun">,</span><span class="pln"> onFSFail</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br>setFileMetadata</span><span class="pun">(</span><a href="cordova_file_file.md.html#LocalFileSystem"><span class="typ">LocalFileSystem</span></a><span class="pun">.</span><span class="pln">PERSISTENT</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Backups/sqlite.db"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"com.apple.MobileBackup"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
 <h2>
 <a name="FileEntry_moveto">moveTo</a>
 </h2>
@@ -854,23 +634,7 @@ entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1});
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>function success(entry) {
-    console.log("New Path: " + entry.fullPath);
-}
-
-function fail(error) {
-    alert(error.code);
-}
-
-function moveFile(entry) {
-    var parent = document.getElementById('parent').value,
-        parentName = parent.substring(parent.lastIndexOf('/')+1),
-        parentEntry = new <a href="cordova_file_file.md.html#DirectoryEntry">DirectoryEntry</a>(parentName, parent);
-
-    // move the file to a new directory and rename it
-    entry.moveTo(parentEntry, "newFile.txt", success, fail);
-}
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> success</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"New Path: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> entry</span><span class="pun">.</span><span class="pln">fullPath</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> moveFile</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> parent </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'parent'</span><span class="pun">).</span><span class="pln">value</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; parentName </span><span class="pun">=</span><span class="pln"> parent</span><span class="pun">.</span><span class="pln">substring</span><span class="pun">(</span><span class="pln">parent</span><span class="pun">.</span><span class="pln">lastIndexOf</span><span class="pun">(</span><span class="str">'/'</span><span class="pun">)+</span><span class="lit">1</span><span class="pun">),</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; parentEntry </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#DirectoryEntry"><span class="typ">DirectoryEntry</span></a><span class="pun">(</span><span class="pln">parentName</span><span class="pun">,</span><span class="pln"> parent</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// move the file to a new directory and rename it</span><span class="pln"><br>&nbsp; &nbsp; entry</span><span class="pun">.</span><span class="pln">moveTo</span><span class="pun">(</span><span class="pln">parentEntry</span><span class="pun">,</span><span class="pln"> </span><span class="str">"newFile.txt"</span><span class="pun">,</span><span class="pln"> success</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="FileEntry_copyto">copyTo</a>
@@ -899,23 +663,7 @@ function moveFile(entry) {
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>function win(entry) {
-    console.log("New Path: " + entry.fullPath);
-}
-
-function fail(error) {
-    alert(error.code);
-}
-
-function copyFile(entry) {
-    var parent = document.getElementById('parent').value,
-        parentName = parent.substring(parent.lastIndexOf('/')+1),
-        parentEntry = new <a href="cordova_file_file.md.html#DirectoryEntry">DirectoryEntry</a>(parentName, parent);
-
-    // copy the file to a new directory and rename it
-    entry.copyTo(parentEntry, "file.copy", success, fail);
-}
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> win</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"New Path: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> entry</span><span class="pun">.</span><span class="pln">fullPath</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> copyFile</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> parent </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'parent'</span><span class="pun">).</span><span class="pln">value</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; parentName </span><span class="pun">=</span><span class="pln"> parent</span><span class="pun">.</span><span class="pln">substring</span><span class="pun">(</span><span class="pln">parent</span><span class="pun">.</span><span class="pln">lastIndexOf</span><span class="pun">(</span><span class="str">'/'</span><span class="pun">)+</span><span class="lit">1</span><span class="pun">),</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; parentEntry </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#DirectoryEntry"><span class="typ">DirectoryEntry</span></a><span class="pun">(</span><span class="pln">parentName</span><span class="pun">,</span><span class="pln"> parent</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// copy the file to a new directory and rename it</span><span class="pln"><br>&nbsp; &nbsp; entry</span><span class="pun">.</span><span class="pln">copyTo</span><span class="pun">(</span><span class="pln">parentEntry</span><span class="pun">,</span><span class="pln"> </span><span class="str">"file.copy"</span><span class="pun">,</span><span class="pln"> success</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="FileEntry_tourl">toURL</a>
@@ -925,10 +673,7 @@ function copyFile(entry) {
 
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>// Request the URL for this entry
-var fileURL = entry.toURL();
-console.log(fileURL);
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// Request the URL for this entry</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> fileURL </span><span class="pun">=</span><span class="pln"> entry</span><span class="pun">.</span><span class="pln">toURL</span><span class="pun">();</span><span class="pln"><br>console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">fileURL</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="FileEntry_remove">remove</a>
@@ -948,17 +693,7 @@ console.log(fileURL);
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>function success(entry) {
-    console.log("Removal succeeded");
-}
-
-function fail(error) {
-    alert('Error removing file: ' + error.code);
-}
-
-// remove the file
-entry.remove(success, fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> success</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Removal succeeded"</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'Error removing file: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// remove the file</span><span class="pln"><br>entry</span><span class="pun">.</span><span class="pln">remove</span><span class="pun">(</span><span class="pln">success</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="FileEntry_getparent">getParent</a>
@@ -978,17 +713,7 @@ entry.remove(success, fail);
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>function success(parent) {
-    console.log("Parent Name: " + parent.name);
-}
-
-function fail(error) {
-    alert(error.code);
-}
-
-// Get the parent <a href="cordova_file_file.md.html#DirectoryEntry">DirectoryEntry</a>
-entry.getParent(success, fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> success</span><span class="pun">(</span><span class="pln">parent</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Parent Name: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> parent</span><span class="pun">.</span><span class="pln">name</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// Get the parent </span><a href="cordova_file_file.md.html#DirectoryEntry"><span class="com">DirectoryEntry</span></a><span class="pln"><br>entry</span><span class="pun">.</span><span class="pln">getParent</span><span class="pun">(</span><span class="pln">success</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="FileEntry_createwriter">createWriter</a>
@@ -1008,17 +733,7 @@ entry.getParent(success, fail);
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>function success(writer) {
-    writer.write("Some text to the file");
-}
-
-function fail(error) {
-    alert(error.code);
-}
-
-// create a <a href="cordova_file_file.md.html#FileWriter">FileWriter</a> to write to the file
-entry.createWriter(success, fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> success</span><span class="pun">(</span><span class="pln">writer</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; writer</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"Some text to the file"</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// create a </span><a href="cordova_file_file.md.html#FileWriter"><span class="com">FileWriter</span></a><span class="com"> to write to the file</span><span class="pln"><br>entry</span><span class="pun">.</span><span class="pln">createWriter</span><span class="pun">(</span><span class="pln">success</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="FileEntry_file">file</a>
@@ -1038,17 +753,7 @@ entry.createWriter(success, fail);
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>function success(file) {
-    console.log("<a href="cordova_file_file.md.html#File">File</a> size: " + file.size);
-}
-
-function fail(error) {
-    alert("Unable to retrieve file properties: " + error.code);
-}
-
-// obtain properties of a file
-entry.file(success, fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> success</span><span class="pun">(</span><span class="pln">file</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"</span><a href="cordova_file_file.md.html#File"><span class="str">File</span></a><span class="str"> size: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> file</span><span class="pun">.</span><span class="pln">size</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Unable to retrieve file properties: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// obtain properties of a file</span><span class="pln"><br>entry</span><span class="pun">.</span><span class="pln">file</span><span class="pun">(</span><span class="pln">success</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="DirectoryEntry">DirectoryEntry</a></h1>
@@ -1118,7 +823,8 @@ entry.file(success, fail);
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="DirectoryEntry_getmetadata">getMetadata</a>
@@ -1138,17 +844,7 @@ entry.file(success, fail);
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>function success(metadata) {
-    console.log("Last Modified: " + metadata.modificationTime);
-}
-
-function fail(error) {
-    alert(error.code);
-}
-
-// Request the metadata object for this entry
-entry.getMetadata(success, fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> success</span><span class="pun">(</span><span class="pln">metadata</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Last Modified: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> metadata</span><span class="pun">.</span><span class="pln">modificationTime</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// Request the metadata object for this entry</span><span class="pln"><br>entry</span><span class="pun">.</span><span class="pln">getMetadata</span><span class="pun">(</span><span class="pln">success</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="DirectoryEntry_setmetadata">setMetadata</a>
@@ -1172,23 +868,17 @@ entry.getMetadata(success, fail);
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>function success() {
-    console.log("The metadata was successfully set.");
-}
-
-function fail() {
-    alert("There was an error in setting the metadata");
-}
-
-// Set the metadata
-entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1});
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> success</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"The metadata was successfully set."</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"There was an error in setting the metadata"</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// Set the metadata</span><span class="pln"><br>entry</span><span class="pun">.</span><span class="pln">setMetadata</span><span class="pun">(</span><span class="pln">success</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="str">"com.apple.MobileBackup"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">});</span><span class="pln"><br></span></code></pre>
 
 <p><strong>iOS Quirk</strong></p>
 
 <ul>
 <li>only the <strong>"com.apple.MobileBackup"</strong> extended attribute is supported. Set the value to <strong>1</strong> to NOT enable the directory to be backed up by iCloud. Set the value to <strong>0</strong> to re-enable the directory to be backed up by iCloud.</li>
 </ul>
+<p><strong>Quick Example</strong></p>
+
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> setFolderMetadata</span><span class="pun">(</span><span class="pln">localFileSystem</span><span class="pun">,</span><span class="pln"> subFolder</span><span class="pun">,</span><span class="pln"> metadataKey</span><span class="pun">,</span><span class="pln"> metadataValue</span><span class="pun">)</span><span class="pln"> <br></span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> onSetMetadataWin </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"success setting metadata"</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> onSetMetadataFail </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"error setting metadata"</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> onGetDirectoryWin </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">parent</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> data </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{};</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; data</span><span class="pun">[</span><span class="pln">metadataKey</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> metadataValue</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; parent</span><span class="pun">.</span><span class="pln">setMetadata</span><span class="pun">(</span><span class="pln">onSetMetadataWin</span><span class="pun">,</span><span class="pln"> onSetMetadataFail</span><span class="pun">,</span><span class="pln"> data</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> onGetDirectoryFail </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"error getting dir"</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> onFSWin </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">fileSystem</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; fileSystem</span><span class="pun">.</span><span class="pln">root</span><span class="pun">.</span><span class="pln">getDirectory</span><span class="pun">(</span><span class="pln">subFolder</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">create</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> exclusive</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">},</span><span class="pln"> onGetDirectoryWin</span><span class="pun">,</span><span class="pln"> onGetDirectoryFail</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> onFSFail </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">.</span><span class="pln">target</span><span class="pun">.</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; window</span><span class="pun">.</span><span class="pln">requestFileSystem</span><span class="pun">(</span><span class="pln">localFileSystem</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> onFSWin</span><span class="pun">,</span><span class="pln"> onFSFail</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br>setFolderMetadata</span><span class="pun">(</span><a href="cordova_file_file.md.html#LocalFileSystem"><span class="typ">LocalFileSystem</span></a><span class="pun">.</span><span class="pln">PERSISTENT</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Backups"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"com.apple.MobileBackup"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
 <h2>
 <a name="DirectoryEntry_moveto">moveTo</a>
 </h2>
@@ -1221,24 +911,7 @@ entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1});
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>function success(entry) {
-    console.log("New Path: " + entry.fullPath);
-}
-
-function fail(error) {
-    alert(error.code);
-}
-
-function moveDir(entry) {
-    var parent = document.getElementById('parent').value,
-        parentName = parent.substring(parent.lastIndexOf('/')+1),
-        newName = document.getElementById('newName').value,
-        parentEntry = new <a href="cordova_file_file.md.html#DirectoryEntry">DirectoryEntry</a>(parentName, parent);
-
-    // move the directory to a new directory and rename it
-    entry.moveTo(parentEntry, newName, success, fail);
-}
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> success</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"New Path: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> entry</span><span class="pun">.</span><span class="pln">fullPath</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> moveDir</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> parent </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'parent'</span><span class="pun">).</span><span class="pln">value</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; parentName </span><span class="pun">=</span><span class="pln"> parent</span><span class="pun">.</span><span class="pln">substring</span><span class="pun">(</span><span class="pln">parent</span><span class="pun">.</span><span class="pln">lastIndexOf</span><span class="pun">(</span><span class="str">'/'</span><span class="pun">)+</span><span class="lit">1</span><span class="pun">),</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; newName </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'newName'</span><span class="pun">).</span><span class="pln">value</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; parentEntry </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#DirectoryEntry"><span class="typ">DirectoryEntry</span></a><span class="pun">(</span><span class="pln">parentName</span><span class="pun">,</span><span class="pln"> parent</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// move the directory to a new directory and rename it</span><span class="pln"><br>&nbsp; &nbsp; entry</span><span class="pun">.</span><span class="pln">moveTo</span><span class="pun">(</span><span class="pln">parentEntry</span><span class="pun">,</span><span class="pln"> newName</span><span class="pun">,</span><span class="pln"> success</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="DirectoryEntry_copyto">copyTo</a>
@@ -1270,24 +943,7 @@ function moveDir(entry) {
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>function win(entry) {
-    console.log("New Path: " + entry.fullPath);
-}
-
-function fail(error) {
-    alert(error.code);
-}
-
-function copyDir(entry) {
-    var parent = document.getElementById('parent').value,
-        parentName = parent.substring(parent.lastIndexOf('/')+1),
-        newName = document.getElementById('newName').value,
-        parentEntry = new <a href="cordova_file_file.md.html#DirectoryEntry">DirectoryEntry</a>(parentName, parent);
-
-    // copy the directory to a new directory and rename it
-    entry.copyTo(parentEntry, newName, success, fail);
-}
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> win</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"New Path: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> entry</span><span class="pun">.</span><span class="pln">fullPath</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> copyDir</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> parent </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'parent'</span><span class="pun">).</span><span class="pln">value</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; parentName </span><span class="pun">=</span><span class="pln"> parent</span><span class="pun">.</span><span class="pln">substring</span><span class="pun">(</span><span class="pln">parent</span><span class="pun">.</span><span class="pln">lastIndexOf</span><span class="pun">(</span><span class="str">'/'</span><span class="pun">)+</span><span class="lit">1</span><span class="pun">),</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; newName </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'newName'</span><span class="pun">).</span><span class="pln">value</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; parentEntry </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#DirectoryEntry"><span class="typ">DirectoryEntry</span></a><span class="pun">(</span><span class="pln">parentName</span><span class="pun">,</span><span class="pln"> parent</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// copy the directory to a new directory and rename it</span><span class="pln"><br>&nbsp; &nbsp; entry</span><span class="pun">.</span><span class="pln">copyTo</span><span class="pun">(</span><span class="pln">parentEntry</span><span class="pun">,</span><span class="pln"> newName</span><span class="pun">,</span><span class="pln"> success</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="DirectoryEntry_tourl">toURL</a>
@@ -1297,10 +953,7 @@ function copyDir(entry) {
 
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>// Get the URL for this directory
-var dirURL = entry.toURL();
-console.log(dirURL);
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// Get the URL for this directory</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> dirURL </span><span class="pun">=</span><span class="pln"> entry</span><span class="pun">.</span><span class="pln">toURL</span><span class="pun">();</span><span class="pln"><br>console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">dirURL</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="DirectoryEntry_remove">remove</a>
@@ -1324,17 +977,7 @@ console.log(dirURL);
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>function success(entry) {
-    console.log("Removal succeeded");
-}
-
-function fail(error) {
-    alert('Error removing directory: ' + error.code);
-}
-
-// remove this directory
-entry.remove(success, fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> success</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Removal succeeded"</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'Error removing directory: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// remove this directory</span><span class="pln"><br>entry</span><span class="pun">.</span><span class="pln">remove</span><span class="pun">(</span><span class="pln">success</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="DirectoryEntry_getparent">getParent</a>
@@ -1354,17 +997,7 @@ entry.remove(success, fail);
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>function success(parent) {
-    console.log("Parent Name: " + parent.name);
-}
-
-function fail(error) {
-    alert('Failed to get parent directory: ' + error.code);
-}
-
-// Get the parent <a href="cordova_file_file.md.html#DirectoryEntry">DirectoryEntry</a>
-entry.getParent(success, fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> success</span><span class="pun">(</span><span class="pln">parent</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Parent Name: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> parent</span><span class="pun">.</span><span class="pln">name</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'Failed to get parent directory: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// Get the parent </span><a href="cordova_file_file.md.html#DirectoryEntry"><span class="com">DirectoryEntry</span></a><span class="pln"><br>entry</span><span class="pun">.</span><span class="pln">getParent</span><span class="pun">(</span><span class="pln">success</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="DirectoryEntry_createreader">createReader</a>
@@ -1374,9 +1007,7 @@ entry.getParent(success, fail);
 
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>// create a directory reader
-var directoryReader = entry.createReader();
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// create a directory reader</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> directoryReader </span><span class="pun">=</span><span class="pln"> entry</span><span class="pun">.</span><span class="pln">createReader</span><span class="pun">();</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="DirectoryEntry_getdirectory">getDirectory</a>
@@ -1405,17 +1036,7 @@ var directoryReader = entry.createReader();
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>function success(parent) {
-    console.log("Parent Name: " + parent.name);
-}
-
-function fail(error) {
-    alert("Unable to create new directory: " + error.code);
-}
-
-// Retrieve an existing directory, or create it if it does not already exist
-entry.getDirectory("newDir", {create: true, exclusive: false}, success, fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> success</span><span class="pun">(</span><span class="pln">parent</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Parent Name: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> parent</span><span class="pun">.</span><span class="pln">name</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Unable to create new directory: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// Retrieve an existing directory, or create it if it does not already exist</span><span class="pln"><br>entry</span><span class="pun">.</span><span class="pln">getDirectory</span><span class="pun">(</span><span class="str">"newDir"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">create</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> exclusive</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">},</span><span class="pln"> success</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="DirectoryEntry_getfile">getFile</a>
@@ -1444,17 +1065,7 @@ entry.getDirectory("newDir", {create: true, exclusive: false}, success, fail);
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>function success(parent) {
-    console.log("Parent Name: " + parent.name);
-}
-
-function fail(error) {
-    alert("Failed to retrieve file: " + error.code);
-}
-
-// Retrieve an existing file, or create it if it does not exist
-entry.getFile("newFile.txt", {create: true, exclusive: false}, success, fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> success</span><span class="pun">(</span><span class="pln">parent</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Parent Name: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> parent</span><span class="pun">.</span><span class="pln">name</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Failed to retrieve file: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// Retrieve an existing file, or create it if it does not exist</span><span class="pln"><br>entry</span><span class="pun">.</span><span class="pln">getFile</span><span class="pun">(</span><span class="str">"newFile.txt"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">create</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> exclusive</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">},</span><span class="pln"> success</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="DirectoryEntry_removerecursively">removeRecursively</a>
@@ -1479,17 +1090,27 @@ be deleted.   It is an error to attempt to:</p>
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>function success(parent) {
-    console.log("Remove Recursively Succeeded");
-}
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> success</span><span class="pun">(</span><span class="pln">parent</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Remove Recursively Succeeded"</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Failed to remove directory or it's contents: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// remove the directory and all it's contents</span><span class="pln"><br>entry</span><span class="pun">.</span><span class="pln">removeRecursively</span><span class="pun">(</span><span class="pln">success</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
-function fail(error) {
-    alert("Failed to remove directory or it's contents: " + error.code);
-}
+<h2>
+<a name="DirectoryEntry_blackberry_quirks">BlackBerry Quirks</a>
+</h2>
 
-// remove the directory and all it's contents
-entry.removeRecursively(success, fail);
-</code></pre>
+<p>May fail with a ControlledAccessException in the following cases:</p>
+
+<ul>
+<li>Access is attempted on an directory created by a previous installation of an application.</li>
+</ul>
+<blockquote>
+  <p>solution: insure temporary directories are cleaned manually, or by the application before reinstall</p>
+</blockquote>
+
+<ul>
+<li>if device is connected by usb</li>
+</ul>
+<blockquote>
+  <p>solution: disconnect usb cable from device and run again</p>
+</blockquote>
 
 <hr>
 <h1><a name="DirectoryReader">DirectoryReader</a></h1>
@@ -1512,7 +1133,8 @@ entry.removeRecursively(success, fail);
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="DirectoryReader_readentries">readEntries</a>
@@ -1532,23 +1154,7 @@ entry.removeRecursively(success, fail);
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>function success(entries) {
-    var i;
-    for (i=0; i&lt;entries.length; i++) {
-        console.log(entries[i].name);
-    }
-}
-
-function fail(error) {
-    alert("Failed to list directory contents: " + error.code);
-}
-
-// Get a directory reader
-var directoryReader = dirEntry.createReader();
-
-// Get a list of all the entries in the directory
-directoryReader.readEntries(success,fail);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> success</span><span class="pun">(</span><span class="pln">entries</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> i</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">entries</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">entries</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">name</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Failed to list directory contents: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// Get a directory reader</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> directoryReader </span><span class="pun">=</span><span class="pln"> dirEntry</span><span class="pun">.</span><span class="pln">createReader</span><span class="pun">();</span><span class="pln"><br><br></span><span class="com">// Get a list of all the entries in the directory</span><span class="pln"><br>directoryReader</span><span class="pun">.</span><span class="pln">readEntries</span><span class="pun">(</span><span class="pln">success</span><span class="pun">,</span><span class="pln">fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="FileTransfer">FileTransfer</a></h1>
@@ -1559,8 +1165,11 @@ directoryReader.readEntries(success,fail);
 <a name="FileTransfer_properties">Properties</a>
 </h2>
 
-<p>N/A</p>
-
+<ul>
+<li>
+<strong>onprogress:</strong> Called with a ProgressEvent whenever a new chunk of data is transferred. <em>(Function)</em>
+</li>
+</ul>
 <h2>
 <a name="FileTransfer_methods">Methods</a>
 </h2>
@@ -1570,6 +1179,8 @@ directoryReader.readEntries(success,fail);
 <strong>upload</strong>: sends a file to a server. </li>
 <li>
 <strong>download</strong>: downloads a file from server.</li>
+<li>
+<strong>abort</strong>: Aborts an in-progress transfer.</li>
 </ul>
 <h2>
 <a name="FileTransfer_details">Details</a>
@@ -1586,7 +1197,8 @@ It is also possible to download a file from remote and save it on the device (on
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="FileTransfer_upload">upload</a>
@@ -1598,111 +1210,42 @@ It is also possible to download a file from remote and save it on the device (on
 <li>
 <strong>filePath</strong> - Full path of the file on the device</li>
 <li>
-<strong>server</strong> - URL of the server to receive the file</li>
+<strong>server</strong> - URL of the server to receive the file (must already be encoded using encodeURI())</li>
 <li>
 <strong>successCallback</strong> - A callback that is called with a <a href="cordova_file_file.md.html#Metadata">Metadata</a> object. <em>(Function)</em>
 </li>
 <li>
-<strong>errorCallback</strong> - A callback that is called if an error occurs retrieving the <a href="cordova_file_file.md.html#Metadata">Metadata</a>. Invoked with a <a href="cordova_file_file.md.html#FileError">FileError</a> object. <em>(Function)</em>
+<strong>errorCallback</strong> - A callback that is called if an error occurs retrieving the <a href="cordova_file_file.md.html#Metadata">Metadata</a>. Invoked with a <a href="cordova_file_file.md.html#FileTransferError">FileTransferError</a> object. <em>(Function)</em>
 </li>
 <li>
 <strong>options</strong> - Optional parameters such as file name and mimetype</li>
+<li>
+<strong>trustAllHosts</strong> - Optional parameter, defaults to false. If set to true then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. <em>(boolean)</em>
+</li>
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code>// !! Assumes variable fileURI contains a valid URI to a  text file on the device
+<pre class="prettyprint"><code><span class="com">// !! Assumes variable fileURI contains a valid URI to a text file on the device</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> win </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">r</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Code = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> r</span><span class="pun">.</span><span class="pln">responseCode</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Response = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> r</span><span class="pun">.</span><span class="pln">response</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Sent = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> r</span><span class="pun">.</span><span class="pln">bytesSent</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> fail </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"An error has occurred: Code = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"upload error source "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">source</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"upload error target "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">target</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#FileUploadOptions"><span class="typ">FileUploadOptions</span></a><span class="pun">();</span><span class="pln"><br>options</span><span class="pun">.</span><span class="pln">fileKey</span><span class="pun">=</span><span class="str">"file"</span><span class="pun">;</span><span class="pln"><br>options</span><span class="pun">.</span><span class="pln">fileName</span><span class="pun">=</span><span class="pln">fileURI</span><span class="pun">.</span><span class="pln">substr</span><span class="pun">(</span><span class="pln">fileURI</span><span class="pun">.</span><span class="pln">lastIndexOf</span><span class="pun">(</span><span class="str">'/'</span><span class="pun">)+</span><span class="lit">1</span><span class="pun">);</span><span class="pln"><br>options</span><span class="pun">.</span><span class="pln">mimeType</span><span class="pun">=</span><span class="str">"text/plain"</span><span class="pun">;</span><span class="pln"><br></span></code></pre>
 
-var win = function(r) {
-    console.log("Code = " + r.responseCode);
-    console.log("Response = " + r.response);
-    console.log("Sent = " + r.bytesSent);
-}
+<p>var params = {};
+	params.value1 = "test";
+	params.value2 = "param";</p>
 
-var fail = function(error) {
-    alert("An error has occurred: Code = " + error.code);
-    console.log("upload error source " + error.source);
-    console.log("upload error target " + error.target);
-}
-
-var options = new <a href="cordova_file_file.md.html#FileUploadOptions">FileUploadOptions</a>();
-options.fileKey="file";
-options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
-options.mimeType="text/plain";
-
-var params = new Object();
-params.value1 = "test";
-params.value2 = "param";
-
-options.params = params;
-
-var ft = new <a href="cordova_file_file.md.html#FileTransfer">FileTransfer</a>();
-ft.upload(fileURI, "http://some.server.com/upload.php", win, fail, options);
-</code></pre>
+<pre class="prettyprint"><code><span class="pln">options</span><span class="pun">.</span><span class="kwd">params</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">params</span><span class="pun">;</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> ft </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#FileTransfer"><span class="typ">FileTransfer</span></a><span class="pun">();</span><span class="pln"><br>ft</span><span class="pun">.</span><span class="pln">upload</span><span class="pun">(</span><span class="pln">fileURI</span><span class="pun">,</span><span class="pln"> encodeURI</span><span class="pun">(</span><span class="str">"http://some.server.com/upload.php"</span><span class="pun">),</span><span class="pln"> win</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <p><strong>Full Example</strong></p>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;<a href="cordova_file_file.md.html#File">File</a> Transfer Example&lt;/title&gt;
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br></span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_file_file.md.html#File"><span class="pln">File</span></a><span class="pln"> Transfer Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// Retrieve image file location from specified source</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_camera_camera.md.html#camera.getPicture"><span class="pln">camera</span><span class="pun">.</span><span class="pln">getPicture</span></a><span class="pun">(</span><span class="pln">uploadPhoto</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">message</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> alert</span><span class="pun">(</span><span class="str">'get picture failed'</span><span class="pun">);</span><span class="pln"> </span><span class="pun">},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">{</span><span class="pln"> quality</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50</span><span class="pun">,</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; destinationType</span><span class="pun">:</span><span class="pln"> navigator</span><span class="pun">.</span><span class="pln">camera</span><span class="pun">.</span><span class="typ">DestinationType</span><span class="pun">.</span><span class="pln">FILE_URI</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sourceType</span><span class="pun">:</span><span class="pln"> navigator</span><span class="pun">.</span><span class="pln">camera</span><span class="pun">.</span><span class="typ">PictureSourceType</span><span class="pun">.</span><span class="pln">PHOTOLIBRARY </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> uploadPhoto</span><span class="pun">(</span><span class="pln">imageURI</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#FileUploadOptions"><span class="typ">FileUploadOptions</span></a><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; options</span><span class="pun">.</span><span class="pln">fileKey</span><span class="pun">=</span><span class="str">"file"</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; options</span><span class="pun">.</span><span class="pln">fileName</span><span class="pun">=</span><span class="pln">imageURI</span><span class="pun">.</span><span class="pln">substr</span><span class="pun">(</span><span class="pln">imageURI</span><span class="pun">.</span><span class="pln">lastIndexOf</span><span class="pun">(</span><span class="str">'/'</span><span class="pun">)+</span><span class="lit">1</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; options</span><span class="pun">.</span><span class="pln">mimeType</span><span class="pun">=</span><span class="str">"image/jpeg"</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> params </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{};</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; params</span><span class="pun">.</span><span class="pln">value1 </span><span class="pun">=</span><span class="pln"> </span><span class="str">"test"</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; params</span><span class="pun">.</span><span class="pln">value2 </span><span class="pun">=</span><span class="pln"> </span><span class="str">"param"</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; options</span><span class="pun">.</span><span class="pln">params </span><span class="pun">=</span><span class="pln"> params</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> ft </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#FileTransfer"><span class="typ">FileTransfer</span></a><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ft</span><span class="pun">.</span><span class="pln">upload</span><span class="pun">(</span><span class="pln">imageURI</span><span class="pun">,</span><span class="pln"> encodeURI</span><span class="pun">(</span><span class="str">"http://some.server.com/upload.php"</span><span class="pun">),</span><span class="pln"> win</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> win</span><span class="pun">(</span><span class="pln">r</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Code = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> r</span><span class="pun">.</span><span class="pln">responseCode</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Response = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> r</span><span class="pun">.</span><span class="pln">response</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Sent = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> r</span><span class="pun">.</span><span class="pln">bytesSent</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"An error has occurred: Code = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"upload error source "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">source</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"upload error target "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">target</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br></span><span class="tag">&lt;/head&gt;</span><span class="pln"><br></span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><span class="pln">Upload </span><a href="cordova_file_file.md.html#File"><span class="pln">File</span></a><span class="tag">&lt;/p&gt;</span><span class="pln"><br></span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
+<p><strong>Setting Upload Headers</strong></p>
 
-        // Wait for Cordova to load
-        //
-        document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
+<p>Supported on Android and iOS</p>
 
-        // Cordova is ready
-        //
-        function onDeviceReady() {
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> win</span><span class="pun">(</span><span class="pln">r</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Code = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> r</span><span class="pun">.</span><span class="pln">responseCode</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Response = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> r</span><span class="pun">.</span><span class="pln">response</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Sent = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> r</span><span class="pun">.</span><span class="pln">bytesSent</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"An error has occurred: Code = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"upload error source "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">source</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"upload error target "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">target</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> uri </span><span class="pun">=</span><span class="pln"> encodeURI</span><span class="pun">(</span><span class="str">"http://some.server.com/upload.php"</span><span class="pun">);</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#FileUploadOptions"><span class="typ">FileUploadOptions</span></a><span class="pun">();</span><span class="pln"><br>options</span><span class="pun">.</span><span class="pln">fileKey</span><span class="pun">=</span><span class="str">"file"</span><span class="pun">;</span><span class="pln"><br>options</span><span class="pun">.</span><span class="pln">fileName</span><span class="pun">=</span><span class="pln">fileURI</span><span class="pun">.</span><span class="pln">substr</span><span class="pun">(</span><span class="pln">fileURI</span><span class="pun">.</span><span class="pln">lastIndexOf</span><span class="pun">(</span><span class="str">'/'</span><span class="pun">)+</span><span class="lit">1</span><span class="pun">);</span><span class="pln"><br>options</span><span class="pun">.</span><span class="pln">mimeType</span><span class="pun">=</span><span class="str">"text/plain"</span><span class="pun">;</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> headers</span><span class="pun">={</span><span class="str">'headerParam'</span><span class="pun">:</span><span class="str">'headerValue'</span><span class="pun">};</span><span class="pln"><br><br>options</span><span class="pun">.</span><span class="pln">headers </span><span class="pun">=</span><span class="pln"> headers</span><span class="pun">;</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> ft </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#FileTransfer"><span class="typ">FileTransfer</span></a><span class="pun">();</span><span class="pln"><br>ft</span><span class="pun">.</span><span class="pln">upload</span><span class="pun">(</span><span class="pln">fileURI</span><span class="pun">,</span><span class="pln"> uri</span><span class="pun">,</span><span class="pln"> win</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
-            // Retrieve image file location from specified source
-            navigator.<a href="cordova_camera_camera.md.html#camera.getPicture">camera.getPicture</a>(uploadPhoto,
-                                        function(message) { alert('get picture failed'); },
-                                        { quality: 50,
-                                        destinationType: navigator.camera.DestinationType.FILE_URI,
-                                        sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY }
-                                        );
+<p><strong>Android Quirks</strong></p>
 
-        }
-
-        function uploadPhoto(imageURI) {
-            var options = new <a href="cordova_file_file.md.html#FileUploadOptions">FileUploadOptions</a>();
-            options.fileKey="file";
-            options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
-            options.mimeType="image/jpeg";
-
-            var params = new Object();
-            params.value1 = "test";
-            params.value2 = "param";
-
-            options.params = params;
-
-            var ft = new <a href="cordova_file_file.md.html#FileTransfer">FileTransfer</a>();
-            ft.upload(imageURI, "http://some.server.com/upload.php", win, fail, options);
-        }
-
-        function win(r) {
-            console.log("Code = " + r.responseCode);
-            console.log("Response = " + r.response);
-            console.log("Sent = " + r.bytesSent);
-        }
-
-        function fail(error) {
-            alert("An error has occurred: Code = " + error.code);
-            console.log("upload error source " + error.source);
-            console.log("upload error target " + error.target);
-        }
-
-        &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;Upload <a href="cordova_file_file.md.html#File">File</a>&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<p>If you experience problems uploading to a Nginx server then make sure you have the chunkedMode option set to false.</p>
 
 <h2>
 <a name="FileTransfer_download">download</a>
@@ -1712,35 +1255,59 @@ ft.upload(fileURI, "http://some.server.com/upload.php", win, fail, options);
 
 <ul>
 <li>
-<strong>source</strong> - URL of the server to receive the file</li>
+<strong>source</strong> - URL of the server to download the file (must already be encoded using encodeURI())</li>
 <li>
 <strong>target</strong> - Full path of the file on the device</li>
 <li>
 <strong>successCallback</strong> - A callback that is called with a <a href="cordova_file_file.md.html#FileEntry">FileEntry</a> object. <em>(Function)</em>
 </li>
 <li>
-<strong>errorCallback</strong> - A callback that is called if an error occurs retrieving the <a href="cordova_file_file.md.html#Metadata">Metadata</a>. Invoked with a <a href="cordova_file_file.md.html#FileError">FileError</a> object. <em>(Function)</em>
+<strong>errorCallback</strong> - A callback that is called if an error occurs retrieving the <a href="cordova_file_file.md.html#Metadata">Metadata</a>. Invoked with a <a href="cordova_file_file.md.html#FileTransferError">FileTransferError</a> object. <em>(Function)</em>
 </li>
+<li>
+<strong>trustAllHosts</strong> - Optional parameter, defaults to false. If set to true then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. <em>(boolean)</em>
+</li>
+<li>
+<strong>options</strong> - Optional parameters, currently only supports headers (such as Authorization (Basic Authentication), etc).</li>
 </ul>
 <p><strong>Quick Example</strong></p>
 
-<pre class="prettyprint"><code> // !! Assumes variable url contains a valid URI to a file on a server and filePath is a valid path on the device
+<pre class="prettyprint"><code><span class="com">// !! Assumes filePath is a valid path on the device</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> fileTransfer </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#FileTransfer"><span class="typ">FileTransfer</span></a><span class="pun">();</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> uri </span><span class="pun">=</span><span class="pln"> encodeURI</span><span class="pun">(</span><span class="str">"http://some.server.com/download.php"</span><span class="pun">);</span><span class="pln"><br><br>fileTransfer</span><span class="pun">.</span><span class="pln">download</span><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; uri</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; filePath</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"download complete: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> entry</span><span class="pun">.</span><span class="pln">fullPath</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">},</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"download error source "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">source</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"download error target "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">target</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"upload error code"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">},</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">false</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; headers</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Authorization"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
-var fileTransfer = new <a href="cordova_file_file.md.html#FileTransfer">FileTransfer</a>();
+<h2>
+<a name="FileTransfer_abort">abort</a>
+</h2>
 
-fileTransfer.download(
-    url,
-    filePath,
-    function(entry) {
-        console.log("download complete: " + entry.fullPath);
-    },
-    function(error) {
-        console.log("download error source " + error.source);
-        console.log("download error target " + error.target);
-        console.log("upload error code" + error.code);
-    }
-);
-</code></pre>
+<p>Aborts an in-progress transfer. The onerror callback will be called with a <a href="cordova_file_file.md.html#FileTransferError">FileTransferError</a> object which has an error code of <a href="cordova_file_file.md.html#FileTransferError">FileTransferError</a>.ABORT_ERR.</p>
+
+<p><strong>Supported Platforms</strong></p>
+
+<ul>
+<li>Android</li>
+<li>iOS</li>
+</ul>
+<p><strong>Quick Example</strong></p>
+
+<pre class="prettyprint"><code><span class="com">// !! Assumes variable fileURI contains a valid URI to a text file on the device</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> win </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">r</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Code = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> r</span><span class="pun">.</span><span class="pln">responseCode</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Response = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> r</span><span class="pun">.</span><span class="pln">response</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Sent = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> r</span><span class="pun">.</span><span class="pln">bytesSent</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> fail </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"An error has occurred: Code = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"upload error source "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">source</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"upload error target "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">target</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#FileUploadOptions"><span class="typ">FileUploadOptions</span></a><span class="pun">();</span><span class="pln"><br>options</span><span class="pun">.</span><span class="pln">fileKey</span><span class="pun">=</span><span class="str">"file"</span><span class="pun">;</span><span class="pln"><br>options</span><span class="pun">.</span><span class="pln">fileName</span><span class="pun">=</span><span class="pln">fileURI</span><span class="pun">.</span><span class="pln">substr</span><span class="pun">(</span><span class="pln">fileURI</span><span class="pun">.</span><span class="pln">lastIndexOf</span><span class="pun">(</span><span class="str">'/'</span><span class="pun">)+</span><span class="lit">1</span><span class="pun">);</span><span class="pln"><br>options</span><span class="pun">.</span><span class="pln">mimeType</span><span class="pun">=</span><span class="str">"text/plain"</span><span class="pun">;</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> </span><span class="kwd">params</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{};</span><span class="pln"><br></span><span class="kwd">params</span><span class="pun">.</span><span class="pln">value1 </span><span class="pun">=</span><span class="pln"> </span><span class="str">"test"</span><span class="pun">;</span><span class="pln"><br></span><span class="kwd">params</span><span class="pun">.</span><span class="pln">value2 </span><span class="pun">=</span><span class="pln"> </span><span class="str">"param"</span><span class="pun">;</span><span class="pln"><br><br>options</span><span class="pun">.</span><span class="kwd">params</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">params</span><span class="pun">;</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> ft </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_file_file.md.html#FileTransfer"><span class="typ">FileTransfer</span></a><span class="pun">();</span><span class="pln"><br>ft</span><span class="pun">.</span><span class="pln">upload</span><span class="pun">(</span><span class="pln">fileURI</span><span class="pun">,</span><span class="pln"> encodeURI</span><span class="pun">(</span><span class="str">"http://some.server.com/upload.php"</span><span class="pun">),</span><span class="pln"> win</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br>ft</span><span class="pun">.</span><span class="pln">abort</span><span class="pun">(</span><span class="pln">win</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="FileTransfer_onprogress">onprogress</a>
+</h2>
+
+<p>Called with a ProgressEvent whenever a new chunk of data is transferred.</p>
+
+<p><strong>Supported Platforms</strong></p>
+
+<ul>
+<li>Android</li>
+<li>iOS</li>
+</ul>
+<p><strong>Example</strong></p>
+
+<pre class="prettyprint"><code><span class="pln">fileTransfer</span><span class="pun">.</span><span class="pln">onprogress </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">progressEvent</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">progressEvent</span><span class="pun">.</span><span class="pln">lengthComputable</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; loadingStatus</span><span class="pun">.</span><span class="pln">setPercentage</span><span class="pun">(</span><span class="pln">progressEvent</span><span class="pun">.</span><span class="pln">loaded </span><span class="pun">/</span><span class="pln"> progressEvent</span><span class="pun">.</span><span class="pln">total</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; loadingStatus</span><span class="pun">.</span><span class="pln">increment</span><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br>fileTransfer</span><span class="pun">.</span><span class="pln">download</span><span class="pun">(...);</span><span class="pln"> </span><span class="com">// or fileTransfer.upload(...);</span><span class="pln"><br></span></code></pre>
+
+<p><strong>Quirks</strong>
+- On both Android an iOS, lengthComputable is false for downloads that use gzip encoding.</p>
 
 <hr>
 <h1><a name="FileUploadOptions">FileUploadOptions</a></h1>
@@ -1762,6 +1329,8 @@ fileTransfer.download(
 <strong>params:</strong> A set of optional key/value pairs to be passed along in the HTTP request. (Object)</li>
 <li>
 <strong>chunkedMode:</strong> Should the data be uploaded in chunked streaming mode. If not set defaults to "true". (Boolean)</li>
+<li>
+<strong>headers:</strong> A map of header name =&gt; header value. To specify multiple values for a header, use an array of values. (Object)</li>
 </ul>
 <h2>
 <a name="FileUploadOptions_description">Description</a>
@@ -1769,15 +1338,6 @@ fileTransfer.download(
 
 <p>A <code><a href="cordova_file_file.md.html#FileUploadOptions">FileUploadOptions</a></code> object can be passed to the <a href="cordova_file_file.md.html#FileTransfer">FileTransfer</a> objects upload method in order to specify additional parameters to the upload script.</p>
 
-<h2>
-<a name="FileUploadOptions_ios_quirk">iOS Quirk</a>
-</h2>
-
-<ul>
-<li>
-<strong>chunkedMode:</strong>
-This parameter is ignored on iOS.</li>
-</ul>
 <h2>
 <a name="FileUploadOptions_wp7_quirk">WP7 Quirk</a>
 </h2>
@@ -1842,18 +1402,14 @@ This parameter is ignored on WP7.</li>
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="Flags_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>// Get the data directory, creating it if it doesn't exist.
-dataDir = fileSystem.root.getDirectory("data", {create: true});
-
-// Create the lock file, if and only if it doesn't exist.
-lockFile = dataDir.getFile("lockfile.txt", {create: true, exclusive: true});
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// Get the data directory, creating it if it doesn't exist.</span><span class="pln"><br>dataDir </span><span class="pun">=</span><span class="pln"> fileSystem</span><span class="pun">.</span><span class="pln">root</span><span class="pun">.</span><span class="pln">getDirectory</span><span class="pun">(</span><span class="str">"data"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">create</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">});</span><span class="pln"><br><br></span><span class="com">// Create the lock file, if and only if it doesn't exist.</span><span class="pln"><br>lockFile </span><span class="pun">=</span><span class="pln"> dataDir</span><span class="pun">.</span><span class="pln">getFile</span><span class="pun">(</span><span class="str">"lockfile.txt"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">create</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> exclusive</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">});</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="LocalFileSystem">LocalFileSystem</a></h1>
@@ -1896,74 +1452,26 @@ lockFile = dataDir.getFile("lockfile.txt", {create: true, exclusive: true});
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="LocalFileSystem_request_file_system_quick_example">Request File System Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function onSuccess(fileSystem) {
-    console.log(fileSystem.name);
-}
-
-// request the persistent file system
-window.requestFileSystem(<a href="cordova_file_file.md.html#LocalFileSystem">LocalFileSystem</a>.PERSISTENT, 0, onSuccess, onError);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">fileSystem</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">fileSystem</span><span class="pun">.</span><span class="pln">name</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// request the persistent file system</span><span class="pln"><br>window</span><span class="pun">.</span><span class="pln">requestFileSystem</span><span class="pun">(</span><a href="cordova_file_file.md.html#LocalFileSystem"><span class="typ">LocalFileSystem</span></a><span class="pun">.</span><span class="pln">PERSISTENT</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="LocalFileSystem_resolve_local_file_system_uri_quick_example">Resolve Local File System URI Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function onSuccess(fileEntry) {
-    console.log(fileEntry.name);
-}
-
-window.resolveLocalFileSystemURI("file:///example.txt", onSuccess, onError);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">fileEntry</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">fileEntry</span><span class="pun">.</span><span class="pln">name</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br>window</span><span class="pun">.</span><span class="pln">resolveLocalFileSystemURI</span><span class="pun">(</span><span class="str">"file:///example.txt"</span><span class="pun">,</span><span class="pln"> onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="LocalFileSystem_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Local <a href="cordova_file_file.md.html#File">File</a> System Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        window.requestFileSystem(<a href="cordova_file_file.md.html#LocalFileSystem">LocalFileSystem</a>.PERSISTENT, 0, onFileSystemSuccess, fail);
-        window.resolveLocalFileSystemURI("file:///example.txt", onResolveSuccess, fail);
-    }
-
-    function onFileSystemSuccess(fileSystem) {
-        console.log(fileSystem.name);
-    }
-
-    function onResolveSuccess(fileEntry) {
-        console.log(fileEntry.name);
-    }
-
-    function fail(evt) {
-        console.log(evt.target.error.code);
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;Local <a href="cordova_file_file.md.html#File">File</a> System&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><span class="pln">Local </span><a href="cordova_file_file.md.html#File"><span class="pln">File</span></a><span class="pln"> System Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; window</span><span class="pun">.</span><span class="pln">requestFileSystem</span><span class="pun">(</span><a href="cordova_file_file.md.html#LocalFileSystem"><span class="typ">LocalFileSystem</span></a><span class="pun">.</span><span class="pln">PERSISTENT</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> onFileSystemSuccess</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; window</span><span class="pun">.</span><span class="pln">resolveLocalFileSystemURI</span><span class="pun">(</span><span class="str">"file:///example.txt"</span><span class="pun">,</span><span class="pln"> onResolveSuccess</span><span class="pun">,</span><span class="pln"> fail</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onFileSystemSuccess</span><span class="pun">(</span><span class="pln">fileSystem</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">fileSystem</span><span class="pun">.</span><span class="pln">name</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onResolveSuccess</span><span class="pun">(</span><span class="pln">fileEntry</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">fileEntry</span><span class="pun">.</span><span class="pln">name</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> fail</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">.</span><span class="pln">target</span><span class="pun">.</span><span class="pln">error</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><span class="pln">Local </span><a href="cordova_file_file.md.html#File"><span class="pln">File</span></a><span class="pln"> System</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="Metadata">Metadata</a></h1>
@@ -1993,19 +1501,14 @@ window.resolveLocalFileSystemURI("file:///example.txt", onSuccess, onError);
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="Metadata_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function win(metadata) {
-    console.log("Last Modified: " + metadata.modificationTime);
-}
-
-// Request the metadata object for this entry
-entry.getMetadata(win, null);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> win</span><span class="pun">(</span><span class="pln">metadata</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Last Modified: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> metadata</span><span class="pun">.</span><span class="pln">modificationTime</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// Request the metadata object for this entry</span><span class="pln"><br>entry</span><span class="pun">.</span><span class="pln">getMetadata</span><span class="pun">(</span><span class="pln">win</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="FileError">FileError</a></h1>
@@ -2055,13 +1558,13 @@ entry.getMetadata(win, null);
 
 <ul>
 <li>
-<strong>code</strong> One of the predefined error codes listed below. (int)</li>
+<strong>code</strong> One of the predefined error codes listed below. (Number)</li>
 <li>
-<strong>source</strong> URI to the source (string)</li>
+<strong>source</strong> URI to the source (String)</li>
 <li>
-<strong>target</strong> URI to the target (string)</li>
+<strong>target</strong> URI to the target (String)</li>
 <li>
-<strong>http_status</strong> HTTP status code.  This attribute is only available when a response code is received from the HTTP connection. (int)</li>
+<strong>http_status</strong> HTTP status code.  This attribute is only available when a response code is received from the HTTP connection. (Number)</li>
 </ul>
 <h2>
 <a name="FileTransferError_constants">Constants</a>
@@ -2071,14 +1574,15 @@ entry.getMetadata(win, null);
 <li><code><a href="cordova_file_file.md.html#FileTransferError">FileTransferError</a>.FILE_NOT_FOUND_ERR</code></li>
 <li><code><a href="cordova_file_file.md.html#FileTransferError">FileTransferError</a>.INVALID_URL_ERR</code></li>
 <li><code><a href="cordova_file_file.md.html#FileTransferError">FileTransferError</a>.CONNECTION_ERR</code></li>
+<li><code><a href="cordova_file_file.md.html#FileTransferError">FileTransferError</a>.ABORT_ERR</code></li>
 </ul>
 <h2>
 <a name="FileTransferError_description">Description</a>
 </h2>
 
-<p>The <code><a href="cordova_file_file.md.html#FileTransferError">FileTransferError</a></code> object is returned via the error callback  when an error occurs when uploading a file.</p>
+<p>The <code><a href="cordova_file_file.md.html#FileTransferError">FileTransferError</a></code> object is returned via the error callback when an error occurs when uploading or downloading a file.</p>
 
-            </div>
+</div>
         </div>
 
         <script type="text/javascript" src="../lib/iscroll.js"></script>

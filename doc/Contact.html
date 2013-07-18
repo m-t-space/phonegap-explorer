@@ -29,8 +29,8 @@
 </head>
 <body>
         <div id="wrapper">
-            <div id="content">
-                <h1><a name="Contacts">Contacts</a></h1>
+<div id="content">
+				<h1><a name="Contacts">Contacts</a></h1>
 
 <blockquote>
   <p>The <code>contacts</code> object provides access to the device contacts database.</p>
@@ -73,66 +73,45 @@
 
 <h3>Android</h3>
 
-<h4>app/res/xml/plugins.xml</h4>
+<h4>app/res/xml/config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;plugin name="<a href="cordova_contacts_contacts.md.html#Contacts">Contacts</a>" value="org.apache.cordova.ContactManager" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_contacts_contacts.md.html#Contacts"><span class="atv">Contacts</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.ContactManager"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h4>app/AndroidManifest.xml</h4>
 
-<pre class="prettyprint"><code>&lt;uses-permission android:name="android.permission.GET_ACCOUNTS" /&gt;
-&lt;uses-permission android:name="android.permission.READ_CONTACTS" /&gt;
-&lt;uses-permission android:name="android.permission.WRITE_CONTACTS" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.GET_ACCOUNTS"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.READ_CONTACTS"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.WRITE_CONTACTS"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>Bada</h3>
 
 <h4>manifest.xml</h4>
 
-<pre class="prettyprint"><code>&lt;Privilege&gt;
-    &lt;Name&gt;ADDRESSBOOK&lt;/Name&gt;
-&lt;/Privilege&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;Privilege&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;Name&gt;</span><span class="pln">ADDRESSBOOK</span><span class="tag">&lt;/Name&gt;</span><span class="pln"><br></span><span class="tag">&lt;/Privilege&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>BlackBerry WebWorks</h3>
 
 <h4>www/plugins.xml</h4>
 
-<pre class="prettyprint"><code>&lt;plugin name="<a href="cordova_contacts_contacts.md.html#Contact">Contact</a>" value="org.apache.cordova.pim.<a href="cordova_contacts_contacts.md.html#Contact">Contact</a>" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_contacts_contacts.md.html#Contact"><span class="atv">Contact</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.pim.</span><a href="cordova_contacts_contacts.md.html#Contact"><span class="atv">Contact</span></a><span class="atv">"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h4>www/config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;feature id="blackberry.find"        required="true" version="1.0.0.0" /&gt;
-&lt;feature id="blackberry.identity"    required="true" version="1.0.0.0" /&gt;
-&lt;feature id="blackberry.pim.Address" required="true" version="1.0.0.0" /&gt;
-&lt;feature id="blackberry.pim.<a href="cordova_contacts_contacts.md.html#Contact">Contact</a>" required="true" version="1.0.0.0" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;feature</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"blackberry.find"</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="atn">required</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">version</span><span class="pun">=</span><span class="atv">"1.0.0.0"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;feature</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"blackberry.identity"</span><span class="pln"> &nbsp; &nbsp;</span><span class="atn">required</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">version</span><span class="pun">=</span><span class="atv">"1.0.0.0"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;feature</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"blackberry.pim.Address"</span><span class="pln"> </span><span class="atn">required</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">version</span><span class="pun">=</span><span class="atv">"1.0.0.0"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;feature</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"blackberry.pim.</span><a href="cordova_contacts_contacts.md.html#Contact"><span class="atv">Contact</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">required</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">version</span><span class="pun">=</span><span class="atv">"1.0.0.0"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>iOS</h3>
 
-<h4>App/Supporting Files/Cordova.plist</h4>
+<h4>config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;key&gt;Plugins&lt;/key&gt;
-&lt;dict&gt;
-    &lt;key&gt;<a href="cordova_contacts_contacts.md.html#Contacts">Contacts</a>&lt;/key&gt;
-    &lt;string&gt;CDVContacts&lt;/string&gt;
-&lt;/dict&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_contacts_contacts.md.html#Contacts"><span class="atv">Contacts</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"CDVContacts"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>webOS</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <h3>Windows Phone</h3>
 
 <h4>Properties/WPAppManifest.xml</h4>
 
-<pre class="prettyprint"><code>&lt;Capabilities&gt;
-    &lt;Capability Name="ID_CAP_CONTACTS" /&gt;
-&lt;/Capabilities&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;Capabilities&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;Capability</span><span class="pln"> </span><span class="atn">Name</span><span class="pun">=</span><span class="atv">"ID_CAP_CONTACTS"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;/Capabilities&gt;</span><span class="pln"><br></span></code></pre>
 
 <p>Reference: <a class="external" href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
 
@@ -141,8 +120,7 @@
 
 <p>Returns a new <a href="cordova_contacts_contacts.md.html#Contact">Contact</a> object.</p>
 
-<pre class="prettyprint"><code>var contact = navigator.<a href="cordova_contacts_contacts.md.html#contacts.create">contacts.create</a>(properties);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> contact </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.create"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">create</span></a><span class="pun">(</span><span class="pln">properties</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="contacts.create_description">Description</a>
@@ -160,56 +138,27 @@
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.0</li>
 </ul>
 <h2>
 <a name="contacts.create_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>var myContact = navigator.<a href="cordova_contacts_contacts.md.html#contacts.create">contacts.create</a>({"displayName": "Test User"});
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> myContact </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.create"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">create</span></a><span class="pun">({</span><span class="str">"displayName"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Test User"</span><span class="pun">});</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="contacts.create_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_contacts_contacts.md.html#Contact">Contact</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        var myContact = navigator.<a href="cordova_contacts_contacts.md.html#contacts.create">contacts.create</a>({"displayName": "Test User"});
-        myContact.note = "This contact has a note.";
-        console.log("The contact, " + myContact.displayName + ", note: " + myContact.note);
-    }
-
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;Create <a href="cordova_contacts_contacts.md.html#Contact">Contact</a>&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_contacts_contacts.md.html#Contact"><span class="pln">Contact</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> myContact </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.create"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">create</span></a><span class="pun">({</span><span class="str">"displayName"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Test User"</span><span class="pun">});</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; myContact</span><span class="pun">.</span><span class="pln">note </span><span class="pun">=</span><span class="pln"> </span><span class="str">"This contact has a note."</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"The contact, "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> myContact</span><span class="pun">.</span><span class="pln">displayName </span><span class="pun">+</span><span class="pln"> </span><span class="str">", note: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> myContact</span><span class="pun">.</span><span class="pln">note</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><span class="pln">Create </span><a href="cordova_contacts_contacts.md.html#Contact"><span class="pln">Contact</span></a><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="contacts.find">contacts.find</a></h1>
 
 <p>Queries the device contacts database and returns one or more <code><a href="cordova_contacts_contacts.md.html#Contact">Contact</a></code> objects, each containing the fields specified.</p>
 
-<pre class="prettyprint"><code>navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.find</a>(<a href="cordova_contacts_contacts.md.html#contactFields">contactFields</a>, <a href="cordova_contacts_contacts.md.html#contactSuccess">contactSuccess</a>, <a href="cordova_contacts_contacts.md.html#contactError">contactError</a>, <a href="cordova_contacts_contacts.md.html#contactFindOptions">contactFindOptions</a>);
-</code></pre>
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.find"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">find</span></a><span class="pun">(</span><a href="cordova_contacts_contacts.md.html#contactFields"><span class="pln">contactFields</span></a><span class="pun">,</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#contactSuccess"><span class="pln">contactSuccess</span></a><span class="pun">,</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">,</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#contactFindOptions"><span class="pln">contactFindOptions</span></a><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="contacts.find_description">Description</a>
@@ -217,7 +166,7 @@
 
 <p><a href="cordova_contacts_contacts.md.html#contacts.find">contacts.find</a> is an asynchronous function that queries the device contacts database and returns an array of <code><a href="cordova_contacts_contacts.md.html#Contact">Contact</a></code> objects.  The resulting objects are passed to the <code><a href="cordova_contacts_contacts.md.html#contactSuccess">contactSuccess</a></code> callback function specified by the <strong><a href="cordova_contacts_contacts.md.html#contactSuccess">contactSuccess</a></strong> parameter.  </p>
 
-<p>Users must specify the contact fields to be used as a search qualifier in the <strong><a href="cordova_contacts_contacts.md.html#contactFields">contactFields</a></strong> parameter.  Only the fields specified in the <strong><a href="cordova_contacts_contacts.md.html#contactFields">contactFields</a></strong> parameter will be returned as properties of the <code><a href="cordova_contacts_contacts.md.html#Contact">Contact</a></code> objects that are passed to the <strong><a href="cordova_contacts_contacts.md.html#contactSuccess">contactSuccess</a></strong> callback function.  A zero-length <strong><a href="cordova_contacts_contacts.md.html#contactFields">contactFields</a></strong> parameter will result in an array of <code><a href="cordova_contacts_contacts.md.html#Contact">Contact</a></code> objects with only the <code>id</code> property populated. A <strong><a href="cordova_contacts_contacts.md.html#contactFields">contactFields</a></strong> value of ["*"] will return all contact fields. </p>
+<p>Users must specify the contact fields to be used as a search qualifier in the <strong><a href="cordova_contacts_contacts.md.html#contactFields">contactFields</a></strong> parameter.  Only the fields specified in the <strong><a href="cordova_contacts_contacts.md.html#contactFields">contactFields</a></strong> parameter will be returned as properties of the <code><a href="cordova_contacts_contacts.md.html#Contact">Contact</a></code> objects that are passed to the <strong><a href="cordova_contacts_contacts.md.html#contactSuccess">contactSuccess</a></strong> callback function.  A zero-length <strong><a href="cordova_contacts_contacts.md.html#contactFields">contactFields</a></strong> parameter is invalid and will result in a <code><a href="cordova_contacts_contacts.md.html#ContactError">ContactError</a>.INVALID_ARGUMENT_ERROR</code> . A <strong><a href="cordova_contacts_contacts.md.html#contactFields">contactFields</a></strong> value of ["*"] will return all contact fields. </p>
 
 <p>The <strong><a href="cordova_contacts_contacts.md.html#contactFindOptions">contactFindOptions</a>.filter</strong> string can be used as a search filter when querying the contacts database.  If provided, a case-insensitive, partial value match is applied to each field specified in the <strong><a href="cordova_contacts_contacts.md.html#contactFields">contactFields</a></strong> parameter.  If a match is found in a comparison with <em>any</em> of the specified fields, the contact is returned.</p>
 
@@ -243,75 +192,21 @@
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.0</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="contacts.find_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function onSuccess(contacts) {
-    alert('Found ' + contacts.length + ' contacts.');
-};
-
-function onError(<a href="cordova_contacts_contacts.md.html#contactError">contactError</a>) {
-    alert('onError!');
-};
-
-// find all contacts with 'Bob' in any name field
-var options = new <a href="cordova_contacts_contacts.md.html#ContactFindOptions">ContactFindOptions</a>();
-options.filter="Bob";
-var fields = ["displayName", "name"];
-navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.find</a>(fields, onSuccess, onError, options);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">contacts</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'Found '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">.</span><span class="pln">length </span><span class="pun">+</span><span class="pln"> </span><span class="str">' contacts.'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="com">// find all contacts with 'Bob' in any name field</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactFindOptions"><span class="typ">ContactFindOptions</span></a><span class="pun">();</span><span class="pln"><br>options</span><span class="pun">.</span><span class="pln">filter</span><span class="pun">=</span><span class="str">"Bob"</span><span class="pun">;</span><span class="pln"><br>options</span><span class="pun">.</span><span class="pln">multiple</span><span class="pun">=</span><span class="kwd">true</span><span class="pun">;</span><span class="pln"> <br></span><span class="kwd">var</span><span class="pln"> fields </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"displayName"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"name"</span><span class="pun">];</span><span class="pln"><br>navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.find"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">find</span></a><span class="pun">(</span><span class="pln">fields</span><span class="pun">,</span><span class="pln"> onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="contacts.find_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_contacts_contacts.md.html#Contact">Contact</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        // find all contacts with 'Bob' in any name field
-        var options = new <a href="cordova_contacts_contacts.md.html#ContactFindOptions">ContactFindOptions</a>();
-        options.filter="Bob";
-        var fields = ["displayName", "name"];
-        navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.find</a>(fields, onSuccess, onError, options);
-    }
-
-    // onSuccess: Get a snapshot of the current contacts
-    //
-    function onSuccess(contacts) {
-        for (var i=0; i&lt;contacts.length; i++) {
-            console.log("Display Name = " + contacts[i].displayName);
-        }
-    }
-
-    // onError: Failed to get the contacts
-    //
-    function onError(<a href="cordova_contacts_contacts.md.html#contactError">contactError</a>) {
-        alert('onError!');
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;Find <a href="cordova_contacts_contacts.md.html#Contacts">Contacts</a>&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_contacts_contacts.md.html#Contact"><span class="pln">Contact</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// find all contacts with 'Bob' in any name field</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactFindOptions"><span class="typ">ContactFindOptions</span></a><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; options</span><span class="pun">.</span><span class="pln">filter</span><span class="pun">=</span><span class="str">"Bob"</span><span class="pun">;</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> fields </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"displayName"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"name"</span><span class="pun">];</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.find"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">find</span></a><span class="pun">(</span><span class="pln">fields</span><span class="pun">,</span><span class="pln"> onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSuccess: Get a snapshot of the current contacts</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">contacts</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">contacts</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Display Name = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">displayName</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onError: Failed to get the contacts</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><span class="pln">Find </span><a href="cordova_contacts_contacts.md.html#Contacts"><span class="pln">Contacts</span></a><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="Contact">Contact</a></h1>
@@ -394,135 +289,33 @@ navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.fin
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.0</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="Contact_save_quick_example">Save Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function onSuccess(contact) {
-    alert("Save Success");
-};
-
-function onError(<a href="cordova_contacts_contacts.md.html#contactError">contactError</a>) {
-    alert("Error = " + <a href="cordova_contacts_contacts.md.html#contactError">contactError</a>.code);
-};
-
-// create a new contact object
-var contact = navigator.<a href="cordova_contacts_contacts.md.html#contacts.create">contacts.create</a>();
-contact.displayName = "Plumber";
-contact.nickname = "Plumber";       //specify both to support all devices
-
-// populate some fields
-var name = new <a href="cordova_contacts_contacts.md.html#ContactName">ContactName</a>();
-name.givenName = "Jane";
-name.familyName = "Doe";
-contact.name = name;
-
-// save to device
-contact.save(onSuccess,onError);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">contact</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Save Success"</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Error = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="com">// create a new contact object</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> contact </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.create"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">create</span></a><span class="pun">();</span><span class="pln"><br>contact</span><span class="pun">.</span><span class="pln">displayName </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Plumber"</span><span class="pun">;</span><span class="pln"><br>contact</span><span class="pun">.</span><span class="pln">nickname </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Plumber"</span><span class="pun">;</span><span class="pln"> &nbsp; &nbsp; &nbsp; </span><span class="com">//specify both to support all devices</span><span class="pln"><br><br></span><span class="com">// populate some fields</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> name </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactName"><span class="typ">ContactName</span></a><span class="pun">();</span><span class="pln"><br>name</span><span class="pun">.</span><span class="pln">givenName </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Jane"</span><span class="pun">;</span><span class="pln"><br>name</span><span class="pun">.</span><span class="pln">familyName </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Doe"</span><span class="pun">;</span><span class="pln"><br>contact</span><span class="pun">.</span><span class="pln">name </span><span class="pun">=</span><span class="pln"> name</span><span class="pun">;</span><span class="pln"><br><br></span><span class="com">// save to device</span><span class="pln"><br>contact</span><span class="pun">.</span><span class="pln">save</span><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln">onError</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="Contact_clone_quick_example">Clone Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>// clone the contact object
-var clone = contact.clone();
-clone.name.givenName = "John";
-console.log("Original contact name = " + contact.name.givenName);
-console.log("Cloned contact name = " + clone.name.givenName);
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// clone the contact object</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> clone </span><span class="pun">=</span><span class="pln"> contact</span><span class="pun">.</span><span class="pln">clone</span><span class="pun">();</span><span class="pln"><br>clone</span><span class="pun">.</span><span class="pln">name</span><span class="pun">.</span><span class="pln">givenName </span><span class="pun">=</span><span class="pln"> </span><span class="str">"John"</span><span class="pun">;</span><span class="pln"><br>console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Original contact name = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contact</span><span class="pun">.</span><span class="pln">name</span><span class="pun">.</span><span class="pln">givenName</span><span class="pun">);</span><span class="pln"><br>console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Cloned contact name = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> clone</span><span class="pun">.</span><span class="pln">name</span><span class="pun">.</span><span class="pln">givenName</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="Contact_remove_quick_example">Remove Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function onSuccess() {
-    alert("Removal Success");
-};
-
-function onError(<a href="cordova_contacts_contacts.md.html#contactError">contactError</a>) {
-    alert("Error = " + <a href="cordova_contacts_contacts.md.html#contactError">contactError</a>.code);
-};
-
-// remove the contact from the device
-contact.remove(onSuccess,onError);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Removal Success"</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Error = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="com">// remove the contact from the device</span><span class="pln"><br>contact</span><span class="pun">.</span><span class="pln">remove</span><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln">onError</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="Contact_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_contacts_contacts.md.html#Contact">Contact</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        // create
-        var contact = navigator.<a href="cordova_contacts_contacts.md.html#contacts.create">contacts.create</a>();
-        contact.displayName = "Plumber";
-        contact.nickname = "Plumber";       //specify both to support all devices
-        var name = new <a href="cordova_contacts_contacts.md.html#ContactName">ContactName</a>();
-        name.givenName = "Jane";
-        name.familyName = "Doe";
-        contact.name = name;
-
-        // save
-        contact.save(onSaveSuccess,onSaveError);
-
-        // clone
-        var clone = contact.clone();
-        clone.name.givenName = "John";
-        console.log("Original contact name = " + contact.name.givenName);
-        console.log("Cloned contact name = " + clone.name.givenName);
-
-        // remove
-        contact.remove(onRemoveSuccess,onRemoveError);
-    }
-
-    // onSaveSuccess: Get a snapshot of the current contacts
-    //
-    function onSaveSuccess(contact) {
-        alert("Save Success");
-    }
-
-    // onSaveError: Failed to get the contacts
-    //
-    function onSaveError(<a href="cordova_contacts_contacts.md.html#contactError">contactError</a>) {
-        alert("Error = " + <a href="cordova_contacts_contacts.md.html#contactError">contactError</a>.code);
-    }
-
-    // onRemoveSuccess: Get a snapshot of the current contacts
-    //
-    function onRemoveSuccess(contacts) {
-        alert("Removal Success");
-    }
-
-    // onRemoveError: Failed to get the contacts
-    //
-    function onRemoveError(<a href="cordova_contacts_contacts.md.html#contactError">contactError</a>) {
-        alert("Error = " + <a href="cordova_contacts_contacts.md.html#contactError">contactError</a>.code);
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;Find <a href="cordova_contacts_contacts.md.html#Contacts">Contacts</a>&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_contacts_contacts.md.html#Contact"><span class="pln">Contact</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// create</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> contact </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.create"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">create</span></a><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; contact</span><span class="pun">.</span><span class="pln">displayName </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Plumber"</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; contact</span><span class="pun">.</span><span class="pln">nickname </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Plumber"</span><span class="pun">;</span><span class="pln"> &nbsp; &nbsp; &nbsp; </span><span class="com">//specify both to support all devices</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> name </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactName"><span class="typ">ContactName</span></a><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; name</span><span class="pun">.</span><span class="pln">givenName </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Jane"</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; name</span><span class="pun">.</span><span class="pln">familyName </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Doe"</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; contact</span><span class="pun">.</span><span class="pln">name </span><span class="pun">=</span><span class="pln"> name</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// save</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; contact</span><span class="pun">.</span><span class="pln">save</span><span class="pun">(</span><span class="pln">onSaveSuccess</span><span class="pun">,</span><span class="pln">onSaveError</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// clone</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> clone </span><span class="pun">=</span><span class="pln"> contact</span><span class="pun">.</span><span class="pln">clone</span><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; clone</span><span class="pun">.</span><span class="pln">name</span><span class="pun">.</span><span class="pln">givenName </span><span class="pun">=</span><span class="pln"> </span><span class="str">"John"</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Original contact name = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contact</span><span class="pun">.</span><span class="pln">name</span><span class="pun">.</span><span class="pln">givenName</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Cloned contact name = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> clone</span><span class="pun">.</span><span class="pln">name</span><span class="pun">.</span><span class="pln">givenName</span><span class="pun">);</span><span class="pln"> <br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// remove</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; contact</span><span class="pun">.</span><span class="pln">remove</span><span class="pun">(</span><span class="pln">onRemoveSuccess</span><span class="pun">,</span><span class="pln">onRemoveError</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSaveSuccess: Get a snapshot of the current contacts</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSaveSuccess</span><span class="pun">(</span><span class="pln">contact</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Save Success"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSaveError: Failed to get the contacts</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSaveError</span><span class="pun">(</span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Error = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onRemoveSuccess: Get a snapshot of the current contacts</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onRemoveSuccess</span><span class="pun">(</span><span class="pln">contacts</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Removal Success"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onRemoveError: Failed to get the contacts</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onRemoveError</span><span class="pun">(</span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Error = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><span class="pln">Find </span><a href="cordova_contacts_contacts.md.html#Contacts"><span class="pln">Contacts</span></a><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="Contact_android_2_x_quirks">Android 2.X Quirks</a>
@@ -531,24 +324,6 @@ contact.remove(onSuccess,onError);
 <ul>
 <li>
 <strong>categories:</strong>  This property is not support by Android 2.X devices, and will always be returned as <code>null</code>.</li>
-</ul>
-<h2>
-<a name="Contact_android_1_x_quirks">Android 1.X Quirks</a>
-</h2>
-
-<ul>
-<li>
-<strong>name:</strong> This property is not support by Android 1.X devices, and will always be returned as <code>null</code>.</li>
-<li>
-<strong>nickname:</strong> This property is not support by Android 1.X devices, and will always be returned as <code>null</code>.</li>
-<li>
-<strong>birthday:</strong> This property is not support by Android 1.X devices, and will always be returned as <code>null</code>.</li>
-<li>
-<strong>photos:</strong> This property is not support by Android 1.X devices, and will always be returned as <code>null</code>.</li>
-<li>
-<strong>categories:</strong>  This property is not support by Android 1.X devices, and will always be returned as <code>null</code>.</li>
-<li>
-<strong>urls:</strong>  This property is not support by Android 1.X devices, and will always be returned as <code>null</code>.</li>
 </ul>
 <h2>
 <a name="Contact_blackberry_webworks_os_5_0_and_higher_quirks">BlackBerry WebWorks (OS 5.0 and higher) Quirks</a>
@@ -584,13 +359,43 @@ contact.remove(onSuccess,onError);
 
 <ul>
 <li>
-<strong>displayName:</strong> This property is not supported by iOS and will be returned as <code>null</code> unless there is no <a href="cordova_contacts_contacts.md.html#ContactName">ContactName</a> specified.  If there is no <a href="cordova_contacts_contacts.md.html#ContactName">ContactName</a>, then composite name, <strong>nickame</strong> or "" is returned for <strong>displayName</strong>, respectively. </li>
+<strong>displayName:</strong> This property is not supported by iOS and will be returned as <code>null</code> unless there is no <a href="cordova_contacts_contacts.md.html#ContactName">ContactName</a> specified.  If there is no <a href="cordova_contacts_contacts.md.html#ContactName">ContactName</a>, then composite name, <strong>nickname</strong> or "" is returned for <strong>displayName</strong>, respectively. </li>
 <li>
 <strong>birthday:</strong> For input, this property must be provided as a JavaScript Date object. It is returned as a JavaScript Date object.</li>
 <li>
 <strong>photos:</strong> Returned Photo is stored in the application's temporary directory and a <a href="cordova_file_file.md.html#File">File</a> URL to photo is returned.  Contents of temporary folder is deleted when application exits. </li>
 <li>
 <strong>categories:</strong>  This property is not currently supported and will always be returned as <code>null</code>.</li>
+</ul>
+<h2>
+<a name="Contact_windows_phone_7_and_8_quirks">Windows Phone 7 and 8 Quirks</a>
+</h2>
+
+<ul>
+<li>
+<strong>displayName:</strong> When creating a contact, the value provided for the display name parameter differs from the display name retrieved when finding the contact. </li>
+<li>
+<strong>urls:</strong> When creating a contact, user inputs multiple web addresses in the url field and saves the contact. While pulling the information during the contact search url field do not <a href="cordova_splashscreen_splashscreen.md.html#show">show</a> up multiple web addresses</li>
+<li>
+<strong>phoneNumbers:</strong> <em>pref</em> is not supported, <em>type</em> is not supported in a <em>find</em> operation, only supports one phoneNumber of each <em>type</em>
+</li>
+<li>
+<strong>emails:</strong> <em>pref</em> is not supported, home and personal points to same email entry, supports only one entry for each <em>type</em>
+</li>
+<li>
+<strong>addresses:</strong> supports only <em>type</em> of work, home/personal, <em>type</em> home and personal points to same address entry, supports only one entry for each <em>type</em>
+</li>
+<li>
+<strong>organizations:</strong> Multiple <em>organizations</em> are not supported, does not support the attributes: <em>pref</em>, <em>type</em>, <em>department</em>
+</li>
+<li>
+<strong>note:</strong> This property is not supported, and will always be returned as <code>null</code>. </li>
+<li>
+<strong>ims:</strong> This property is not supported, and will always be returned as <code>null</code>. </li>
+<li>
+<strong>birthdays:</strong> This property is not supported, and will always be returned as <code>null</code>. </li>
+<li>
+<strong>categories:</strong> This property is not supported, and will always be returned as <code>null</code>. </li>
 </ul>
 <h2>
 <a name="Contact_bada_quirks">Bada Quirks</a>
@@ -657,96 +462,20 @@ contact.remove(onSuccess,onError);
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
 <li>Bada 1.2 &amp; 2.0</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="ContactAddress_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>// display the address information for all contacts
-function onSuccess(contacts) {
-    for (var i=0; i&lt;contacts.length; i++) {
-        for (var j=0; j&lt;contacts[i].addresses.length; j++) {
-            alert("Pref: " + contacts[i].addresses[j].pref + "\n" +
-                    "Type: " + contacts[i].addresses[j].type + "\n" +
-                    "Formatted: " + contacts[i].addresses[j].formatted + "\n" +
-                    "Street Address: "  + contacts[i].addresses[j].streetAddress + "\n" +
-                    "Locality: "  + contacts[i].addresses[j].locality + "\n" +
-                    "Region: "  + contacts[i].addresses[j].region + "\n" +
-                    "Postal Code: "  + contacts[i].addresses[j].postalCode + "\n" +
-                    "Country: "  + contacts[i].addresses[j].country);
-        }
-    }
-};
-
-function onError(<a href="cordova_contacts_contacts.md.html#contactError">contactError</a>) {
-    alert('onError!');
-};
-
-// find all contacts
-var options = new <a href="cordova_contacts_contacts.md.html#ContactFindOptions">ContactFindOptions</a>();
-options.filter="";
-var filter = ["displayName","addresses"];
-navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.find</a>(filter, onSuccess, onError, options);
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// display the address information for all contacts</span><span class="pln"><br></span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">contacts</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">contacts</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">&lt;</span><span class="pln">contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">addresses</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Pref: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">addresses</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">pref </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Type: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">addresses</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">type </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Formatted: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">addresses</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">formatted </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Street Address: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">addresses</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">streetAddress </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Locality: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">addresses</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">locality </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Region: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">addresses</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">region </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Postal Code: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">addresses</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">postalCode </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Country: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">addresses</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">country</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="com">// find all contacts</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactFindOptions"><span class="typ">ContactFindOptions</span></a><span class="pun">();</span><span class="pln"><br>options</span><span class="pun">.</span><span class="pln">filter</span><span class="pun">=</span><span class="str">""</span><span class="pun">;</span><span class="pln"> <br></span><span class="kwd">var</span><span class="pln"> filter </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"displayName"</span><span class="pun">,</span><span class="str">"addresses"</span><span class="pun">];</span><span class="pln"><br>navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.find"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">find</span></a><span class="pun">(</span><span class="pln">filter</span><span class="pun">,</span><span class="pln"> onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="ContactAddress_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_contacts_contacts.md.html#Contact">Contact</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        // find all contacts
-        var options = new <a href="cordova_contacts_contacts.md.html#ContactFindOptions">ContactFindOptions</a>();
-        options.filter="";
-        var filter = ["displayName","addresses"];
-        navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.find</a>(filter, onSuccess, onError, options);
-    }
-
-    // onSuccess: Get a snapshot of the current contacts
-    //
-    function onSuccess(contacts) {
-        // display the address information for all contacts
-        for (var i=0; i&lt;contacts.length; i++) {
-            for (var j=0; j&lt;contacts[i].addresses.length; j++) {
-                alert("Pref: " + contacts[i].addresses[j].pref + "\n" +
-                        "Type: " + contacts[i].addresses[j].type + "\n" +
-                        "Formatted: " + contacts[i].addresses[j].formatted + "\n" +
-                        "Street Address: "  + contacts[i].addresses[j].streetAddress + "\n" +
-                        "Locality: "  + contacts[i].addresses[j].locality + "\n" +
-                        "Region: "  + contacts[i].addresses[j].region + "\n" +
-                        "Postal Code: "  + contacts[i].addresses[j].postalCode + "\n" +
-                        "Country: "  + contacts[i].addresses[j].country);
-            }
-        }
-    };
-
-    // onError: Failed to get the contacts
-    //
-    function onError(<a href="cordova_contacts_contacts.md.html#contactError">contactError</a>) {
-        alert('onError!');
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;Find <a href="cordova_contacts_contacts.md.html#Contacts">Contacts</a>&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_contacts_contacts.md.html#Contact"><span class="pln">Contact</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// find all contacts</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactFindOptions"><span class="typ">ContactFindOptions</span></a><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; options</span><span class="pun">.</span><span class="pln">filter</span><span class="pun">=</span><span class="str">""</span><span class="pun">;</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> filter </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"displayName"</span><span class="pun">,</span><span class="str">"addresses"</span><span class="pun">];</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.find"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">find</span></a><span class="pun">(</span><span class="pln">filter</span><span class="pun">,</span><span class="pln"> onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSuccess: Get a snapshot of the current contacts</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">contacts</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// display the address information for all contacts</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">contacts</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">&lt;</span><span class="pln">contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">addresses</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Pref: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">addresses</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">pref </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Type: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">addresses</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">type </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Formatted: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">addresses</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">formatted </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Street Address: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">addresses</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">streetAddress </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Locality: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">addresses</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">locality </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Region: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">addresses</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">region </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Postal Code: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">addresses</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">postalCode </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Country: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">addresses</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">country</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onError: Failed to get the contacts</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><span class="pln">Find </span><a href="cordova_contacts_contacts.md.html#Contacts"><span class="pln">Contacts</span></a><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="ContactAddress_android_2_x_quirks">Android 2.X Quirks</a>
@@ -755,26 +484,6 @@ navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.fin
 <ul>
 <li>
 <strong>pref:</strong> This property is not supported by Android 2.X devices and will always return <code>false</code>.</li>
-</ul>
-<h2>
-<a name="ContactAddress_android_1_x_quirks">Android 1.X Quirks</a>
-</h2>
-
-<ul>
-<li>
-<strong>pref:</strong> This property is not supported by Android 1.X devices and will always return <code>false</code>.</li>
-<li>
-<strong>type:</strong> This property is not supported by Android 1.X devices and will always return <code>null</code>.</li>
-<li>
-<strong>streetAddress:</strong> This property is not support by Android 1.X devices, and will always return <code>null</code>.</li>
-<li>
-<strong>locality:</strong> This property is not support by Android 1.X devices, and will always return <code>null</code>.</li>
-<li>
-<strong>region:</strong> This property is not support by Android 1.X devices, and will always return <code>null</code>.</li>
-<li>
-<strong>postalCode:</strong> This property is not support by Android 1.X devices, and will always return <code>null</code>.</li>
-<li>
-<strong>country:</strong> This property is not support by Android 1.X devices, and will always return <code>null</code>.</li>
 </ul>
 <h2>
 <a name="ContactAddress_blackberry_webworks_os_5_0_and_higher_quirks">BlackBerry WebWorks (OS 5.0 and higher) Quirks</a>
@@ -855,91 +564,20 @@ navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.fin
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
 <li>Bada 1.2 &amp; 2.0</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="ContactField_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>// create a new contact
-var contact = navigator.<a href="cordova_contacts_contacts.md.html#contacts.create">contacts.create</a>();
-
-// store contact phone numbers in <a href="cordova_contacts_contacts.md.html#ContactField">ContactField</a>[]
-var phoneNumbers = [];
-phoneNumbers[0] = new <a href="cordova_contacts_contacts.md.html#ContactField">ContactField</a>('work', '212-555-1234', false);
-phoneNumbers[1] = new <a href="cordova_contacts_contacts.md.html#ContactField">ContactField</a>('mobile', '917-555-5432', true); // preferred number
-phoneNumbers[2] = new <a href="cordova_contacts_contacts.md.html#ContactField">ContactField</a>('home', '203-555-7890', false);
-contact.phoneNumbers = phoneNumbers;
-
-// save the contact
-contact.save();
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// create a new contact</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> contact </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.create"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">create</span></a><span class="pun">();</span><span class="pln"><br><br></span><span class="com">// store contact phone numbers in </span><a href="cordova_contacts_contacts.md.html#ContactField"><span class="com">ContactField</span></a><span class="com">[]</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> phoneNumbers </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[];</span><span class="pln"><br>phoneNumbers</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactField"><span class="typ">ContactField</span></a><span class="pun">(</span><span class="str">'work'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'212-555-1234'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br>phoneNumbers</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactField"><span class="typ">ContactField</span></a><span class="pun">(</span><span class="str">'mobile'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'917-555-5432'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">);</span><span class="pln"> </span><span class="com">// preferred number</span><span class="pln"><br>phoneNumbers</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactField"><span class="typ">ContactField</span></a><span class="pun">(</span><span class="str">'home'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'203-555-7890'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br>contact</span><span class="pun">.</span><span class="pln">phoneNumbers </span><span class="pun">=</span><span class="pln"> phoneNumbers</span><span class="pun">;</span><span class="pln"><br><br></span><span class="com">// save the contact</span><span class="pln"><br>contact</span><span class="pun">.</span><span class="pln">save</span><span class="pun">();</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="ContactField_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_contacts_contacts.md.html#Contact">Contact</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        // create a new contact
-        var contact = navigator.<a href="cordova_contacts_contacts.md.html#contacts.create">contacts.create</a>();
-
-        // store contact phone numbers in <a href="cordova_contacts_contacts.md.html#ContactField">ContactField</a>[]
-        var phoneNumbers = [];
-        phoneNumbers[0] = new <a href="cordova_contacts_contacts.md.html#ContactField">ContactField</a>('work', '212-555-1234', false);
-        phoneNumbers[1] = new <a href="cordova_contacts_contacts.md.html#ContactField">ContactField</a>('mobile', '917-555-5432', true); // preferred number
-        phoneNumbers[2] = new <a href="cordova_contacts_contacts.md.html#ContactField">ContactField</a>('home', '203-555-7890', false);
-        contact.phoneNumbers = phoneNumbers;
-
-        // save the contact
-        contact.save();
-
-        // search contacts, returning display name and phone numbers
-        var options = new <a href="cordova_contacts_contacts.md.html#ContactFindOptions">ContactFindOptions</a>();
-        options.filter="";
-        filter = ["displayName","phoneNumbers"];
-        navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.find</a>(filter, onSuccess, onError, options);
-    }
-
-    // onSuccess: Get a snapshot of the current contacts
-    //
-    function onSuccess(contacts) {
-        for (var i=0; i&lt;contacts.length; i++) {
-            // display phone numbers
-            for (var j=0; j&lt;contacts[i].phoneNumbers.length; j++) {
-                alert("Type: " + contacts[i].phoneNumbers[j].type + "\n" +
-                        "Value: "  + contacts[i].phoneNumbers[j].value + "\n" +
-                        "Preferred: "  + contacts[i].phoneNumbers[j].pref);
-            }
-        }
-    };
-
-    // onError: Failed to get the contacts
-    //
-    function onError(<a href="cordova_contacts_contacts.md.html#contactError">contactError</a>) {
-        alert('onError!');
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;Find <a href="cordova_contacts_contacts.md.html#Contacts">Contacts</a>&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_contacts_contacts.md.html#Contact"><span class="pln">Contact</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// create a new contact</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> contact </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.create"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">create</span></a><span class="pun">();</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// store contact phone numbers in </span><a href="cordova_contacts_contacts.md.html#ContactField"><span class="com">ContactField</span></a><span class="com">[]</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> phoneNumbers </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[];</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; phoneNumbers</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactField"><span class="typ">ContactField</span></a><span class="pun">(</span><span class="str">'work'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'212-555-1234'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; phoneNumbers</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactField"><span class="typ">ContactField</span></a><span class="pun">(</span><span class="str">'mobile'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'917-555-5432'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">);</span><span class="pln"> </span><span class="com">// preferred number</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; phoneNumbers</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactField"><span class="typ">ContactField</span></a><span class="pun">(</span><span class="str">'home'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'203-555-7890'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; contact</span><span class="pun">.</span><span class="pln">phoneNumbers </span><span class="pun">=</span><span class="pln"> phoneNumbers</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// save the contact</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; contact</span><span class="pun">.</span><span class="pln">save</span><span class="pun">();</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// search contacts, returning display name and phone numbers</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactFindOptions"><span class="typ">ContactFindOptions</span></a><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; options</span><span class="pun">.</span><span class="pln">filter</span><span class="pun">=</span><span class="str">""</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; filter </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"displayName"</span><span class="pun">,</span><span class="str">"phoneNumbers"</span><span class="pun">];</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.find"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">find</span></a><span class="pun">(</span><span class="pln">filter</span><span class="pun">,</span><span class="pln"> onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSuccess: Get a snapshot of the current contacts</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">contacts</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">contacts</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// display phone numbers</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">&lt;</span><span class="pln">contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">phoneNumbers</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Type: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">phoneNumbers</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">type </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Value: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">phoneNumbers</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">value </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Preferred: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">phoneNumbers</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">pref</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onError: Failed to get the contacts</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><span class="pln">Find </span><a href="cordova_contacts_contacts.md.html#Contacts"><span class="pln">Contacts</span></a><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="ContactField_android_quirks">Android Quirks</a>
@@ -1001,84 +639,20 @@ contact.save();
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
 <li>Bada 1.2 &amp; 2.0</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="ContactFindOptions_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>// success callback
-function onSuccess(contacts) {
-    for (var i=0; i&lt;contacts.length; i++) {
-        alert(contacts[i].displayName);
-    }
-};
-
-// error callback
-function onError(<a href="cordova_contacts_contacts.md.html#contactError">contactError</a>) {
-    alert('onError!');
-};
-
-// specify contact search criteria
-var options = new <a href="cordova_contacts_contacts.md.html#ContactFindOptions">ContactFindOptions</a>();
-options.filter="";          // empty search string returns all contacts
-options.multiple=true;      // return multiple results
-filter = ["displayName"];   // return contact.displayName field
-
-// find contacts
-navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.find</a>(filter, onSuccess, onError, options);
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// success callback</span><span class="pln"><br></span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">contacts</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">contacts</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="pln">contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">displayName</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="com">// error callback</span><span class="pln"><br></span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="com">// specify contact search criteria</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactFindOptions"><span class="typ">ContactFindOptions</span></a><span class="pun">();</span><span class="pln"><br>options</span><span class="pun">.</span><span class="pln">filter</span><span class="pun">=</span><span class="str">""</span><span class="pun">;</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// empty search string returns all contacts</span><span class="pln"><br>options</span><span class="pun">.</span><span class="pln">multiple</span><span class="pun">=</span><span class="kwd">true</span><span class="pun">;</span><span class="pln"> &nbsp; &nbsp; &nbsp;</span><span class="com">// return multiple results</span><span class="pln"><br>filter </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"displayName"</span><span class="pun">];</span><span class="pln"> &nbsp; </span><span class="com">// return contact.displayName field</span><span class="pln"><br><br></span><span class="com">// find contacts</span><span class="pln"><br>navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.find"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">find</span></a><span class="pun">(</span><span class="pln">filter</span><span class="pun">,</span><span class="pln"> onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="ContactFindOptions_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_contacts_contacts.md.html#Contact">Contact</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        // specify contact search criteria
-        var options = new <a href="cordova_contacts_contacts.md.html#ContactFindOptions">ContactFindOptions</a>();
-        options.filter="";          // empty search string returns all contacts
-        options.multiple=true;      // return multiple results
-        filter = ["displayName"];   // return contact.displayName field
-
-        // find contacts
-        navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.find</a>(filter, onSuccess, onError, options);
-    }
-
-    // onSuccess: Get a snapshot of the current contacts
-    //
-    function onSuccess(contacts) {
-        for (var i=0; i&lt;contacts.length; i++) {
-            alert(contacts[i].displayName);
-        }
-    };
-
-    // onError: Failed to get the contacts
-    //
-    function onError(<a href="cordova_contacts_contacts.md.html#contactError">contactError</a>) {
-        alert('onError!');
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;Find <a href="cordova_contacts_contacts.md.html#Contacts">Contacts</a>&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_contacts_contacts.md.html#Contact"><span class="pln">Contact</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// specify contact search criteria</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactFindOptions"><span class="typ">ContactFindOptions</span></a><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; options</span><span class="pun">.</span><span class="pln">filter</span><span class="pun">=</span><span class="str">""</span><span class="pun">;</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// empty search string returns all contacts</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; options</span><span class="pun">.</span><span class="pln">multiple</span><span class="pun">=</span><span class="kwd">true</span><span class="pun">;</span><span class="pln"> &nbsp; &nbsp; &nbsp;</span><span class="com">// return multiple results</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; filter </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"displayName"</span><span class="pun">];</span><span class="pln"> &nbsp; </span><span class="com">// return contact.displayName field</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// find contacts</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.find"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">find</span></a><span class="pun">(</span><span class="pln">filter</span><span class="pun">,</span><span class="pln"> onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSuccess: Get a snapshot of the current contacts</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">contacts</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">contacts</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="pln">contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">displayName</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onError: Failed to get the contacts</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><span class="pln">Find </span><a href="cordova_contacts_contacts.md.html#Contacts"><span class="pln">Contacts</span></a><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="ContactFindOptions_bada_quirks">Bada Quirks</a>
@@ -1130,84 +704,20 @@ navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.fin
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
 <li>Bada 1.2 &amp; 2.0</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="ContactName_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function onSuccess(contacts) {
-    for (var i=0; i&lt;contacts.length; i++) {
-        alert("Formatted: " + contacts[i].name.formatted + "\n" +
-                "Family Name: "  + contacts[i].name.familyName + "\n" +
-                "Given Name: "  + contacts[i].name.givenName + "\n" +
-                "Middle Name: "  + contacts[i].name.middleName + "\n" +
-                "Suffix: "  + contacts[i].name.honorificSuffix + "\n" +
-                "Prefix: "  + contacts[i].name.honorificSuffix);
-    }
-};
-
-function onError(<a href="cordova_contacts_contacts.md.html#contactError">contactError</a>) {
-    alert('onError!');
-};
-
-var options = new <a href="cordova_contacts_contacts.md.html#ContactFindOptions">ContactFindOptions</a>();
-options.filter="";
-filter = ["displayName","name"];
-navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.find</a>(filter, onSuccess, onError, options);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">contacts</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">contacts</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Formatted: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">name</span><span class="pun">.</span><span class="pln">formatted </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Family Name: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">name</span><span class="pun">.</span><span class="pln">familyName </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Given Name: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">name</span><span class="pun">.</span><span class="pln">givenName </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Middle Name: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">name</span><span class="pun">.</span><span class="pln">middleName </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Suffix: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">name</span><span class="pun">.</span><span class="pln">honorificSuffix </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Prefix: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">name</span><span class="pun">.</span><span class="pln">honorificSuffix</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactFindOptions"><span class="typ">ContactFindOptions</span></a><span class="pun">();</span><span class="pln"><br>options</span><span class="pun">.</span><span class="pln">filter</span><span class="pun">=</span><span class="str">""</span><span class="pun">;</span><span class="pln"><br>filter </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"displayName"</span><span class="pun">,</span><span class="str">"name"</span><span class="pun">];</span><span class="pln"><br>navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.find"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">find</span></a><span class="pun">(</span><span class="pln">filter</span><span class="pun">,</span><span class="pln"> onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="ContactName_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_contacts_contacts.md.html#Contact">Contact</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        var options = new <a href="cordova_contacts_contacts.md.html#ContactFindOptions">ContactFindOptions</a>();
-        options.filter="";
-        filter = ["displayName","name"];
-        navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.find</a>(filter, onSuccess, onError, options);
-    }
-
-    // onSuccess: Get a snapshot of the current contacts
-    //
-    function onSuccess(contacts) {
-        for (var i=0; i&lt;contacts.length; i++) {
-            alert("Formatted: " + contacts[i].name.formatted + "\n" +
-                    "Family Name: "  + contacts[i].name.familyName + "\n" +
-                    "Given Name: "  + contacts[i].name.givenName + "\n" +
-                    "Middle Name: "  + contacts[i].name.middleName + "\n" +
-                    "Suffix: "  + contacts[i].name.honorificSuffix + "\n" +
-                    "Prefix: "  + contacts[i].name.honorificPrefix);
-        }
-    };
-
-    // onError: Failed to get the contacts
-    //
-    function onError(<a href="cordova_contacts_contacts.md.html#contactError">contactError</a>) {
-        alert('onError!');
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;Find <a href="cordova_contacts_contacts.md.html#Contacts">Contacts</a>&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_contacts_contacts.md.html#Contact"><span class="pln">Contact</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactFindOptions"><span class="typ">ContactFindOptions</span></a><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; options</span><span class="pun">.</span><span class="pln">filter</span><span class="pun">=</span><span class="str">""</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; filter </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"displayName"</span><span class="pun">,</span><span class="str">"name"</span><span class="pun">];</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.find"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">find</span></a><span class="pun">(</span><span class="pln">filter</span><span class="pun">,</span><span class="pln"> onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSuccess: Get a snapshot of the current contacts</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">contacts</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">contacts</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Formatted: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">name</span><span class="pun">.</span><span class="pln">formatted </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Family Name: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">name</span><span class="pun">.</span><span class="pln">familyName </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Given Name: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">name</span><span class="pun">.</span><span class="pln">givenName </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Middle Name: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">name</span><span class="pun">.</span><span class="pln">middleName </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Suffix: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">name</span><span class="pun">.</span><span class="pln">honorificSuffix </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Prefix: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">name</span><span class="pun">.</span><span class="pln">honorificPrefix</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onError: Failed to get the contacts</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><span class="pln">Find </span><a href="cordova_contacts_contacts.md.html#Contacts"><span class="pln">Contacts</span></a><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="ContactName_android_quirks">Android Quirks</a>
@@ -1296,86 +806,20 @@ _ <strong>honorificPrefix:</strong> Property not supported</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
 <li>Bada 1.2</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="ContactOrganization_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function onSuccess(contacts) {
-    for (var i=0; i&lt;contacts.length; i++) {
-        for (var j=0; j&lt;contacts[i].organizations.length; j++) {
-            alert("Pref: " + contacts[i].organizations[j].pref + "\n" +
-                    "Type: " + contacts[i].organizations[j].type + "\n" +
-                    "Name: " + contacts[i].organizations[j].name + "\n" +
-                    "Department: "  + contacts[i].organizations[j].department + "\n" +
-                    "Title: "  + contacts[i].organizations[j].title);
-        }
-    }
-};
-
-function onError(<a href="cordova_contacts_contacts.md.html#contactError">contactError</a>) {
-    alert('onError!');
-};
-
-var options = new <a href="cordova_contacts_contacts.md.html#ContactFindOptions">ContactFindOptions</a>();
-options.filter="";
-filter = ["displayName","organizations"];
-navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.find</a>(filter, onSuccess, onError, options);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">contacts</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">contacts</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">&lt;</span><span class="pln">contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">organizations</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Pref: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">organizations</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">pref </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Type: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">organizations</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">type </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Name: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">organizations</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">name </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Department: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">organizations</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">department </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Title: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">organizations</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">title</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactFindOptions"><span class="typ">ContactFindOptions</span></a><span class="pun">();</span><span class="pln"><br>options</span><span class="pun">.</span><span class="pln">filter</span><span class="pun">=</span><span class="str">""</span><span class="pun">;</span><span class="pln"><br>filter </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"displayName"</span><span class="pun">,</span><span class="str">"organizations"</span><span class="pun">];</span><span class="pln"><br>navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.find"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">find</span></a><span class="pun">(</span><span class="pln">filter</span><span class="pun">,</span><span class="pln"> onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="ContactOrganization_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_contacts_contacts.md.html#Contact">Contact</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        var options = new <a href="cordova_contacts_contacts.md.html#ContactFindOptions">ContactFindOptions</a>();
-        options.filter="";
-        filter = ["displayName","organizations"];
-        navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.find</a>(filter, onSuccess, onError, options);
-    }
-
-    // onSuccess: Get a snapshot of the current contacts
-    //
-    function onSuccess(contacts) {
-        for (var i=0; i&lt;contacts.length; i++) {
-            for (var j=0; j&lt;contacts[i].organizations.length; j++) {
-                alert("Pref: " + contacts[i].organizations[j].pref + "\n" +
-                        "Type: " + contacts[i].organizations[j].type + "\n" +
-                        "Name: " + contacts[i].organizations[j].name + "\n" +
-                        "Department: "  + contacts[i].organizations[j].department + "\n" +
-                        "Title: "  + contacts[i].organizations[j].title);
-            }
-        }
-    };
-
-    // onError: Failed to get the contacts
-    //
-    function onError(<a href="cordova_contacts_contacts.md.html#contactError">contactError</a>) {
-        alert('onError!');
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;Find <a href="cordova_contacts_contacts.md.html#Contacts">Contacts</a>&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_contacts_contacts.md.html#Contact"><span class="pln">Contact</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#ContactFindOptions"><span class="typ">ContactFindOptions</span></a><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; options</span><span class="pun">.</span><span class="pln">filter</span><span class="pun">=</span><span class="str">""</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; filter </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"displayName"</span><span class="pun">,</span><span class="str">"organizations"</span><span class="pun">];</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_contacts_contacts.md.html#contacts.find"><span class="pln">contacts</span><span class="pun">.</span><span class="pln">find</span></a><span class="pun">(</span><span class="pln">filter</span><span class="pun">,</span><span class="pln"> onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSuccess: Get a snapshot of the current contacts</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">contacts</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">contacts</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">&lt;</span><span class="pln">contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">organizations</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Pref: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">organizations</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">pref </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Type: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">organizations</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">type </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Name: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">organizations</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">name </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Department: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">organizations</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">department </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\n"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">"Title: "</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">organizations</span><span class="pun">[</span><span class="pln">j</span><span class="pun">].</span><span class="pln">title</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onError: Failed to get the contacts</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><a href="cordova_contacts_contacts.md.html#contactError"><span class="pln">contactError</span></a><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><span class="pln">Find </span><a href="cordova_contacts_contacts.md.html#Contacts"><span class="pln">Contacts</span></a><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="ContactOrganization_android_2_x_quirks">Android 2.X Quirks</a>
@@ -1384,18 +828,6 @@ navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.fin
 <ul>
 <li>
 <strong>pref:</strong> This property is not supported by Android 2.X devices and will always return <code>false</code>.</li>
-</ul>
-<h2>
-<a name="ContactOrganization_android_1_x_quirks">Android 1.X Quirks</a>
-</h2>
-
-<ul>
-<li>
-<strong>pref:</strong> This property is not supported by Android 1.X devices and will always return <code>false</code>.</li>
-<li>
-<strong>type:</strong> This property is not supported by Android 1.X devices and will always return <code>null</code>.</li>
-<li>
-<strong>title:</strong> This property is not supported by Android 1.X devices, and will always be returned as <code>null</code>. </li>
 </ul>
 <h2>
 <a name="ContactOrganization_blackberry_webworks_os_5_0_and_higher_quirks">BlackBerry WebWorks (OS 5.0 and higher) Quirks</a>
@@ -1474,10 +906,7 @@ navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.fin
 
 <p>Success callback function that provides the <code><a href="cordova_contacts_contacts.md.html#Contact">Contact</a></code> array resulting from a <code><a href="cordova_contacts_contacts.md.html#contacts.find">contacts.find</a></code> operation.</p>
 
-<pre class="prettyprint"><code>function(contacts) {
-    // Do something
-}
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pun">(</span><span class="pln">contacts</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// Do something</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="contactSuccess_parameters">Parameters</a>
@@ -1491,40 +920,28 @@ navigator.<a href="cordova_contacts_contacts.md.html#contacts.find">contacts.fin
 <a name="contactSuccess_example">Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function <a href="cordova_contacts_contacts.md.html#contactSuccess">contactSuccess</a>(contacts) {
-    for (var i=0; i&lt;contacts.length; i++) {
-        console.log("Display Name = " + contacts[i].displayName;
-}
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> </span><a href="cordova_contacts_contacts.md.html#contactSuccess"><span class="pln">contactSuccess</span></a><span class="pun">(</span><span class="pln">contacts</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">contacts</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Display Name = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> contacts</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">displayName</span><span class="pun">;</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="contactError">contactError</a></h1>
 
 <p>Error callback function for contact functions.</p>
 
-<pre class="prettyprint"><code>function(error) {
-    // Handle the error
-}
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// Handle the error</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="contactFields">contactFields</a></h1>
 
 <p>Required parameter of the <code><a href="cordova_contacts_contacts.md.html#contacts.find">contacts.find</a></code> method.  Use this parameter to specify which fields should be included in the <code><a href="cordova_contacts_contacts.md.html#Contact">Contact</a></code> objects resulting from a find operation.</p>
 
-<pre class="prettyprint"><code>["name", "phoneNumbers", "emails"]
-</code></pre>
+<pre class="prettyprint"><code><span class="pun">[</span><span class="str">"name"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"phoneNumbers"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"emails"</span><span class="pun">]</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="contactFindOptions">contactFindOptions</a></h1>
 
 <p>Optional parameter of the <code><a href="cordova_contacts_contacts.md.html#contacts.find">contacts.find</a></code> method.  Use this parameter to filter the contacts returned from the contacts database.</p>
 
-<pre class="prettyprint"><code>{
-    filter: "",
-    multiple: true,
-};
-</code></pre>
+<pre class="prettyprint"><code><span class="pun">{</span><span class="pln"> <br>&nbsp; &nbsp; filter</span><span class="pun">:</span><span class="pln"> </span><span class="str">""</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; multiple</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="contactFindOptions_options">Options</a>

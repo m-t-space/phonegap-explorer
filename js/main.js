@@ -20,7 +20,7 @@ var AppRouter = Backbone.Router.extend({
             {id: 8, name: "Events", view: "EventsView", description: "Handle app life cycle events"},
             {id: 9, name: "File", view: "FileView", description: "Read and write local files"},
             {id: 10, name: "Geolocation", view: "GeolocationView", description: "Track your location"},
-            {id: 11, name: "Google Maps", view: "GoogleMapsView", description: "Track your location on a map"},
+            //{id: 11, name: "Google Maps", view: "GoogleMapsView", description: "Track your location on a map"},
             {id: 12, name: "Notification", view: "NotificationView", description: "Display native alerts"},
             {id: 13, name: "Database", view: "DatabaseView", description: "Access a local database"}
         ]);
@@ -90,7 +90,7 @@ var AppRouter = Backbone.Router.extend({
 templateLoader.load([   'HeaderView',
                         'SampleListItemView',
                         'GeolocationView',
-                        'GoogleMapsView',
+                        //'GoogleMapsView',
                         'CameraView',
                         'DeviceView',
                         'AccelerometerView',

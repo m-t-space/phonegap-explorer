@@ -29,14 +29,14 @@
 </head>
 <body>
         <div id="wrapper">
-            <div id="content">
-                <h1><a name="Connection">Connection</a></h1>
+<div id="content">
+				<h1><a name="Connection">Connection</a></h1>
 
 <blockquote>
   <p>The <code>connection</code> object gives access to the device's cellular and wifi connection information.</p>
 </blockquote>
 
-<p>This object is accessed under the <code>navigator.network</code> interface.</p>
+<p>This object is exposed as <code>navigator.connection</code>.</p>
 
 <h2>
 <a name="Connection_properties">Properties</a>
@@ -63,6 +63,8 @@
 <li>
 <a href="cordova_connection_connection.md.html#Connection">Connection</a>.CELL_4G</li>
 <li>
+<a href="cordova_connection_connection.md.html#Connection">Connection</a>.CELL</li>
+<li>
 <a href="cordova_connection_connection.md.html#Connection">Connection</a>.NONE</li>
 </ul>
 <h2>
@@ -71,58 +73,49 @@
 
 <h3>Android</h3>
 
-<h4>app/res/xml/plugins.xml</h4>
+<h4>app/res/xml/config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"NetworkStatus"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.NetworkManager"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h4>app/AndroidManifest.xml</h4>
 
-<pre class="prettyprint"><code>&lt;uses-permission android:name="android.permission.INTERNET" /&gt;
-&lt;uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /&gt;
-&lt;uses-permission android:name="android.permission.READ_PHONE_STATE" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.INTERNET"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.ACCESS_NETWORK_STATE"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.READ_PHONE_STATE"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>Bada</h3>
 
-<pre class="prettyprint"><code>&lt;Privilege&gt;
-    &lt;Name&gt;SYSTEM_SERVICE&lt;/Name&gt;
-&lt;/Privilege&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;Privilege&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;Name&gt;</span><span class="pln">SYSTEM_SERVICE</span><span class="tag">&lt;/Name&gt;</span><span class="pln"><br></span><span class="tag">&lt;/Privilege&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>BlackBerry WebWorks</h3>
 
 <h4>www/plugins.xml</h4>
 
-<pre class="prettyprint"><code>&lt;plugin name="Network Status" value="org.apache.cordova.network.Network" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Network Status"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.network.Network"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>iOS</h3>
 
-<h4>App/Supporting Files/Cordova.plist</h4>
+<h4>config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;key&gt;Plugins&lt;/key&gt;
-&lt;dict&gt;
-    &lt;key&gt;NetworkStatus&lt;/key&gt;
-    &lt;string&gt;CDVConnection&lt;/string&gt;
-&lt;/dict&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"NetworkStatus"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"CDVConnection"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>webOS</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <h3>Windows Phone</h3>
 
 <h4>Properties/WPAppManifest.xml</h4>
 
-<pre class="prettyprint"><code>&lt;Capabilities&gt;
-    &lt;Capability Name="ID_CAP_NETWORKING" /&gt;
-&lt;/Capabilities&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;Capabilities&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;Capability</span><span class="pln"> </span><span class="atn">Name</span><span class="pun">=</span><span class="atv">"ID_CAP_NETWORKING"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;/Capabilities&gt;</span><span class="pln"><br></span></code></pre>
 
 <p>Reference: <a class="external" href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
+
+<h3>Tizen</h3>
+
+<h4>config.xml</h4>
+
+<pre class="prettyprint"><code><span class="tag">&lt;feature</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"http://tizen.org/api/systeminfo"</span><span class="pln"> </span><span class="atn">required</span><span class="pun">=</span><span class="atv">"true"</span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
+
+<p>Reference: <a class="external" href="https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures">Application Manifest for Tizen Web Application</a></p>
 
 <hr>
 <h1><a name="connection.type">connection.type</a></h1>
@@ -143,76 +136,33 @@
 <li>iOS</li>
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 2.x</li>
 <li>webOS</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="connection.type_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function checkConnection() {
-    var networkState = navigator.network.<a href="cordova_connection_connection.md.html#connection.type">connection.type</a>;
-
-    var states = {};
-    states[<a href="cordova_connection_connection.md.html#Connection">Connection</a>.UNKNOWN]  = 'Unknown connection';
-    states[<a href="cordova_connection_connection.md.html#Connection">Connection</a>.ETHERNET] = 'Ethernet connection';
-    states[<a href="cordova_connection_connection.md.html#Connection">Connection</a>.WIFI]     = 'WiFi connection';
-    states[<a href="cordova_connection_connection.md.html#Connection">Connection</a>.CELL_2G]  = 'Cell 2G connection';
-    states[<a href="cordova_connection_connection.md.html#Connection">Connection</a>.CELL_3G]  = 'Cell 3G connection';
-    states[<a href="cordova_connection_connection.md.html#Connection">Connection</a>.CELL_4G]  = 'Cell 4G connection';
-    states[<a href="cordova_connection_connection.md.html#Connection">Connection</a>.NONE]     = 'No network connection';
-
-    alert('<a href="cordova_connection_connection.md.html#Connection">Connection</a> type: ' + states[networkState]);
-}
-
-checkConnection();
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> checkConnection</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> networkState </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_connection_connection.md.html#connection.type"><span class="pln">connection</span><span class="pun">.</span><span class="pln">type</span></a><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> states </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{};</span><span class="pln"><br>&nbsp; &nbsp; states</span><span class="pun">[</span><a href="cordova_connection_connection.md.html#Connection"><span class="typ">Connection</span></a><span class="pun">.</span><span class="pln">UNKNOWN</span><span class="pun">]</span><span class="pln"> &nbsp;</span><span class="pun">=</span><span class="pln"> </span><span class="str">'Unknown connection'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; states</span><span class="pun">[</span><a href="cordova_connection_connection.md.html#Connection"><span class="typ">Connection</span></a><span class="pun">.</span><span class="pln">ETHERNET</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">'Ethernet connection'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; states</span><span class="pun">[</span><a href="cordova_connection_connection.md.html#Connection"><span class="typ">Connection</span></a><span class="pun">.</span><span class="pln">WIFI</span><span class="pun">]</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">=</span><span class="pln"> </span><span class="str">'WiFi connection'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; states</span><span class="pun">[</span><a href="cordova_connection_connection.md.html#Connection"><span class="typ">Connection</span></a><span class="pun">.</span><span class="pln">CELL_2G</span><span class="pun">]</span><span class="pln"> &nbsp;</span><span class="pun">=</span><span class="pln"> </span><span class="str">'Cell 2G connection'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; states</span><span class="pun">[</span><a href="cordova_connection_connection.md.html#Connection"><span class="typ">Connection</span></a><span class="pun">.</span><span class="pln">CELL_3G</span><span class="pun">]</span><span class="pln"> &nbsp;</span><span class="pun">=</span><span class="pln"> </span><span class="str">'Cell 3G connection'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; states</span><span class="pun">[</span><a href="cordova_connection_connection.md.html#Connection"><span class="typ">Connection</span></a><span class="pun">.</span><span class="pln">CELL_4G</span><span class="pun">]</span><span class="pln"> &nbsp;</span><span class="pun">=</span><span class="pln"> </span><span class="str">'Cell 4G connection'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; states</span><span class="pun">[</span><a href="cordova_connection_connection.md.html#Connection"><span class="typ">Connection</span></a><span class="pun">.</span><span class="pln">CELL</span><span class="pun">]</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">=</span><span class="pln"> </span><span class="str">'Cell generic connection'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; states</span><span class="pun">[</span><a href="cordova_connection_connection.md.html#Connection"><span class="typ">Connection</span></a><span class="pun">.</span><span class="pln">NONE</span><span class="pun">]</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">=</span><span class="pln"> </span><span class="str">'No network connection'</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'</span><a href="cordova_connection_connection.md.html#Connection"><span class="str">Connection</span></a><span class="str"> type: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> states</span><span class="pun">[</span><span class="pln">networkState</span><span class="pun">]);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br>checkConnection</span><span class="pun">();</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="connection.type_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;navigator.network.<a href="cordova_connection_connection.md.html#connection.type">connection.type</a> Example&lt;/title&gt;
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><span class="pln">navigator.</span><a href="cordova_connection_connection.md.html#connection.type"><span class="pln">connection.type</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// </span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is loaded and it is now safe to make calls Cordova methods</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; checkConnection</span><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> checkConnection</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> networkState </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_connection_connection.md.html#connection.type"><span class="pln">connection</span><span class="pun">.</span><span class="pln">type</span></a><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> states </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{};</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; states</span><span class="pun">[</span><a href="cordova_connection_connection.md.html#Connection"><span class="typ">Connection</span></a><span class="pun">.</span><span class="pln">UNKNOWN</span><span class="pun">]</span><span class="pln"> &nbsp;</span><span class="pun">=</span><span class="pln"> </span><span class="str">'Unknown connection'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; states</span><span class="pun">[</span><a href="cordova_connection_connection.md.html#Connection"><span class="typ">Connection</span></a><span class="pun">.</span><span class="pln">ETHERNET</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">'Ethernet connection'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; states</span><span class="pun">[</span><a href="cordova_connection_connection.md.html#Connection"><span class="typ">Connection</span></a><span class="pun">.</span><span class="pln">WIFI</span><span class="pun">]</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">=</span><span class="pln"> </span><span class="str">'WiFi connection'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; states</span><span class="pun">[</span><a href="cordova_connection_connection.md.html#Connection"><span class="typ">Connection</span></a><span class="pun">.</span><span class="pln">CELL_2G</span><span class="pun">]</span><span class="pln"> &nbsp;</span><span class="pun">=</span><span class="pln"> </span><span class="str">'Cell 2G connection'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; states</span><span class="pun">[</span><a href="cordova_connection_connection.md.html#Connection"><span class="typ">Connection</span></a><span class="pun">.</span><span class="pln">CELL_3G</span><span class="pun">]</span><span class="pln"> &nbsp;</span><span class="pun">=</span><span class="pln"> </span><span class="str">'Cell 3G connection'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; states</span><span class="pun">[</span><a href="cordova_connection_connection.md.html#Connection"><span class="typ">Connection</span></a><span class="pun">.</span><span class="pln">CELL_4G</span><span class="pun">]</span><span class="pln"> &nbsp;</span><span class="pun">=</span><span class="pln"> </span><span class="str">'Cell 4G connection'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; states</span><span class="pun">[</span><a href="cordova_connection_connection.md.html#Connection"><span class="typ">Connection</span></a><span class="pun">.</span><span class="pln">CELL</span><span class="pun">]</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">=</span><span class="pln"> </span><span class="str">'Cell generic connection'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; states</span><span class="pun">[</span><a href="cordova_connection_connection.md.html#Connection"><span class="typ">Connection</span></a><span class="pun">.</span><span class="pln">NONE</span><span class="pun">]</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">=</span><span class="pln"> </span><span class="str">'No network connection'</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'</span><a href="cordova_connection_connection.md.html#Connection"><span class="str">Connection</span></a><span class="str"> type: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> states</span><span class="pun">[</span><span class="pln">networkState</span><span class="pun">]);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><span class="pln">A dialog box will report the network state.</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
+<h2>
+<a name="connection.type_api_change">API Change</a>
+</h2>
 
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
+<p>Before Cordova 2.3.0, the <a href="cordova_connection_connection.md.html#Connection">Connection</a> object existed at: <code>navigator.network.connection</code>.</p>
 
-    // Cordova is loaded and it is now safe to make calls Cordova methods
-    //
-    function onDeviceReady() {
-        checkConnection();
-    }
+<p>To match the spec, this was changed to <code>navigator.connection</code> in 2.3.0.</p>
 
-    function checkConnection() {
-        var networkState = navigator.network.<a href="cordova_connection_connection.md.html#connection.type">connection.type</a>;
-
-        var states = {};
-        states[<a href="cordova_connection_connection.md.html#Connection">Connection</a>.UNKNOWN]  = 'Unknown connection';
-        states[<a href="cordova_connection_connection.md.html#Connection">Connection</a>.ETHERNET] = 'Ethernet connection';
-        states[<a href="cordova_connection_connection.md.html#Connection">Connection</a>.WIFI]     = 'WiFi connection';
-        states[<a href="cordova_connection_connection.md.html#Connection">Connection</a>.CELL_2G]  = 'Cell 2G connection';
-        states[<a href="cordova_connection_connection.md.html#Connection">Connection</a>.CELL_3G]  = 'Cell 3G connection';
-        states[<a href="cordova_connection_connection.md.html#Connection">Connection</a>.CELL_4G]  = 'Cell 4G connection';
-        states[<a href="cordova_connection_connection.md.html#Connection">Connection</a>.NONE]     = 'No network connection';
-
-        alert('<a href="cordova_connection_connection.md.html#Connection">Connection</a> type: ' + states[networkState]);
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;A dialog box will report the network state.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<p><code>navigator.network.connection</code> still exists, but is now deprecated and will be removed in a future release.</p>
 
 <h2>
 <a name="connection.type_ios_quirks">iOS Quirks</a>
@@ -222,7 +172,7 @@ checkConnection();
 <li>iOS cannot detect the type of cellular network connection.
 <ul>
 <li>
-<code>navigator.network.<a href="cordova_connection_connection.md.html#connection.type">connection.type</a></code> is set to <code><a href="cordova_connection_connection.md.html#Connection">Connection</a>.CELL_2G</code> for all cellular data.</li>
+<code>navigator.<a href="cordova_connection_connection.md.html#connection.type">connection.type</a></code> is set to <code><a href="cordova_connection_connection.md.html#Connection">Connection</a>.CELL_2G</code> for all cellular data.  This is deprecated as of 2.6.0 and will be changed to return <code><a href="cordova_connection_connection.md.html#Connection">Connection</a>.CELL</code> in a future release.</li>
 </ul>
 </li>
 </ul>
@@ -234,7 +184,7 @@ checkConnection();
 <li>Bada can only detect a WiFi or cellular connection.
 <ul>
 <li>
-<code>navigator.network.<a href="cordova_connection_connection.md.html#connection.type">connection.type</a></code> is set to <code><a href="cordova_connection_connection.md.html#Connection">Connection</a>.CELL_2G</code> for all cellular data.</li>
+<code>navigator.<a href="cordova_connection_connection.md.html#connection.type">connection.type</a></code> is set to <code><a href="cordova_connection_connection.md.html#Connection">Connection</a>.CELL_2G</code> for all cellular data.</li>
 </ul>
 </li>
 </ul>
@@ -250,7 +200,25 @@ checkConnection();
 </h2>
 
 <ul>
-<li>Windows Phone Emulator always detects <code>navigator.network.<a href="cordova_connection_connection.md.html#connection.type">connection.type</a></code> as <code><a href="cordova_connection_connection.md.html#Connection">Connection</a>.UNKNOWN</code>.</li>
+<li>When running in the emulator, always detects <code>navigator.<a href="cordova_connection_connection.md.html#connection.type">connection.type</a></code> as <code><a href="cordova_connection_connection.md.html#Connection">Connection</a>.UNKNOWN</code>.</li>
+<li>Windows Phone cannot detect the type of cellular network connection.
+<ul>
+<li>
+<code>navigator.<a href="cordova_connection_connection.md.html#connection.type">connection.type</a></code> is set to <code><a href="cordova_connection_connection.md.html#Connection">Connection</a>.CELL</code> for all cellular data.</li>
+</ul>
+</li>
+</ul>
+<h2>
+<a name="connection.type_tizen_quirks">Tizen Quirks</a>
+</h2>
+
+<ul>
+<li>Tizen can only detect a WiFi or cellular connection.
+<ul>
+<li>
+<code>navigator.<a href="cordova_connection_connection.md.html#connection.type">connection.type</a></code> is set to <code><a href="cordova_connection_connection.md.html#Connection">Connection</a>.CELL_2G</code> for all cellular data.</li>
+</ul>
+</li>
 </ul>
 </div>
         </div>

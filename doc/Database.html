@@ -29,8 +29,8 @@
 </head>
 <body>
         <div id="wrapper">
-            <div id="content">
-                <h1><a name="Storage">Storage</a></h1>
+<div id="content">
+				<h1><a name="Storage">Storage</a></h1>
 
 <blockquote>
   <p>Provides access to the devices storage options.</p>
@@ -63,7 +63,7 @@
 <li><a href="cordova_storage_storage.md.html#Database">Database</a></li>
 <li><a href="cordova_storage_storage.md.html#SQLTransaction">SQLTransaction</a></li>
 <li><a href="cordova_storage_storage.md.html#SQLResultSet">SQLResultSet</a></li>
-<li><a href="cordova_storage_storage.md.html#SQLResultSetList">SQLResultSetList</a></li>
+<li><a href="cordova_storage_storage.md.html#SQLResultSetRowList">SQLResultSetRowList</a></li>
 <li><a href="cordova_storage_storage.md.html#SQLError">SQLError</a></li>
 <li><a href="cordova_storage_storage.md.html#localStorage">localStorage</a></li>
 </ul>
@@ -73,45 +73,42 @@
 
 <h3>Android</h3>
 
-<h4>app/res/xml/plugins.xml</h4>
+<h4>app/res/xml/config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;plugin name="<a href="cordova_storage_storage.md.html#Storage">Storage</a>" value="org.apache.cordova.<a href="cordova_storage_storage.md.html#Storage">Storage</a>" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_storage_storage.md.html#Storage"><span class="atv">Storage</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.</span><a href="cordova_storage_storage.md.html#Storage"><span class="atv">Storage</span></a><span class="atv">"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>Bada</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <h3>BlackBerry WebWorks</h3>
 
 <h4>www/config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;feature id="blackberry.widgetcache" required="true" version="1.0.0.0" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;feature</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"blackberry.widgetcache"</span><span class="pln"> </span><span class="atn">required</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">version</span><span class="pun">=</span><span class="atv">"1.0.0.0"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>iOS</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <h3>webOS</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <h3>Windows Phone</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
+
+<h3>Tizen</h3>
+
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="openDatabase">openDatabase</a></h1>
 
 <p>Returns a new <a href="cordova_storage_storage.md.html#Database">Database</a> object.</p>
 
-<pre class="prettyprint"><code>var dbShell = window.<a href="cordova_storage_storage.md.html#openDatabase">openDatabase</a>(<a href="cordova_storage_storage.md.html#database_name">database_name</a>, <a href="cordova_storage_storage.md.html#database_version">database_version</a>, <a href="cordova_storage_storage.md.html#database_displayname">database_displayname</a>, <a href="cordova_storage_storage.md.html#database_size">database_size</a>);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> dbShell </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#openDatabase"><span class="pln">openDatabase</span></a><span class="pun">(</span><a href="cordova_storage_storage.md.html#database_name"><span class="pln">database_name</span></a><span class="pun">,</span><span class="pln"> </span><a href="cordova_storage_storage.md.html#database_version"><span class="pln">database_version</span></a><span class="pun">,</span><span class="pln"> </span><a href="cordova_storage_storage.md.html#database_displayname"><span class="pln">database_displayname</span></a><span class="pun">,</span><span class="pln"> </span><a href="cordova_storage_storage.md.html#database_size"><span class="pln">database_size</span></a><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="openDatabase_description">Description</a>
@@ -130,44 +127,19 @@
 <li>BlackBerry WebWorks (OS 6.0 and higher)</li>
 <li>iPhone</li>
 <li>webOS</li>
+<li>Tizen</li>
 </ul>
 <h2>
 <a name="openDatabase_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>var db = window.<a href="cordova_storage_storage.md.html#openDatabase">openDatabase</a>("test", "1.0", "Test DB", 1000000);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> db </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#openDatabase"><span class="pln">openDatabase</span></a><span class="pun">(</span><span class="str">"test"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"1.0"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Test DB"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1000000</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="openDatabase_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_storage_storage.md.html#Storage">Storage</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        var db = window.<a href="cordova_storage_storage.md.html#openDatabase">openDatabase</a>("test", "1.0", "Test DB", 1000000);
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;Open <a href="cordova_storage_storage.md.html#Database">Database</a>&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_storage_storage.md.html#Storage"><span class="pln">Storage</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> db </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#openDatabase"><span class="pln">openDatabase</span></a><span class="pun">(</span><span class="str">"test"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"1.0"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Test DB"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1000000</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><span class="pln">Open </span><a href="cordova_storage_storage.md.html#Database"><span class="pln">Database</span></a><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="database_name">database_name</a></h1>
@@ -219,99 +191,26 @@
 <li>BlackBerry WebWorks (OS 6.0 and higher)</li>
 <li>iPhone</li>
 <li>webOS</li>
+<li>Tizen</li>
 </ul>
 <h2>
 <a name="Database_transaction_quick_example">Transaction Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function populateDB(tx) {
-     tx.executeSql('DROP TABLE IF EXISTS DEMO');
-     tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-     tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-     tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
-}
-
-function errorCB(err) {
-    alert("Error processing SQL: "+err.code);
-}
-
-function successCB() {
-    alert("success!");
-}
-
-var db = window.<a href="cordova_storage_storage.md.html#openDatabase">openDatabase</a>("<a href="cordova_storage_storage.md.html#Database">Database</a>", "1.0", "Cordova Demo", 200000);
-db.transaction(populateDB, errorCB, successCB);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> populateDB</span><span class="pun">(</span><span class="pln">tx</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp;tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'DROP TABLE IF EXISTS DEMO'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp;tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'CREATE TABLE IF NOT EXISTS DEMO (id unique, data)'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp;tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'INSERT INTO DEMO (id, data) VALUES (1, "First row")'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp;tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'INSERT INTO DEMO (id, data) VALUES (2, "Second row")'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> errorCB</span><span class="pun">(</span><span class="pln">err</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Error processing SQL: "</span><span class="pun">+</span><span class="pln">err</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> successCB</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"success!"</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> db </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#openDatabase"><span class="pln">openDatabase</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_storage_storage.md.html#Database"><span class="str">Database</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"1.0"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Cordova Demo"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">200000</span><span class="pun">);</span><span class="pln"><br>db</span><span class="pun">.</span><span class="pln">transaction</span><span class="pun">(</span><span class="pln">populateDB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">,</span><span class="pln"> successCB</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="Database_change_version_quick_example">Change Version Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>var db = window.<a href="cordova_storage_storage.md.html#openDatabase">openDatabase</a>("<a href="cordova_storage_storage.md.html#Database">Database</a>", "1.0", "Cordova Demo", 200000);
-db.changeVersion("1.0", "1.1");
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> db </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#openDatabase"><span class="pln">openDatabase</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_storage_storage.md.html#Database"><span class="str">Database</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"1.0"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Cordova Demo"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">200000</span><span class="pun">);</span><span class="pln"><br>db</span><span class="pun">.</span><span class="pln">changeVersion</span><span class="pun">(</span><span class="str">"1.0"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"1.1"</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="Database_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_storage_storage.md.html#Storage">Storage</a> Example&lt;/title&gt;
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_storage_storage.md.html#Storage"><span class="pln">Storage</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> db </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#openDatabase"><span class="pln">openDatabase</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_storage_storage.md.html#Database"><span class="str">Database</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"1.0"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Cordova Demo"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">200000</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; db</span><span class="pun">.</span><span class="pln">transaction</span><span class="pun">(</span><span class="pln">populateDB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">,</span><span class="pln"> successCB</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Populate the database </span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> populateDB</span><span class="pun">(</span><span class="pln">tx</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'DROP TABLE IF EXISTS DEMO'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'CREATE TABLE IF NOT EXISTS DEMO (id unique, data)'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'INSERT INTO DEMO (id, data) VALUES (1, "First row")'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'INSERT INTO DEMO (id, data) VALUES (2, "Second row")'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Transaction error callback</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> errorCB</span><span class="pun">(</span><span class="pln">tx</span><span class="pun">,</span><span class="pln"> err</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Error processing SQL: "</span><span class="pun">+</span><span class="pln">err</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Transaction success callback</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> successCB</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"success!"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><a href="cordova_storage_storage.md.html#Database"><span class="pln">Database</span></a><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        var db = window.<a href="cordova_storage_storage.md.html#openDatabase">openDatabase</a>("<a href="cordova_storage_storage.md.html#Database">Database</a>", "1.0", "Cordova Demo", 200000);
-        db.transaction(populateDB, errorCB, successCB);
-    }
-
-    // Populate the database
-    //
-    function populateDB(tx) {
-         tx.executeSql('DROP TABLE IF EXISTS DEMO');
-         tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-         tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-         tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
-    }
-
-    // Transaction error callback
-    //
-    function errorCB(tx, err) {
-        alert("Error processing SQL: "+err);
-    }
-
-    // Transaction success callback
-    //
-    function successCB() {
-        alert("success!");
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;<a href="cordova_storage_storage.md.html#Database">Database</a>&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-<h2>
-<a name="Database_android_1_x_quirks">Android 1.X Quirks</a>
-</h2>
-
-<ul>
-<li>
-<strong>changeVersion:</strong> This method is not support by Android 1.X devices.</li>
-</ul>
 <hr>
 <h1><a name="SQLTransaction">SQLTransaction</a></h1>
 
@@ -340,82 +239,19 @@ db.changeVersion("1.0", "1.1");
 <li>BlackBerry WebWorks (OS 6.0 and higher)</li>
 <li>iPhone</li>
 <li>webOS</li>
+<li>Tizen</li>
 </ul>
 <h2>
 <a name="SQLTransaction_execute_sql_quick_example">Execute SQL Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function populateDB(tx) {
-     tx.executeSql('DROP TABLE IF EXISTS DEMO');
-     tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-     tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-     tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
-}
-
-function errorCB(err) {
-    alert("Error processing SQL: "+err);
-}
-
-function successCB() {
-    alert("success!");
-}
-
-var db = window.<a href="cordova_storage_storage.md.html#openDatabase">openDatabase</a>("<a href="cordova_storage_storage.md.html#Database">Database</a>", "1.0", "Cordova Demo", 200000);
-db.transaction(populateDB, errorCB, successCB);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> populateDB</span><span class="pun">(</span><span class="pln">tx</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp;tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'DROP TABLE IF EXISTS DEMO'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp;tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'CREATE TABLE IF NOT EXISTS DEMO (id unique, data)'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp;tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'INSERT INTO DEMO (id, data) VALUES (1, "First row")'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp;tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'INSERT INTO DEMO (id, data) VALUES (2, "Second row")'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> errorCB</span><span class="pun">(</span><span class="pln">err</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Error processing SQL: "</span><span class="pun">+</span><span class="pln">err</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> successCB</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"success!"</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> db </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#openDatabase"><span class="pln">openDatabase</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_storage_storage.md.html#Database"><span class="str">Database</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"1.0"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Cordova Demo"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">200000</span><span class="pun">);</span><span class="pln"><br>db</span><span class="pun">.</span><span class="pln">transaction</span><span class="pun">(</span><span class="pln">populateDB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">,</span><span class="pln"> successCB</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="SQLTransaction_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_storage_storage.md.html#Storage">Storage</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        var db = window.<a href="cordova_storage_storage.md.html#openDatabase">openDatabase</a>("<a href="cordova_storage_storage.md.html#Database">Database</a>", "1.0", "Cordova Demo", 200000);
-        db.transaction(populateDB, errorCB, successCB);
-    }
-
-    // Populate the database
-    //
-    function populateDB(tx) {
-         tx.executeSql('DROP TABLE IF EXISTS DEMO');
-         tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-         tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-         tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
-    }
-
-    // Transaction error callback
-    //
-    function errorCB(err) {
-        alert("Error processing SQL: "+err);
-    }
-
-    // Transaction success callback
-    //
-    function successCB() {
-        alert("success!");
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;<a href="cordova_storage_storage.md.html#SQLTransaction">SQLTransaction</a>&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_storage_storage.md.html#Storage"><span class="pln">Storage</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> db </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#openDatabase"><span class="pln">openDatabase</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_storage_storage.md.html#Database"><span class="str">Database</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"1.0"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Cordova Demo"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">200000</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; db</span><span class="pun">.</span><span class="pln">transaction</span><span class="pun">(</span><span class="pln">populateDB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">,</span><span class="pln"> successCB</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Populate the database </span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> populateDB</span><span class="pun">(</span><span class="pln">tx</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'DROP TABLE IF EXISTS DEMO'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'CREATE TABLE IF NOT EXISTS DEMO (id unique, data)'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'INSERT INTO DEMO (id, data) VALUES (1, "First row")'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'INSERT INTO DEMO (id, data) VALUES (2, "Second row")'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Transaction error callback</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> errorCB</span><span class="pun">(</span><span class="pln">err</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Error processing SQL: "</span><span class="pun">+</span><span class="pln">err</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Transaction success callback</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> successCB</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"success!"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><a href="cordova_storage_storage.md.html#SQLTransaction"><span class="pln">SQLTransaction</span></a><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="SQLResultSet">SQLResultSet</a></h1>
@@ -432,13 +268,13 @@ db.transaction(populateDB, errorCB, successCB);
 <li>
 <strong>rowsAffected</strong>: the number of rows that were changed by the SQL statement.  If the statement did not affect any rows then it is set to 0. </li>
 <li>
-<strong>rows</strong>: a SQLResultSetRowList representing the rows returned.  If no rows are returned the object will be empty.</li>
+<strong>rows</strong>: a <a href="cordova_storage_storage.md.html#SQLResultSetRowList">SQLResultSetRowList</a> representing the rows returned.  If no rows are returned the object will be empty.</li>
 </ul>
 <h2>
 <a name="SQLResultSet_details">Details</a>
 </h2>
 
-<p>When you call the <a href="cordova_storage_storage.md.html#SQLTransaction">SQLTransaction</a> executeSql method its callback methods will be called with a <a href="cordova_storage_storage.md.html#SQLResultSet">SQLResultSet</a> object.  The result object has three properties.  The first is the <code>insertId</code> which will return the row number of a success SQL insert statement.  If the SQL statement is not an insert then the <code>insertId</code> is not set.  The <code>rowsAffected</code> is always 0 for a SQL select statement.  For insert or update statements it returns the number of rows that have been modified.  The final property is of type <a href="cordova_storage_storage.md.html#SQLResultSetList">SQLResultSetList</a> and it contains the data returned from a SQL select statement.</p>
+<p>When you call the <a href="cordova_storage_storage.md.html#SQLTransaction">SQLTransaction</a> executeSql method its callback methods will be called with a <a href="cordova_storage_storage.md.html#SQLResultSet">SQLResultSet</a> object.  The result object has three properties.  The first is the <code>insertId</code> which will return the row number of a success SQL insert statement.  If the SQL statement is not an insert then the <code>insertId</code> is not set.  The <code>rowsAffected</code> is always 0 for a SQL select statement.  For insert or update statements it returns the number of rows that have been modified.  The final property is of type SQLResultSetList and it contains the data returned from a SQL select statement.</p>
 
 <h2>
 <a name="SQLResultSet_supported_platforms">Supported Platforms</a>
@@ -449,114 +285,27 @@ db.transaction(populateDB, errorCB, successCB);
 <li>BlackBerry WebWorks (OS 6.0 and higher)</li>
 <li>iPhone</li>
 <li>webOS</li>
+<li>Tizen</li>
 </ul>
 <h2>
 <a name="SQLResultSet_execute_sql_quick_example">Execute SQL Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function queryDB(tx) {
-    tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
-}
-
-function querySuccess(tx, results) {
-console.log("Returned rows = " + results.rows.length);
-// this will be true since it was a select statement and so rowsAffected was 0
-if (!resultSet.rowsAffected) {
-  console.log('No rows affected!');
-  return false;
-}
-// for an insert statement, this property will return the ID of the last inserted row
-console.log("Last inserted row ID = " + results.insertId);
-}
-
-function errorCB(err) {
-    alert("Error processing SQL: "+err.code);
-}
-
-var db = window.<a href="cordova_storage_storage.md.html#openDatabase">openDatabase</a>("<a href="cordova_storage_storage.md.html#Database">Database</a>", "1.0", "Cordova Demo", 200000);
-db.transaction(queryDB, errorCB);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> queryDB</span><span class="pun">(</span><span class="pln">tx</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'SELECT * FROM DEMO'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[],</span><span class="pln"> querySuccess</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> querySuccess</span><span class="pun">(</span><span class="pln">tx</span><span class="pun">,</span><span class="pln"> results</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Returned rows = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> results</span><span class="pun">.</span><span class="pln">rows</span><span class="pun">.</span><span class="pln">length</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// this will be true since it was a select statement and so rowsAffected was 0</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="pln">results</span><span class="pun">.</span><span class="pln">rowsAffected</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">'No rows affected!'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// for an insert statement, this property will return the ID of the last inserted row</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Last inserted row ID = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> results</span><span class="pun">.</span><span class="pln">insertId</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> errorCB</span><span class="pun">(</span><span class="pln">err</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Error processing SQL: "</span><span class="pun">+</span><span class="pln">err</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> db </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#openDatabase"><span class="pln">openDatabase</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_storage_storage.md.html#Database"><span class="str">Database</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"1.0"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Cordova Demo"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">200000</span><span class="pun">);</span><span class="pln"><br>db</span><span class="pun">.</span><span class="pln">transaction</span><span class="pun">(</span><span class="pln">queryDB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="SQLResultSet_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_storage_storage.md.html#Storage">Storage</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Populate the database
-    //
-    function populateDB(tx) {
-        tx.executeSql('DROP TABLE IF EXISTS DEMO');
-        tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
-    }
-
-    // Query the database
-    //
-    function queryDB(tx) {
-        tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
-    }
-
-    // Query the success callback
-    //
-    function querySuccess(tx, results) {
-  console.log("Returned rows = " + results.rows.length);
-  // this will be true since it was a select statement and so rowsAffected was 0
-  if (!results.rowsAffected) {
-    console.log('No rows affected!');
-    return false;
-  }
-  // for an insert statement, this property will return the ID of the last inserted row
-  console.log("Last inserted row ID = " + results.insertId);
-    }
-
-    // Transaction error callback
-    //
-    function errorCB(err) {
-        console.log("Error processing SQL: "+err.code);
-    }
-
-    // Transaction success callback
-    //
-    function successCB() {
-        var db = window.<a href="cordova_storage_storage.md.html#openDatabase">openDatabase</a>("<a href="cordova_storage_storage.md.html#Database">Database</a>", "1.0", "Cordova Demo", 200000);
-        db.transaction(queryDB, errorCB);
-    }
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        var db = window.<a href="cordova_storage_storage.md.html#openDatabase">openDatabase</a>("<a href="cordova_storage_storage.md.html#Database">Database</a>", "1.0", "Cordova Demo", 200000);
-        db.transaction(populateDB, errorCB, successCB);
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;<a href="cordova_storage_storage.md.html#Database">Database</a>&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_storage_storage.md.html#Storage"><span class="pln">Storage</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Populate the database </span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> populateDB</span><span class="pun">(</span><span class="pln">tx</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'DROP TABLE IF EXISTS DEMO'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'CREATE TABLE IF NOT EXISTS DEMO (id unique, data)'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'INSERT INTO DEMO (id, data) VALUES (1, "First row")'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'INSERT INTO DEMO (id, data) VALUES (2, "Second row")'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Query the database</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> queryDB</span><span class="pun">(</span><span class="pln">tx</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'SELECT * FROM DEMO'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[],</span><span class="pln"> querySuccess</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Query the success callback</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> querySuccess</span><span class="pun">(</span><span class="pln">tx</span><span class="pun">,</span><span class="pln"> results</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Returned rows = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> results</span><span class="pun">.</span><span class="pln">rows</span><span class="pun">.</span><span class="pln">length</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// this will be true since it was a select statement and so rowsAffected was 0</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="pln">results</span><span class="pun">.</span><span class="pln">rowsAffected</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">'No rows affected!'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// for an insert statement, this property will return the ID of the last inserted row</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Last inserted row ID = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> results</span><span class="pun">.</span><span class="pln">insertId</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Transaction error callback</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> errorCB</span><span class="pun">(</span><span class="pln">err</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Error processing SQL: "</span><span class="pun">+</span><span class="pln">err</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Transaction success callback</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> successCB</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> db </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#openDatabase"><span class="pln">openDatabase</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_storage_storage.md.html#Database"><span class="str">Database</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"1.0"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Cordova Demo"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">200000</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; db</span><span class="pun">.</span><span class="pln">transaction</span><span class="pun">(</span><span class="pln">queryDB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> db </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#openDatabase"><span class="pln">openDatabase</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_storage_storage.md.html#Database"><span class="str">Database</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"1.0"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Cordova Demo"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">200000</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; db</span><span class="pun">.</span><span class="pln">transaction</span><span class="pun">(</span><span class="pln">populateDB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">,</span><span class="pln"> successCB</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><a href="cordova_storage_storage.md.html#Database"><span class="pln">Database</span></a><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <hr>
-<h1><a name="SQLResultSetList">SQLResultSetList</a></h1>
+<h1><a name="SQLResultSetRowList">SQLResultSetRowList</a></h1>
 
 <p>One of the properties of the <a href="cordova_storage_storage.md.html#SQLResultSet">SQLResultSet</a> containing the rows returned from a SQL query.</p>
 
 <h2>
-<a name="SQLResultSetList_properties">Properties</a>
+<a name="SQLResultSetRowList_properties">Properties</a>
 </h2>
 
 <ul>
@@ -564,7 +313,7 @@ db.transaction(queryDB, errorCB);
 <strong>length</strong>: the number of rows returned by the SQL query</li>
 </ul>
 <h2>
-<a name="SQLResultSetList_methods">Methods</a>
+<a name="SQLResultSetRowList_methods">Methods</a>
 </h2>
 
 <ul>
@@ -572,13 +321,13 @@ db.transaction(queryDB, errorCB);
 <strong>item</strong>: returns the row at the specified index represented by a JavaScript object.</li>
 </ul>
 <h2>
-<a name="SQLResultSetList_details">Details</a>
+<a name="SQLResultSetRowList_details">Details</a>
 </h2>
 
-<p>The <a href="cordova_storage_storage.md.html#SQLResultSetList">SQLResultSetList</a> contains the data returned from a SQL select statement.  The object contains a length property letting you know how many rows the select statement has been returned.  To get a row of data you would call the <code>item</code> method specifing an index.  The item method returns a JavaScript Object who's properties are the columns of the database the select statement was executed against.</p>
+<p>The <a href="cordova_storage_storage.md.html#SQLResultSetRowList">SQLResultSetRowList</a> contains the data returned from a SQL select statement.  The object contains a length property letting you know how many rows the select statement has been returned.  To get a row of data you would call the <code>item</code> method specifying an index.  The item method returns a JavaScript Object who's properties are the columns of the database the select statement was executed against.</p>
 
 <h2>
-<a name="SQLResultSetList_supported_platforms">Supported Platforms</a>
+<a name="SQLResultSetRowList_supported_platforms">Supported Platforms</a>
 </h2>
 
 <ul>
@@ -586,100 +335,19 @@ db.transaction(queryDB, errorCB);
 <li>BlackBerry WebWorks (OS 6.0 and higher)</li>
 <li>iPhone</li>
 <li>webOS</li>
+<li>Tizen</li>
 </ul>
 <h2>
-<a name="SQLResultSetList_execute_sql_quick_example">Execute SQL Quick Example</a>
+<a name="SQLResultSetRowList_execute_sql_quick_example">Execute SQL Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function queryDB(tx) {
-    tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
-}
-
-function querySuccess(tx, results) {
-    var len = results.rows.length;
-    console.log("DEMO table: " + len + " rows found.");
-    for (var i=0; i&lt;len; i++){
-        console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
-    }
-}
-
-function errorCB(err) {
-    alert("Error processing SQL: "+err.code);
-}
-
-var db = window.<a href="cordova_storage_storage.md.html#openDatabase">openDatabase</a>("<a href="cordova_storage_storage.md.html#Database">Database</a>", "1.0", "Cordova Demo", 200000);
-db.transaction(queryDB, errorCB);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> queryDB</span><span class="pun">(</span><span class="pln">tx</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'SELECT * FROM DEMO'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[],</span><span class="pln"> querySuccess</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> querySuccess</span><span class="pun">(</span><span class="pln">tx</span><span class="pun">,</span><span class="pln"> results</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> len </span><span class="pun">=</span><span class="pln"> results</span><span class="pun">.</span><span class="pln">rows</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"DEMO table: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> len </span><span class="pun">+</span><span class="pln"> </span><span class="str">" rows found."</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">len</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++){</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Row = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> i </span><span class="pun">+</span><span class="pln"> </span><span class="str">" ID = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> results</span><span class="pun">.</span><span class="pln">rows</span><span class="pun">.</span><span class="pln">item</span><span class="pun">(</span><span class="pln">i</span><span class="pun">).</span><span class="pln">id </span><span class="pun">+</span><span class="pln"> </span><span class="str">" Data = &nbsp;"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> results</span><span class="pun">.</span><span class="pln">rows</span><span class="pun">.</span><span class="pln">item</span><span class="pun">(</span><span class="pln">i</span><span class="pun">).</span><span class="pln">data</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> errorCB</span><span class="pun">(</span><span class="pln">err</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Error processing SQL: "</span><span class="pun">+</span><span class="pln">err</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> db </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#openDatabase"><span class="pln">openDatabase</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_storage_storage.md.html#Database"><span class="str">Database</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"1.0"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Cordova Demo"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">200000</span><span class="pun">);</span><span class="pln"><br>db</span><span class="pun">.</span><span class="pln">transaction</span><span class="pun">(</span><span class="pln">queryDB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
-<a name="SQLResultSetList_full_example">Full Example</a>
+<a name="SQLResultSetRowList_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_storage_storage.md.html#Storage">Storage</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Populate the database
-    //
-    function populateDB(tx) {
-        tx.executeSql('DROP TABLE IF EXISTS DEMO');
-        tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
-    }
-
-    // Query the database
-    //
-    function queryDB(tx) {
-        tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
-    }
-
-    // Query the success callback
-    //
-    function querySuccess(tx, results) {
-        var len = results.rows.length;
-        console.log("DEMO table: " + len + " rows found.");
-        for (var i=0; i&lt;len; i++){
-            console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
-        }
-    }
-
-    // Transaction error callback
-    //
-    function errorCB(err) {
-        console.log("Error processing SQL: "+err.code);
-    }
-
-    // Transaction success callback
-    //
-    function successCB() {
-        var db = window.<a href="cordova_storage_storage.md.html#openDatabase">openDatabase</a>("<a href="cordova_storage_storage.md.html#Database">Database</a>", "1.0", "Cordova Demo", 200000);
-        db.transaction(queryDB, errorCB);
-    }
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        var db = window.<a href="cordova_storage_storage.md.html#openDatabase">openDatabase</a>("<a href="cordova_storage_storage.md.html#Database">Database</a>", "1.0", "Cordova Demo", 200000);
-        db.transaction(populateDB, errorCB, successCB);
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;<a href="cordova_storage_storage.md.html#Database">Database</a>&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_storage_storage.md.html#Storage"><span class="pln">Storage</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Populate the database </span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> populateDB</span><span class="pun">(</span><span class="pln">tx</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'DROP TABLE IF EXISTS DEMO'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'CREATE TABLE IF NOT EXISTS DEMO (id unique, data)'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'INSERT INTO DEMO (id, data) VALUES (1, "First row")'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'INSERT INTO DEMO (id, data) VALUES (2, "Second row")'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Query the database</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> queryDB</span><span class="pun">(</span><span class="pln">tx</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; tx</span><span class="pun">.</span><span class="pln">executeSql</span><span class="pun">(</span><span class="str">'SELECT * FROM DEMO'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[],</span><span class="pln"> querySuccess</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Query the success callback</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> querySuccess</span><span class="pun">(</span><span class="pln">tx</span><span class="pun">,</span><span class="pln"> results</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> len </span><span class="pun">=</span><span class="pln"> results</span><span class="pun">.</span><span class="pln">rows</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"DEMO table: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> len </span><span class="pun">+</span><span class="pln"> </span><span class="str">" rows found."</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">len</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++){</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Row = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> i </span><span class="pun">+</span><span class="pln"> </span><span class="str">" ID = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> results</span><span class="pun">.</span><span class="pln">rows</span><span class="pun">.</span><span class="pln">item</span><span class="pun">(</span><span class="pln">i</span><span class="pun">).</span><span class="pln">id </span><span class="pun">+</span><span class="pln"> </span><span class="str">" Data = &nbsp;"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> results</span><span class="pun">.</span><span class="pln">rows</span><span class="pun">.</span><span class="pln">item</span><span class="pun">(</span><span class="pln">i</span><span class="pun">).</span><span class="pln">data</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Transaction error callback</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> errorCB</span><span class="pun">(</span><span class="pln">err</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"Error processing SQL: "</span><span class="pun">+</span><span class="pln">err</span><span class="pun">.</span><span class="pln">code</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Transaction success callback</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> successCB</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> db </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#openDatabase"><span class="pln">openDatabase</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_storage_storage.md.html#Database"><span class="str">Database</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"1.0"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Cordova Demo"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">200000</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; db</span><span class="pun">.</span><span class="pln">transaction</span><span class="pun">(</span><span class="pln">queryDB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> db </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#openDatabase"><span class="pln">openDatabase</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_storage_storage.md.html#Database"><span class="str">Database</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"1.0"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Cordova Demo"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">200000</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; db</span><span class="pun">.</span><span class="pln">transaction</span><span class="pun">(</span><span class="pln">populateDB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">,</span><span class="pln"> successCB</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><a href="cordova_storage_storage.md.html#Database"><span class="pln">Database</span></a><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="SQLError">SQLError</a></h1>
@@ -721,8 +389,7 @@ db.transaction(queryDB, errorCB);
 
 <p>Provides access to a W3C <a href="cordova_storage_storage.md.html#Storage">Storage</a> interface (http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)</p>
 
-<pre class="prettyprint"><code>var storage = window.<a href="cordova_storage_storage.md.html#localStorage">localStorage</a>;
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> storage </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#localStorage"><span class="pln">localStorage</span></a><span class="pun">;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="localStorage_methods">Methods</a>
@@ -756,91 +423,52 @@ db.transaction(queryDB, errorCB);
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 6.0 and higher)</li>
 <li>iPhone</li>
-<li>Windows Phone 7</li>
+<li>Windows Phone 7 and 8</li>
 <li>webOS</li>
+<li>Tizen</li>
 </ul>
 <h2>
 <a name="localStorage_key_quick_example">Key Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>var keyName = window.<a href="cordova_storage_storage.md.html#localStorage">localStorage</a>.key(0);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> keyName </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#localStorage"><span class="pln">localStorage</span></a><span class="pun">.</span><span class="pln">key</span><span class="pun">(</span><span class="lit">0</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="localStorage_set_item_quick_example">Set Item Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>window.<a href="cordova_storage_storage.md.html#localStorage">localStorage</a>.setItem("key", "value");
-</code></pre>
+<pre class="prettyprint"><code><span class="pln">window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#localStorage"><span class="pln">localStorage</span></a><span class="pun">.</span><span class="pln">setItem</span><span class="pun">(</span><span class="str">"key"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"value"</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="localStorage_get_item_quick_example">Get Item Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>var value = window.<a href="cordova_storage_storage.md.html#localStorage">localStorage</a>.getItem("key");
-// value is now equal to "value"
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> value </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#localStorage"><span class="pln">localStorage</span></a><span class="pun">.</span><span class="pln">getItem</span><span class="pun">(</span><span class="str">"key"</span><span class="pun">);</span><span class="pln"><br></span><span class="com">// value is now equal to "value"</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="localStorage_remove_item_quick_example">Remove Item Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>window.<a href="cordova_storage_storage.md.html#localStorage">localStorage</a>.removeItem("key");
-</code></pre>
+<pre class="prettyprint"><code><span class="pln">window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#localStorage"><span class="pln">localStorage</span></a><span class="pun">.</span><span class="pln">removeItem</span><span class="pun">(</span><span class="str">"key"</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="localStorage_clear_quick_example">Clear Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>window.<a href="cordova_storage_storage.md.html#localStorage">localStorage</a>.clear();
-</code></pre>
+<pre class="prettyprint"><code><span class="pln">window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#localStorage"><span class="pln">localStorage</span></a><span class="pun">.</span><span class="pln">clear</span><span class="pun">();</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="localStorage_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_storage_storage.md.html#Storage">Storage</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        window.<a href="cordova_storage_storage.md.html#localStorage">localStorage</a>.setItem("key", "value");
-        var keyname = window.<a href="cordova_storage_storage.md.html#localStorage">localStorage</a>.key(i);
-        // keyname is now equal to "key"
-        var value = window.<a href="cordova_storage_storage.md.html#localStorage">localStorage</a>.getItem("key");
-        // value is now equal to "value"
-        window.<a href="cordova_storage_storage.md.html#localStorage">localStorage</a>.removeItem("key");
-        window.<a href="cordova_storage_storage.md.html#localStorage">localStorage</a>.setItem("key2", "value2");
-        window.<a href="cordova_storage_storage.md.html#localStorage">localStorage</a>.clear();
-        // <a href="cordova_storage_storage.md.html#localStorage">localStorage</a> is now empty
-    }
-
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;<a href="cordova_storage_storage.md.html#localStorage">localStorage</a>&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_storage_storage.md.html#Storage"><span class="pln">Storage</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#localStorage"><span class="pln">localStorage</span></a><span class="pun">.</span><span class="pln">setItem</span><span class="pun">(</span><span class="str">"key"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"value"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> keyname </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#localStorage"><span class="pln">localStorage</span></a><span class="pun">.</span><span class="pln">key</span><span class="pun">(</span><span class="pln">i</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// keyname is now equal to "key"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> value </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#localStorage"><span class="pln">localStorage</span></a><span class="pun">.</span><span class="pln">getItem</span><span class="pun">(</span><span class="str">"key"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// value is now equal to "value"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#localStorage"><span class="pln">localStorage</span></a><span class="pun">.</span><span class="pln">removeItem</span><span class="pun">(</span><span class="str">"key"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#localStorage"><span class="pln">localStorage</span></a><span class="pun">.</span><span class="pln">setItem</span><span class="pun">(</span><span class="str">"key2"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"value2"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; window</span><span class="pun">.</span><a href="cordova_storage_storage.md.html#localStorage"><span class="pln">localStorage</span></a><span class="pun">.</span><span class="pln">clear</span><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// </span><a href="cordova_storage_storage.md.html#localStorage"><span class="com">localStorage</span></a><span class="com"> is now empty</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><a href="cordova_storage_storage.md.html#localStorage"><span class="pln">localStorage</span></a><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="localStorage_windows_phone_7_quirks">Windows Phone 7 Quirks</a>
 </h2>
 
 <ul>
-<li>dot notation is NOT available on Windows Phone. Be sure to use : window.<a href="cordova_storage_storage.md.html#localStorage">localStorage</a>.setItem/getItem, and not the w3 spec defined calls to window.<a href="cordova_storage_storage.md.html#localStorage">localStorage</a>.someKey = 'someValue';</li>
+<li>dot notation is NOT available on Windows Phone 7. Be sure to use : window.<a href="cordova_storage_storage.md.html#localStorage">localStorage</a>.setItem/getItem, and not the w3 spec defined calls to window.<a href="cordova_storage_storage.md.html#localStorage">localStorage</a>.someKey = 'someValue';</li>
 </ul>
 </div>
         </div>

@@ -29,8 +29,8 @@
 </head>
 <body>
         <div id="wrapper">
-            <div id="content">
-                <h1><a name="Geolocation">Geolocation</a></h1>
+<div id="content">
+				<h1><a name="Geolocation">Geolocation</a></h1>
 
 <blockquote>
   <p>The <code>geolocation</code> object provides access to the device's GPS sensor.</p>
@@ -38,7 +38,7 @@
 
 <p><a href="cordova_geolocation_geolocation.md.html#Geolocation">Geolocation</a> provides location information for the device, such as latitude and longitude. Common sources of location information include Global Positioning System (GPS) and location inferred from network signals such as IP address, RFID, WiFi and Bluetooth MAC addresses, and GSM/CDMA cell IDs. No guarantee is given that the API returns the device's actual location.</p>
 
-<p>This API is based on the <a class="external" href="http://dev.w3.org/geo/api/spec-source.html">W3C </a><a href="cordova_geolocation_geolocation.md.html#Geolocation">Geolocation</a> API Specification.  Some devices (Android, BlackBerry, Bada, Windows Phone 7 and webOS, to be specific) already provide an implementation of this spec.  For those devices, the built-in support is used instead of replacing it with Cordova's implementation.  For devices that don't have geolocation support, the Cordova implementation adheres to the W3C specification.</p>
+<p>This API is based on the <a class="external" href="http://dev.w3.org/geo/api/spec-source.html">W3C </a><a href="cordova_geolocation_geolocation.md.html#Geolocation">Geolocation</a> API Specification.  Some devices (Android, BlackBerry, Bada, Windows Phone 7, webOS and Tizen, to be specific) already provide an implementation of this spec.  For those devices, the built-in support is used instead of replacing it with Cordova's implementation.  For devices that don't have geolocation support, the Cordova implementation adheres to the W3C specification.</p>
 
 <h2>
 <a name="Geolocation_methods">Methods</a>
@@ -73,73 +73,56 @@
 
 <h3>Android</h3>
 
-<h4>app/res/xml/plugins.xml</h4>
+<h4>app/res/xml/config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;plugin name="<a href="cordova_geolocation_geolocation.md.html#Geolocation">Geolocation</a>" value="org.apache.cordova.GeoBroker" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_geolocation_geolocation.md.html#Geolocation"><span class="atv">Geolocation</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.GeoBroker"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h4>app/AndroidManifest.xml</h4>
 
-<pre class="prettyprint"><code>&lt;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /&gt;
-&lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;
-&lt;uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.ACCESS_COARSE_LOCATION"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.ACCESS_FINE_LOCATION"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>Bada</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <h3>BlackBerry WebWorks</h3>
 
 <h4>www/plugins.xml</h4>
 
-<pre class="prettyprint"><code>&lt;plugin name="<a href="cordova_geolocation_geolocation.md.html#Geolocation">Geolocation</a>" value="org.apache.cordova.geolocation.<a href="cordova_geolocation_geolocation.md.html#Geolocation">Geolocation</a>" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_geolocation_geolocation.md.html#Geolocation"><span class="atv">Geolocation</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.geolocation.</span><a href="cordova_geolocation_geolocation.md.html#Geolocation"><span class="atv">Geolocation</span></a><span class="atv">"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h4>www/config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;rim:permissions&gt;
-    &lt;rim:permit&gt;read_geolocation&lt;/rim:permit&gt;
-&lt;/rim:permissions&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;rim:permissions&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;rim:permit&gt;</span><span class="pln">read_geolocation</span><span class="tag">&lt;/rim:permit&gt;</span><span class="pln"><br></span><span class="tag">&lt;/rim:permissions&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>iOS</h3>
 
-<h4>App/Supporting Files/Cordova.plist</h4>
+<h4>config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;key&gt;Plugins&lt;/key&gt;
-&lt;dict&gt;
-    &lt;key&gt;<a href="cordova_geolocation_geolocation.md.html#Geolocation">Geolocation</a>&lt;/key&gt;
-    &lt;string&gt;CDVLocation&lt;/string&gt;
-&lt;/dict&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_geolocation_geolocation.md.html#Geolocation"><span class="atv">Geolocation</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"CDVLocation"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>webOS</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <h3>Windows Phone</h3>
 
 <h4>Properties/WPAppManifest.xml</h4>
 
-<pre class="prettyprint"><code>&lt;Capabilities&gt;
-    &lt;Capability Name="ID_CAP_LOCATION" /&gt;
-&lt;/Capabilities&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;Capabilities&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;Capability</span><span class="pln"> </span><span class="atn">Name</span><span class="pun">=</span><span class="atv">"ID_CAP_LOCATION"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;/Capabilities&gt;</span><span class="pln"><br></span></code></pre>
 
 <p>Reference: <a class="external" href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
+
+<h3>Tizen</h3>
+
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="geolocation.getCurrentPosition">geolocation.getCurrentPosition</a></h1>
 
 <p>Returns the device's current position as a <code><a href="cordova_geolocation_geolocation.md.html#Position">Position</a></code> object.</p>
 
-<pre class="prettyprint"><code>navigator.<a href="cordova_geolocation_geolocation.md.html#geolocation.getCurrentPosition">geolocation.getCurrentPosition</a>(<a href="cordova_geolocation_geolocation.md.html#geolocationSuccess">geolocationSuccess</a>,
-                                         [<a href="cordova_geolocation_geolocation.md.html#geolocationError">geolocationError</a>],
-                                         [<a href="cordova_geolocation_geolocation.md.html#geolocationOptions">geolocationOptions</a>]);
-</code></pre>
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_geolocation_geolocation.md.html#geolocation.getCurrentPosition"><span class="pln">geolocation</span><span class="pun">.</span><span class="pln">getCurrentPosition</span></a><span class="pun">(</span><a href="cordova_geolocation_geolocation.md.html#geolocationSuccess"><span class="pln">geolocationSuccess</span></a><span class="pun">,</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">[</span><a href="cordova_geolocation_geolocation.md.html#geolocationError"><span class="pln">geolocationError</span></a><span class="pun">],</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">[</span><a href="cordova_geolocation_geolocation.md.html#geolocationOptions"><span class="pln">geolocationOptions</span></a><span class="pun">]);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="geolocation.getCurrentPosition_parameters">Parameters</a>
@@ -157,7 +140,7 @@
 <a name="geolocation.getCurrentPosition_description">Description</a>
 </h2>
 
-<p><code>geolocation.getCurrentPositon</code> is an asynchronous function. It returns the device's current position to the <code><a href="cordova_geolocation_geolocation.md.html#geolocationSuccess">geolocationSuccess</a></code> callback with a <code><a href="cordova_geolocation_geolocation.md.html#Position">Position</a></code> object as the parameter.  If there is an error, the <code><a href="cordova_geolocation_geolocation.md.html#geolocationError">geolocationError</a></code> callback is invoked with a <code><a href="cordova_geolocation_geolocation.md.html#PositionError">PositionError</a></code> object.</p>
+<p><code><a href="cordova_geolocation_geolocation.md.html#geolocation.getCurrentPosition">geolocation.getCurrentPosition</a></code> is an asynchronous function. It returns the device's current position to the <code><a href="cordova_geolocation_geolocation.md.html#geolocationSuccess">geolocationSuccess</a></code> callback with a <code><a href="cordova_geolocation_geolocation.md.html#Position">Position</a></code> object as the parameter.  If there is an error, the <code><a href="cordova_geolocation_geolocation.md.html#geolocationError">geolocationError</a></code> callback is invoked with a <code><a href="cordova_geolocation_geolocation.md.html#PositionError">PositionError</a></code> object.</p>
 
 <h2>
 <a name="geolocation.getCurrentPosition_supported_platforms">Supported Platforms</a>
@@ -167,99 +150,30 @@
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.x</li>
 <li>webOS</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="geolocation.getCurrentPosition_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>// onSuccess Callback
-//   This method accepts a `<a href="cordova_geolocation_geolocation.md.html#Position">Position</a>` object, which contains
-//   the current GPS coordinates
-//
-var onSuccess = function(position) {
-    alert('Latitude: '          + position.coords.latitude          + '\n' +
-          'Longitude: '         + position.coords.longitude         + '\n' +
-          'Altitude: '          + position.coords.altitude          + '\n' +
-          'Accuracy: '          + position.coords.accuracy          + '\n' +
-          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-          'Heading: '           + position.coords.heading           + '\n' +
-          'Speed: '             + position.coords.speed             + '\n' +
-          'Timestamp: '         + position.timestamp                + '\n');
-};
-
-// onError Callback receives a <a href="cordova_geolocation_geolocation.md.html#PositionError">PositionError</a> object
-//
-function onError(error) {
-    alert('code: '    + error.code    + '\n' +
-          'message: ' + error.message + '\n');
-}
-
-navigator.<a href="cordova_geolocation_geolocation.md.html#geolocation.getCurrentPosition">geolocation.getCurrentPosition</a>(onSuccess, onError);
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// onSuccess Callback</span><span class="pln"><br></span><span class="com">// &nbsp; This method accepts a `</span><a href="cordova_geolocation_geolocation.md.html#Position"><span class="com">Position</span></a><span class="com">` object, which contains</span><span class="pln"><br></span><span class="com">// &nbsp; the current GPS coordinates</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> onSuccess </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">position</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'Latitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">latitude &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Longitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">longitude &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Altitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">altitude &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Accuracy: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">accuracy &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Altitude Accuracy: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">altitudeAccuracy &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Heading: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">heading &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Speed: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">speed &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Timestamp: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">timestamp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="com">// onError Callback receives a </span><a href="cordova_geolocation_geolocation.md.html#PositionError"><span class="com">PositionError</span></a><span class="com"> object</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'code: '</span><span class="pln"> &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'message: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">message </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br>navigator</span><span class="pun">.</span><a href="cordova_geolocation_geolocation.md.html#geolocation.getCurrentPosition"><span class="pln">geolocation</span><span class="pun">.</span><span class="pln">getCurrentPosition</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="geolocation.getCurrentPosition_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_device_device.md.html#Device">Device</a> Properties Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        navigator.<a href="cordova_geolocation_geolocation.md.html#geolocation.getCurrentPosition">geolocation.getCurrentPosition</a>(onSuccess, onError);
-    }
-
-    // onSuccess <a href="cordova_geolocation_geolocation.md.html#Geolocation">Geolocation</a>
-    //
-    function onSuccess(position) {
-        var element = document.getElementById('geolocation');
-        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '&lt;br /&gt;' +
-                            'Longitude: '          + position.coords.longitude             + '&lt;br /&gt;' +
-                            'Altitude: '           + position.coords.altitude              + '&lt;br /&gt;' +
-                            'Accuracy: '           + position.coords.accuracy              + '&lt;br /&gt;' +
-                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '&lt;br /&gt;' +
-                            'Heading: '            + position.coords.heading               + '&lt;br /&gt;' +
-                            'Speed: '              + position.coords.speed                 + '&lt;br /&gt;' +
-                            'Timestamp: '          +                                   position.timestamp          + '&lt;br /&gt;';
-    }
-
-    // onError Callback receives a <a href="cordova_geolocation_geolocation.md.html#PositionError">PositionError</a> object
-    //
-    function onError(error) {
-        alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p id="geolocation"&gt;Finding geolocation...&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_device_device.md.html#Device"><span class="pln">Device</span></a><span class="pln"> Properties Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_geolocation_geolocation.md.html#geolocation.getCurrentPosition"><span class="pln">geolocation</span><span class="pun">.</span><span class="pln">getCurrentPosition</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSuccess </span><a href="cordova_geolocation_geolocation.md.html#Geolocation"><span class="com">Geolocation</span></a><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">position</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'geolocation'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; element</span><span class="pun">.</span><span class="pln">innerHTML </span><span class="pun">=</span><span class="pln"> </span><span class="str">'Latitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">latitude &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Longitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">longitude &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Altitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">altitude &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Accuracy: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">accuracy &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Altitude Accuracy: '</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">altitudeAccuracy &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Heading: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">heading &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Speed: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">speed &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Timestamp: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; position</span><span class="pun">.</span><span class="pln">timestamp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onError Callback receives a </span><a href="cordova_geolocation_geolocation.md.html#PositionError"><span class="com">PositionError</span></a><span class="com"> object</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'code: '</span><span class="pln"> &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'message: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">message </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"geolocation"</span><span class="tag">&gt;</span><span class="pln">Finding geolocation...</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="geolocation.watchPosition">geolocation.watchPosition</a></h1>
 
 <p>Watches for changes to the device's current position.</p>
 
-<pre class="prettyprint"><code>var watchId = navigator.<a href="cordova_geolocation_geolocation.md.html#geolocation.watchPosition">geolocation.watchPosition</a>(<a href="cordova_geolocation_geolocation.md.html#geolocationSuccess">geolocationSuccess</a>,
-                                                  [<a href="cordova_geolocation_geolocation.md.html#geolocationError">geolocationError</a>],
-                                                  [<a href="cordova_geolocation_geolocation.md.html#geolocationOptions">geolocationOptions</a>]);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> watchId </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_geolocation_geolocation.md.html#geolocation.watchPosition"><span class="pln">geolocation</span><span class="pun">.</span><span class="pln">watchPosition</span></a><span class="pun">(</span><a href="cordova_geolocation_geolocation.md.html#geolocationSuccess"><span class="pln">geolocationSuccess</span></a><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">[</span><a href="cordova_geolocation_geolocation.md.html#geolocationError"><span class="pln">geolocationError</span></a><span class="pun">],</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">[</span><a href="cordova_geolocation_geolocation.md.html#geolocationOptions"><span class="pln">geolocationOptions</span></a><span class="pun">]);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="geolocation.watchPosition_parameters">Parameters</a>
@@ -295,94 +209,30 @@ navigator.<a href="cordova_geolocation_geolocation.md.html#geolocation.getCurren
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.x</li>
 <li>webOS</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="geolocation.watchPosition_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>// onSuccess Callback
-//   This method accepts a `<a href="cordova_geolocation_geolocation.md.html#Position">Position</a>` object, which contains
-//   the current GPS coordinates
-//
-function onSuccess(position) {
-    var element = document.getElementById('geolocation');
-    element.innerHTML = 'Latitude: '  + position.coords.latitude      + '&lt;br /&gt;' +
-                        'Longitude: ' + position.coords.longitude     + '&lt;br /&gt;' +
-                        '&lt;hr /&gt;'      + element.innerHTML;
-}
-
-// onError Callback receives a <a href="cordova_geolocation_geolocation.md.html#PositionError">PositionError</a> object
-//
-function onError(error) {
-    alert('code: '    + error.code    + '\n' +
-          'message: ' + error.message + '\n');
-}
-
-// Options: throw an error if no update is received every 30 seconds.
-//
-var watchID = navigator.<a href="cordova_geolocation_geolocation.md.html#geolocation.watchPosition">geolocation.watchPosition</a>(onSuccess, onError, { timeout: 30000 });
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// onSuccess Callback</span><span class="pln"><br></span><span class="com">// &nbsp; This method accepts a `</span><a href="cordova_geolocation_geolocation.md.html#Position"><span class="com">Position</span></a><span class="com">` object, which contains</span><span class="pln"><br></span><span class="com">// &nbsp; the current GPS coordinates</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">position</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'geolocation'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; element</span><span class="pun">.</span><span class="pln">innerHTML </span><span class="pun">=</span><span class="pln"> </span><span class="str">'Latitude: '</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">latitude &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Longitude: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">longitude &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'&lt;hr /&gt;'</span><span class="pln"> &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> element</span><span class="pun">.</span><span class="pln">innerHTML</span><span class="pun">;</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// onError Callback receives a </span><a href="cordova_geolocation_geolocation.md.html#PositionError"><span class="com">PositionError</span></a><span class="com"> object</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'code: '</span><span class="pln"> &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'message: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">message </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="com">// Options: throw an error if no update is received every 30 seconds.</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> watchID </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_geolocation_geolocation.md.html#geolocation.watchPosition"><span class="pln">geolocation</span><span class="pun">.</span><span class="pln">watchPosition</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> timeout</span><span class="pun">:</span><span class="pln"> </span><span class="lit">30000</span><span class="pln"> </span><span class="pun">});</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="geolocation.watchPosition_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_device_device.md.html#Device">Device</a> Properties Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    var watchID = null;
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        // Throw an error if no update is received every 30 seconds
-        var options = { timeout: 30000 };
-        watchID = navigator.<a href="cordova_geolocation_geolocation.md.html#geolocation.watchPosition">geolocation.watchPosition</a>(onSuccess, onError, options);
-    }
-
-    // onSuccess <a href="cordova_geolocation_geolocation.md.html#Geolocation">Geolocation</a>
-    //
-    function onSuccess(position) {
-        var element = document.getElementById('geolocation');
-        element.innerHTML = 'Latitude: '  + position.coords.latitude      + '&lt;br /&gt;' +
-                            'Longitude: ' + position.coords.longitude     + '&lt;br /&gt;' +
-                            '&lt;hr /&gt;'      + element.innerHTML;
-    }
-
-    // onError Callback receives a <a href="cordova_geolocation_geolocation.md.html#PositionError">PositionError</a> object
-    //
-    function onError(error) {
-        alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p id="geolocation"&gt;Watching geolocation...&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_device_device.md.html#Device"><span class="pln">Device</span></a><span class="pln"> Properties Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> watchID </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// Throw an error if no update is received every 30 seconds</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> timeout</span><span class="pun">:</span><span class="pln"> </span><span class="lit">30000</span><span class="pln"> </span><span class="pun">};</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; watchID </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_geolocation_geolocation.md.html#geolocation.watchPosition"><span class="pln">geolocation</span><span class="pun">.</span><span class="pln">watchPosition</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSuccess </span><a href="cordova_geolocation_geolocation.md.html#Geolocation"><span class="com">Geolocation</span></a><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">position</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'geolocation'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; element</span><span class="pun">.</span><span class="pln">innerHTML </span><span class="pun">=</span><span class="pln"> </span><span class="str">'Latitude: '</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">latitude &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Longitude: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">longitude &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'&lt;hr /&gt;'</span><span class="pln"> &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> element</span><span class="pun">.</span><span class="pln">innerHTML</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onError Callback receives a </span><a href="cordova_geolocation_geolocation.md.html#PositionError"><span class="com">PositionError</span></a><span class="com"> object</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'code: '</span><span class="pln"> &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'message: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">message </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"geolocation"</span><span class="tag">&gt;</span><span class="pln">Watching geolocation...</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="geolocation.clearWatch">geolocation.clearWatch</a></h1>
 
 <p>Stop watching for changes to the device's location referenced by the <code>watchID</code> parameter.</p>
 
-<pre class="prettyprint"><code>navigator.<a href="cordova_geolocation_geolocation.md.html#geolocation.clearWatch">geolocation.clearWatch</a>(watchID);
-</code></pre>
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_geolocation_geolocation.md.html#geolocation.clearWatch"><span class="pln">geolocation</span><span class="pun">.</span><span class="pln">clearWatch</span></a><span class="pun">(</span><span class="pln">watchID</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="geolocation.clearWatch_parameters">Parameters</a>
@@ -406,84 +256,23 @@ var watchID = navigator.<a href="cordova_geolocation_geolocation.md.html#geoloca
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.x</li>
 <li>webOS</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="geolocation.clearWatch_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>// Options: watch for changes in position, and use the most
-// accurate position acquisition method available.
-//
-var watchID = navigator.<a href="cordova_geolocation_geolocation.md.html#geolocation.watchPosition">geolocation.watchPosition</a>(onSuccess, onError, { enableHighAccuracy: true });
-
-// ...later on...
-
-navigator.<a href="cordova_geolocation_geolocation.md.html#geolocation.clearWatch">geolocation.clearWatch</a>(watchID);
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// Options: watch for changes in position, and use the most</span><span class="pln"><br></span><span class="com">// accurate position acquisition method available.</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> watchID </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_geolocation_geolocation.md.html#geolocation.watchPosition"><span class="pln">geolocation</span><span class="pun">.</span><span class="pln">watchPosition</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> enableHighAccuracy</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">});</span><span class="pln"><br><br></span><span class="com">// ...later on...</span><span class="pln"><br><br>navigator</span><span class="pun">.</span><a href="cordova_geolocation_geolocation.md.html#geolocation.clearWatch"><span class="pln">geolocation</span><span class="pun">.</span><span class="pln">clearWatch</span></a><span class="pun">(</span><span class="pln">watchID</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="geolocation.clearWatch_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_device_device.md.html#Device">Device</a> Properties Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    var watchID = null;
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        // Get the most accurate position updates available on the
-        // device.
-        var options = { enableHighAccuracy: true };
-        watchID = navigator.<a href="cordova_geolocation_geolocation.md.html#geolocation.watchPosition">geolocation.watchPosition</a>(onSuccess, onError, options);
-    }
-
-    // onSuccess <a href="cordova_geolocation_geolocation.md.html#Geolocation">Geolocation</a>
-    //
-    function onSuccess(position) {
-        var element = document.getElementById('geolocation');
-        element.innerHTML = 'Latitude: '  + position.coords.latitude      + '&lt;br /&gt;' +
-                            'Longitude: ' + position.coords.longitude     + '&lt;br /&gt;' +
-                            '&lt;hr /&gt;'      + element.innerHTML;
-    }
-
-    // clear the watch that was started earlier
-    //
-    function clearWatch() {
-        if (watchID != null) {
-            navigator.<a href="cordova_geolocation_geolocation.md.html#geolocation.clearWatch">geolocation.clearWatch</a>(watchID);
-            watchID = null;
-        }
-    }
-
-    // onError Callback receives a <a href="cordova_geolocation_geolocation.md.html#PositionError">PositionError</a> object
-    //
-    function onError(error) {
-      alert('code: '    + error.code    + '\n' +
-            'message: ' + error.message + '\n');
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p id="geolocation"&gt;Watching geolocation...&lt;/p&gt;
-    &lt;button onclick="clearWatch();"&gt;Clear Watch&lt;/button&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_device_device.md.html#Device"><span class="pln">Device</span></a><span class="pln"> Properties Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> watchID </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// Get the most accurate position updates available on the</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// device.</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> enableHighAccuracy</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">};</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; watchID </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_geolocation_geolocation.md.html#geolocation.watchPosition"><span class="pln">geolocation</span><span class="pun">.</span><span class="pln">watchPosition</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSuccess </span><a href="cordova_geolocation_geolocation.md.html#Geolocation"><span class="com">Geolocation</span></a><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">position</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'geolocation'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; element</span><span class="pun">.</span><span class="pln">innerHTML </span><span class="pun">=</span><span class="pln"> </span><span class="str">'Latitude: '</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">latitude &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Longitude: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">longitude &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'&lt;hr /&gt;'</span><span class="pln"> &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> element</span><span class="pun">.</span><span class="pln">innerHTML</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// clear the watch that was started earlier</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// </span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> clearWatch</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">watchID </span><span class="pun">!=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_geolocation_geolocation.md.html#geolocation.clearWatch"><span class="pln">geolocation</span><span class="pun">.</span><span class="pln">clearWatch</span></a><span class="pun">(</span><span class="pln">watchID</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; watchID </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onError Callback receives a </span><a href="cordova_geolocation_geolocation.md.html#PositionError"><span class="com">PositionError</span></a><span class="com"> object</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'code: '</span><span class="pln"> &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'message: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">message </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"geolocation"</span><span class="tag">&gt;</span><span class="pln">Watching geolocation...</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">clearWatch</span><span class="pun">();</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Clear Watch</span><span class="tag">&lt;/button&gt;</span><span class="pln"> &nbsp; &nbsp; <br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="Coordinates">Coordinates</a></h1>
@@ -531,84 +320,23 @@ navigator.<a href="cordova_geolocation_geolocation.md.html#geolocation.clearWatc
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.x</li>
 <li>webOS</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="Coordinates_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>// onSuccess Callback
-//
-var onSuccess = function(position) {
-    alert('Latitude: '          + position.coords.latitude          + '\n' +
-          'Longitude: '         + position.coords.longitude         + '\n' +
-          'Altitude: '          + position.coords.altitude          + '\n' +
-          'Accuracy: '          + position.coords.accuracy          + '\n' +
-          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-          'Heading: '           + position.coords.heading           + '\n' +
-          'Speed: '             + position.coords.speed             + '\n' +
-          'Timestamp: '         + position.timestamp                + '\n');
-};
-
-// onError Callback
-//
-var onError = function() {
-    alert('onError!');
-};
-
-navigator.<a href="cordova_geolocation_geolocation.md.html#geolocation.getCurrentPosition">geolocation.getCurrentPosition</a>(onSuccess, onError);
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// onSuccess Callback</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> onSuccess </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">position</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'Latitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">latitude &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Longitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">longitude &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Altitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">altitude &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Accuracy: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">accuracy &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Altitude Accuracy: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">altitudeAccuracy &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Heading: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">heading &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Speed: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">speed &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Timestamp: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">timestamp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="com">// onError Callback</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> onError </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br>navigator</span><span class="pun">.</span><a href="cordova_geolocation_geolocation.md.html#geolocation.getCurrentPosition"><span class="pln">geolocation</span><span class="pun">.</span><span class="pln">getCurrentPosition</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="Coordinates_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_geolocation_geolocation.md.html#Geolocation">Geolocation</a> <a href="cordova_geolocation_geolocation.md.html#Position">Position</a> Example&lt;/title&gt;
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Set an event to wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is loaded and Ready
-    //
-    function onDeviceReady() {
-        navigator.<a href="cordova_geolocation_geolocation.md.html#geolocation.getCurrentPosition">geolocation.getCurrentPosition</a>(onSuccess, onError);
-    }
-
-    // Display `<a href="cordova_geolocation_geolocation.md.html#Position">Position</a>` properties from the geolocation
-    //
-    function onSuccess(position) {
-        var div = document.getElementById('myDiv');
-
-        div.innerHTML = 'Latitude: '             + position.coords.latitude  + '&lt;br/&gt;' +
-                        'Longitude: '            + position.coords.longitude + '&lt;br/&gt;' +
-                        'Altitude: '             + position.coords.altitude  + '&lt;br/&gt;' +
-                        'Accuracy: '             + position.coords.accuracy  + '&lt;br/&gt;' +
-                        'Altitude Accuracy: '    + position.coords.altitudeAccuracy  + '&lt;br/&gt;' +
-                        'Heading: '              + position.coords.heading   + '&lt;br/&gt;' +
-                        'Speed: '                + position.coords.speed     + '&lt;br/&gt;';
-    }
-
-    // Show an alert if there is a problem getting the geolocation
-    //
-    function onError() {
-        alert('onError!');
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div id="myDiv"&gt;&lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_geolocation_geolocation.md.html#Geolocation"><span class="pln">Geolocation</span></a><span class="pln"> </span><a href="cordova_geolocation_geolocation.md.html#Position"><span class="pln">Position</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Set an event to wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is loaded and Ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_geolocation_geolocation.md.html#geolocation.getCurrentPosition"><span class="pln">geolocation</span><span class="pun">.</span><span class="pln">getCurrentPosition</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Display `</span><a href="cordova_geolocation_geolocation.md.html#Position"><span class="com">Position</span></a><span class="com">` properties from the geolocation</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">position</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> div </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'myDiv'</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; div</span><span class="pun">.</span><span class="pln">innerHTML </span><span class="pun">=</span><span class="pln"> </span><span class="str">'Latitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">latitude &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br/&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Longitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">longitude </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br/&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Altitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">altitude &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br/&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Accuracy: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">accuracy &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br/&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Altitude Accuracy: '</span><span class="pln"> &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">altitudeAccuracy &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br/&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Heading: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">heading &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br/&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Speed: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">speed &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br/&gt;'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Show an alert if there is a problem getting the geolocation</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"myDiv"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="Coordinates_android_quirks">Android Quirks</a>
@@ -647,88 +375,23 @@ navigator.<a href="cordova_geolocation_geolocation.md.html#geolocation.getCurren
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.x</li>
 <li>webOS</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="Position_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>// onSuccess Callback
-//
-var onSuccess = function(position) {
-    alert('Latitude: '          + position.coords.latitude          + '\n' +
-          'Longitude: '         + position.coords.longitude         + '\n' +
-          'Altitude: '          + position.coords.altitude          + '\n' +
-          'Accuracy: '          + position.coords.accuracy          + '\n' +
-          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-          'Heading: '           + position.coords.heading           + '\n' +
-          'Speed: '             + position.coords.speed             + '\n' +
-          'Timestamp: '         + position.timestamp                + '\n');
-};
-
-// onError Callback receives a <a href="cordova_geolocation_geolocation.md.html#PositionError">PositionError</a> object
-//
-function onError(error) {
-    alert('code: '    + error.code    + '\n' +
-          'message: ' + error.message + '\n');
-}
-
-navigator.<a href="cordova_geolocation_geolocation.md.html#geolocation.getCurrentPosition">geolocation.getCurrentPosition</a>(onSuccess, onError);
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// onSuccess Callback</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> onSuccess </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">position</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'Latitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">latitude &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Longitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">longitude &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Altitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">altitude &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Accuracy: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">accuracy &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Altitude Accuracy: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">altitudeAccuracy &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Heading: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">heading &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Speed: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">speed &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Timestamp: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">timestamp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="com">// onError Callback receives a </span><a href="cordova_geolocation_geolocation.md.html#PositionError"><span class="com">PositionError</span></a><span class="com"> object</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'code: '</span><span class="pln"> &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'message: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">message </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br>navigator</span><span class="pun">.</span><a href="cordova_geolocation_geolocation.md.html#geolocation.getCurrentPosition"><span class="pln">geolocation</span><span class="pun">.</span><span class="pln">getCurrentPosition</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="Position_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_device_device.md.html#Device">Device</a> Properties Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        navigator.<a href="cordova_geolocation_geolocation.md.html#geolocation.getCurrentPosition">geolocation.getCurrentPosition</a>(onSuccess, onError);
-    }
-
-    // onSuccess <a href="cordova_geolocation_geolocation.md.html#Geolocation">Geolocation</a>
-    //
-    function onSuccess(position) {
-        var element = document.getElementById('geolocation');
-        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '&lt;br /&gt;' +
-                            'Longitude: '          + position.coords.longitude             + '&lt;br /&gt;' +
-                            'Altitude: '           + position.coords.altitude              + '&lt;br /&gt;' +
-                            'Accuracy: '           + position.coords.accuracy              + '&lt;br /&gt;' +
-                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '&lt;br /&gt;' +
-                            'Heading: '            + position.coords.heading               + '&lt;br /&gt;' +
-                            'Speed: '              + position.coords.speed                 + '&lt;br /&gt;' +
-                            'Timestamp: '          +
- position.timestamp                    + '&lt;br /&gt;';
-    }
-
-    // onError Callback receives a <a href="cordova_geolocation_geolocation.md.html#PositionError">PositionError</a> object
-    //
-    function onError(error) {
-        alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p id="geolocation"&gt;Finding geolocation...&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_device_device.md.html#Device"><span class="pln">Device</span></a><span class="pln"> Properties Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_geolocation_geolocation.md.html#geolocation.getCurrentPosition"><span class="pln">geolocation</span><span class="pun">.</span><span class="pln">getCurrentPosition</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSuccess </span><a href="cordova_geolocation_geolocation.md.html#Geolocation"><span class="com">Geolocation</span></a><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">position</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'geolocation'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; element</span><span class="pun">.</span><span class="pln">innerHTML </span><span class="pun">=</span><span class="pln"> </span><span class="str">'Latitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">latitude &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Longitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">longitude &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Altitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">altitude &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Accuracy: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">accuracy &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Altitude Accuracy: '</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">altitudeAccuracy &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Heading: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">heading &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Speed: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">speed &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Timestamp: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> <br>&nbsp;position</span><span class="pun">.</span><span class="pln">timestamp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onError Callback receives a </span><a href="cordova_geolocation_geolocation.md.html#PositionError"><span class="com">PositionError</span></a><span class="com"> object</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'code: '</span><span class="pln"> &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'message: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">message </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"geolocation"</span><span class="tag">&gt;</span><span class="pln">Finding geolocation...</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="PositionError">PositionError</a></h1>
@@ -783,10 +446,7 @@ called into the <code><a href="cordova_geolocation_geolocation.md.html#geolocati
 
 <p>The user's callback function that is called when a geolocation position becomes available (when using with <code><a href="cordova_geolocation_geolocation.md.html#geolocation.getCurrentPosition">geolocation.getCurrentPosition</a></code>), or when the position changes (when using with <code><a href="cordova_geolocation_geolocation.md.html#geolocation.watchPosition">geolocation.watchPosition</a></code>).</p>
 
-<pre class="prettyprint"><code>function(position) {
-    // Do something
-}
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pun">(</span><span class="pln">position</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// Do something</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="geolocationSuccess_parameters">Parameters</a>
@@ -800,27 +460,14 @@ called into the <code><a href="cordova_geolocation_geolocation.md.html#geolocati
 <a name="geolocationSuccess_example">Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function <a href="cordova_geolocation_geolocation.md.html#geolocationSuccess">geolocationSuccess</a>(position) {
-    alert('Latitude: '          + position.coords.latitude          + '\n' +
-          'Longitude: '         + position.coords.longitude         + '\n' +
-          'Altitude: '          + position.coords.altitude          + '\n' +
-          'Accuracy: '          + position.coords.accuracy          + '\n' +
-          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-          'Heading: '           + position.coords.heading           + '\n' +
-          'Speed: '             + position.coords.speed             + '\n' +
-          'Timestamp: '         + position.timestamp                + '\n');
-}
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> </span><a href="cordova_geolocation_geolocation.md.html#geolocationSuccess"><span class="pln">geolocationSuccess</span></a><span class="pun">(</span><span class="pln">position</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'Latitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">latitude &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Longitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">longitude &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Altitude: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">altitude &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Accuracy: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">accuracy &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Altitude Accuracy: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">altitudeAccuracy &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Heading: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">heading &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Speed: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">coords</span><span class="pun">.</span><span class="pln">speed &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Timestamp: '</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> position</span><span class="pun">.</span><span class="pln">timestamp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="geolocationError">geolocationError</a></h1>
 
 <p>The user's callback function that is called when there is an error for geolocation functions.</p>
 
-<pre class="prettyprint"><code>function(error) {
-    // Handle the error
-}
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// Handle the error</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="geolocationError_parameters">Parameters</a>
@@ -836,8 +483,7 @@ called into the <code><a href="cordova_geolocation_geolocation.md.html#geolocati
 <p>Optional parameters to customize the retrieval of the geolocation
 <code><a href="cordova_geolocation_geolocation.md.html#Position">Position</a></code>.</p>
 
-<pre class="prettyprint"><code>{ maximumAge: 3000, timeout: 5000, enableHighAccuracy: true };
-</code></pre>
+<pre class="prettyprint"><code><span class="pun">{</span><span class="pln"> maximumAge</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3000</span><span class="pun">,</span><span class="pln"> timeout</span><span class="pun">:</span><span class="pln"> </span><span class="lit">5000</span><span class="pun">,</span><span class="pln"> enableHighAccuracy</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">};</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="geolocationOptions_options">Options</a>
@@ -860,10 +506,9 @@ called into the <code><a href="cordova_geolocation_geolocation.md.html#geolocati
 
 <p>The Android 2.x simulators will not return a geolocation result unless the enableHighAccuracy option is set to true.</p>
 
-<pre class="prettyprint"><code>{ enableHighAccuracy: true }
-</code></pre>
+<pre class="prettyprint"><code><span class="pun">{</span><span class="pln"> enableHighAccuracy</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">}</span><span class="pln"><br></span></code></pre>
 
-            </div>
+</div>
         </div>
 
         <script type="text/javascript" src="../lib/iscroll.js"></script>

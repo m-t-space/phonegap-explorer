@@ -1,0 +1,753 @@
+
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+--><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+<meta name="generator" content="joDoc">
+<title>Apache Cordova API Documentation</title>
+<link rel="stylesheet" type="text/css" href="index.css">
+<link rel="stylesheet" type="text/css" href="mobile.css" media="only screen and (max-device-width: 1024px)">
+<link rel="stylesheet" type="text/css" href="prettify/prettify.css">
+</head>
+<body>
+        <div id="wrapper">
+<div id="content">
+                <h1><a name="Globalization">Globalization</a></h1>
+
+<p>The <code>globalization</code> object obtains information and performs operations specific to the user's locale and timezone.</p>
+
+<h2>
+<a name="Globalization_objects">Objects</a>
+</h2>
+
+<ul>
+<li><a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a></li>
+</ul>
+<h2>
+<a name="Globalization_methods">Methods</a>
+</h2>
+
+<ul>
+<li><a href="cordova_globalization_globalization.md.html#globalization.getPreferredLanguage">globalization.getPreferredLanguage</a></li>
+<li><a href="cordova_globalization_globalization.md.html#globalization.getLocaleName">globalization.getLocaleName</a></li>
+<li><a href="cordova_globalization_globalization.md.html#globalization.dateToString">globalization.dateToString</a></li>
+<li><a href="cordova_globalization_globalization.md.html#globalization.stringToDate">globalization.stringToDate</a></li>
+<li><a href="cordova_globalization_globalization.md.html#globalization.getDatePattern">globalization.getDatePattern</a></li>
+<li><a href="cordova_globalization_globalization.md.html#globalization.getDateNames">globalization.getDateNames</a></li>
+<li><a href="cordova_globalization_globalization.md.html#globalization.isDayLightSavingsTime">globalization.isDayLightSavingsTime</a></li>
+<li><a href="cordova_globalization_globalization.md.html#globalization.getFirstDayOfWeek">globalization.getFirstDayOfWeek</a></li>
+<li><a href="cordova_globalization_globalization.md.html#globalization.numberToString">globalization.numberToString</a></li>
+<li><a href="cordova_globalization_globalization.md.html#globalization.stringToNumber">globalization.stringToNumber</a></li>
+<li><a href="cordova_globalization_globalization.md.html#globalization.getNumberPattern">globalization.getNumberPattern</a></li>
+<li><a href="cordova_globalization_globalization.md.html#globalization.getCurrencyPattern">globalization.getCurrencyPattern</a></li>
+</ul>
+<h2>
+<a name="Globalization_variable_scope">Variable Scope</a>
+</h2>
+
+<p>The <code>globalization</code> object is a child of the <code>navigator</code> object, and therefore has global scope.</p>
+
+<pre class="prettyprint"><code><span class="com">// The global globalization object</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> globalization </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><span class="pln">globalization</span><span class="pun">;</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="Globalization_permissions">Permissions</a>
+</h2>
+
+<h3>Android</h3>
+
+<h4>app/res/xml/config.xml</h4>
+
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_globalization_globalization.md.html#Globalization"><span class="atv">Globalization</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.</span><a href="cordova_globalization_globalization.md.html#Globalization"><span class="atv">Globalization</span></a><span class="atv">"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
+
+<hr>
+<h1><a name="globalization.getPreferredLanguage">globalization.getPreferredLanguage</a></h1>
+
+<p>Get the string identifier for the client's current language.</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getPreferredLanguage"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getPreferredLanguage</span></a><span class="pun">(</span><span class="pln">successCB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.getPreferredLanguage_description">Description</a>
+</h2>
+
+<p>It returns the language identifier string to the successCB callback with a
+properties object as a parameter. That object should have a <code>value</code> property with a String value.</p>
+
+<p>If there is an error getting the language, then the errorCB callback is invoked with a <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a> object as a parameter. The expected code for this error is <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a>.UNKNOWN_ERROR.</p>
+
+<h2>
+<a name="globalization.getPreferredLanguage_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+<li>iPhone</li>
+<li>Windows Phone 8</li>
+</ul>
+<h2>
+<a name="globalization.getPreferredLanguage_quick_example">Quick Example</a>
+</h2>
+
+<p>In the case when the browser is set to the en_US locale, this should display a popup dialog with the text "language: English".</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getPreferredLanguage"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getPreferredLanguage</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">language</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'language: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> language</span><span class="pun">.</span><span class="pln">value </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting language\n'</span><span class="pun">);}</span><span class="pln"><br></span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.getPreferredLanguage_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE HTML&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><span class="pln">Cordova</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> checkLanguage</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getPreferredLanguage"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getPreferredLanguage</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">language</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'language: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> language</span><span class="pun">.</span><span class="pln">value </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting language\n'</span><span class="pun">);}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">checkLanguage</span><span class="pun">()</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Click for language</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.getPreferredLanguage_windows_phone_8_quirks">Windows Phone 8 Quirks</a>
+</h2>
+
+<ul>
+<li>Returns the ISO 639-1 two-letter code for the current language.</li>
+</ul>
+<hr>
+<h1><a name="globalization.getLocaleName">globalization.getLocaleName</a></h1>
+
+<p>Get the string identifier for the client's current locale setting.</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getLocaleName"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getLocaleName</span></a><span class="pun">(</span><span class="pln">successCB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.getLocaleName_description">Description</a>
+</h2>
+
+<p>It returns the locale identifier string to the successCB callback with a
+properties object as a parameter. That object should have a <code>value</code> property with a String value.</p>
+
+<p>If there is an error getting the locale, then the errorCB callback is invoked with a <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a> object as a parameter. The expected code for this error is <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a>.UNKNOWN_ERROR.</p>
+
+<h2>
+<a name="globalization.getLocaleName_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+<li>iPhone</li>
+<li>Windows Phone 8</li>
+</ul>
+<h2>
+<a name="globalization.getLocaleName_quick_example">Quick Example</a>
+</h2>
+
+<p>In the case when the browser is set to the en_US locale, this should display a popup dialog with the text "locale: en_US".</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getLocaleName"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getLocaleName</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">locale</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'locale: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> locale</span><span class="pun">.</span><span class="pln">value </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting locale\n'</span><span class="pun">);}</span><span class="pln"><br></span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.getLocaleName_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE HTML&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><span class="pln">Cordova</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> checkLocale</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getLocaleName"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getLocaleName</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">locale</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'locale: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> locale</span><span class="pun">.</span><span class="pln">value </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting locale\n'</span><span class="pun">);}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">checkLocale</span><span class="pun">()</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Click for locale</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.getLocaleName_windows_phone_8_quirks">Windows Phone 8 Quirks</a>
+</h2>
+
+<ul>
+<li>Returns the two-letter code defined in ISO 3166 for the current country/region.</li>
+</ul>
+<hr>
+<h1><a name="globalization.dateToString">globalization.dateToString</a></h1>
+
+<p>Returns a date formatted as a string according to the client's locale and timezone.</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.dateToString"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">dateToString</span></a><span class="pun">(</span><span class="pln">date</span><span class="pun">,</span><span class="pln"> successCB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.dateToString_description">Description</a>
+</h2>
+
+<p>It returns the formatted date string to the successCB callback with a properties object as a parameter. That object should have a <code>value</code> property with a String value.</p>
+
+<p>The inbound <code>date</code> parameter should be of type <code>Date</code>.</p>
+
+<p>If there is an error formatting the date, then the errorCB callback is invoked with a <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a> object as a parameter. The expected code for this error is <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a>.FORMATTING_ERROR.</p>
+
+<p><code>options.formatLength</code> can be 'short', 'medium', 'long', or 'full'.
+<code>options.selector</code> can be 'date', 'time' or 'date and time'.</p>
+
+<p>The default options are <code>{formatLength:'short', selector:'date and time'}</code>.
+The <code>options</code> parameter is optional.</p>
+
+<h2>
+<a name="globalization.dateToString_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+<li>iPhone</li>
+<li>Windows Phone 8</li>
+</ul>
+<h2>
+<a name="globalization.dateToString_quick_example">Quick Example</a>
+</h2>
+
+<p>In the case when the browser is set to the en_US locale, this should display a popup dialog with text similar to "date: 9/25/2012 4:21PM" using the default options.</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.dateToString"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">dateToString</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Date</span><span class="pun">(),</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">date</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'date:'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> date</span><span class="pun">.</span><span class="pln">value </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting dateString\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; </span><span class="pun">{</span><span class="pln">formatLength</span><span class="pun">:</span><span class="str">'short'</span><span class="pun">,</span><span class="pln"> selector</span><span class="pun">:</span><span class="str">'date and time'</span><span class="pun">}</span><span class="pln"><br></span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.dateToString_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE HTML&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><span class="pln">Cordova</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> checkDateString</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.dateToString"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">dateToString</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Date</span><span class="pun">(),</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">date</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'date: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> date</span><span class="pun">.</span><span class="pln">value </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting dateString\n'</span><span class="pun">);,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">{</span><span class="pln">formatLength</span><span class="pun">:</span><span class="str">'short'</span><span class="pun">,</span><span class="pln"> selector</span><span class="pun">:</span><span class="str">'date and time'</span><span class="pun">}}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">checkDateString</span><span class="pun">()</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Click for date string</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.dateToString_windows_phone_8_quirks">Windows Phone 8 Quirks</a>
+</h2>
+
+<ul>
+<li>
+<code>formatLength</code> option supports only short and full values</li>
+</ul>
+<hr>
+<h1><a name="globalization.stringToDate">globalization.stringToDate</a></h1>
+
+<p>Parses a date formatted as a string according to the client's user
+preferences and calendar using the time zone of the client and returns
+the corresponding date object.</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.stringToDate"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">stringToDate</span></a><span class="pun">(</span><span class="pln">dateString</span><span class="pun">,</span><span class="pln"> successCB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.stringToDate_description">Description</a>
+</h2>
+
+<p>It returns the date to the success callback with a properties object as a parameter. That object should have the following properties:</p>
+
+<ul>
+<li>year {Number}: The four digit year</li>
+<li>month {Number}: The month from (0 - 11)</li>
+<li>day {Number}: The day from (1 - 31)</li>
+<li>hour {Number}: The hour from (0 - 23)</li>
+<li>minute {Number}: The minute from (0 - 59)</li>
+<li>second {Number}: The second from (0 - 59)</li>
+<li>millisecond {Number}: The milliseconds (from 0 - 999), not available on all platforms</li>
+</ul>
+<p>The inbound <code>dateString</code> parameter should be of type <code>String</code>.</p>
+
+<p><code>options.formatLength</code> can be 'short', 'medium', 'long', or 'full'.
+<code>options.selector</code> can be 'date', 'time' or 'date and time'.</p>
+
+<p>The default options are <code>{formatLength:'short', selector:'date and time'}</code>.
+The options parameter is optional.</p>
+
+<p>If there is an error parsing the date string, then the errorCB callback is invoked with a <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a> object as a parameter. The expected code for this error is <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a>.PARSING_ERROR.</p>
+
+<h2>
+<a name="globalization.stringToDate_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+<li>iPhone</li>
+<li>Windows Phone 8</li>
+</ul>
+<h2>
+<a name="globalization.stringToDate_quick_example">Quick Example</a>
+</h2>
+
+<p>In the case when the browser is set to the en_US locale, this should display a popup dialog with text similar to "month:8 day:25 year:2012". Note that the month integer is one less than the string, as the month integer represents an index.</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.stringToDate"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">stringToDate</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; </span><span class="str">'9/25/2012'</span><span class="pun">,</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">date</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'month:'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> date</span><span class="pun">.</span><span class="pln">month </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="str">' day:'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> date</span><span class="pun">.</span><span class="pln">day </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="str">' year:'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> date</span><span class="pun">.</span><span class="pln">year </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting date\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; </span><span class="pun">{</span><span class="pln">selector</span><span class="pun">:</span><span class="str">'date'</span><span class="pun">}</span><span class="pln"><br></span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.stringToDate_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE HTML&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><span class="pln">Cordova</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> checkStringDate</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.stringToDate"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">stringToDate</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'9/25/2012'</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">date</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'month:'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> date</span><span class="pun">.</span><span class="pln">month </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="str">' day:'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> date</span><span class="pun">.</span><span class="pln">day </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="str">' year:'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> date</span><span class="pun">.</span><span class="pln">year </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting date\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">{</span><span class="pln">selector</span><span class="pun">:</span><span class="str">'date'</span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">checkStringDate</span><span class="pun">()</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Click for parsed date</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.stringToDate_windows_phone_8_quirks">Windows Phone 8 Quirks</a>
+</h2>
+
+<ul>
+<li>
+<code>formatLength</code> option supports only short and full values</li>
+</ul>
+<hr>
+<h1><a name="globalization.getDatePattern">globalization.getDatePattern</a></h1>
+
+<p>Returns a pattern string for formatting and parsing dates according to the client's user preferences.</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getDatePattern"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getDatePattern</span></a><span class="pun">(</span><span class="pln">successCB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.getDatePattern_description">Description</a>
+</h2>
+
+<p>It returns the pattern to the successCB callback with a properties object as a parameter. That object should have the following properties:</p>
+
+<ul>
+<li>pattern {String}: The date and time pattern for formatting and parsing dates.  The patterns follow Unicode Technical Standard #35. <a class="external" href="http://unicode.org/reports/tr35/tr35-4.html">http://unicode.org/reports/tr35/tr35-4.html</a>
+</li>
+<li>timezone {String}: The abbreviated name of the time zone on the client</li>
+<li>utc_offset {Number}: The current difference in seconds between the client's time zone and coordinated universal time.</li>
+<li>dst_offset {Number}: The current daylight saving time offset in seconds between the client's non-daylight saving's time zone and the client's daylight saving's time zone.</li>
+</ul>
+<p>If there is an error obtaining the pattern, then the errorCB callback is invokedwith a <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a> object as a parameter. The expected code for this error is <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a>.PATTERN_ERROR.</p>
+
+<p><code>options.formatLength</code> can be 'short', 'medium', 'long', or 'full'.
+<code>options.selector</code> can be 'date', 'time' or 'date and time'.</p>
+
+<p>The default options are <code>{formatLength:'short', selector:'date and time'}</code>.
+The options parameter is optional.</p>
+
+<h2>
+<a name="globalization.getDatePattern_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+<li>iPhone</li>
+<li>Windows Phone 8</li>
+</ul>
+<h2>
+<a name="globalization.getDatePattern_quick_example">Quick Example</a>
+</h2>
+
+<p>In the case when the browser is set to the en_US locale, this should display a popup dialog with text similar to "pattern: M/d/yyyy h:mm a".</p>
+
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> checkDatePattern</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getDatePattern"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getDatePattern</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">date</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'pattern: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> date</span><span class="pun">.</span><span class="pln">pattern </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting pattern\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">{</span><span class="pln">formatLength</span><span class="pun">:</span><span class="str">'short'</span><span class="pun">,</span><span class="pln"> selector</span><span class="pun">:</span><span class="str">'date and time'</span><span class="pun">}</span><span class="pln"><br>&nbsp; </span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.getDatePattern_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE HTML&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><span class="pln">Cordova</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> checkDatePattern</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getDatePattern"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getDatePattern</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">date</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'pattern: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> date</span><span class="pun">.</span><span class="pln">pattern </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting pattern\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">{</span><span class="pln">formatLength</span><span class="pun">:</span><span class="str">'short'</span><span class="pun">,</span><span class="pln"> selector</span><span class="pun">:</span><span class="str">'date and time'</span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">checkDatePattern</span><span class="pun">()</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Click for pattern</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.getDatePattern_windows_phone_8_quirks">Windows Phone 8 Quirks</a>
+</h2>
+
+<ul>
+<li>
+<code>formatLength</code> option supports only short and full values.</li>
+<li>
+<code>pattern</code> property for <code>date and time</code> pattern returns only full datetime format.</li>
+<li>
+<code>timezone</code> property returns full time zone name</li>
+<li>
+<code>dst_offset</code> returned property is not supported and always returns zero.</li>
+</ul>
+<hr>
+<h1><a name="globalization.getDateNames">globalization.getDateNames</a></h1>
+
+<p>Returns an array of either the names of the months or days of the week according to the client's user preferences and calendar.</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getDateNames"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getDateNames</span></a><span class="pun">(</span><span class="pln">successCB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.getDateNames_description">Description</a>
+</h2>
+
+<p>It returns the array of names to the successCB callback with a properties object as a parameter. That object should have a <code>value</code> property with an Array of Strings. That array will be the names starting from either the first month in the year or the first day of the week, depending on the option selected.</p>
+
+<p>If there is an error obtaining the names, then the errorCB callback is invoked with a <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a> object as a parameter. The expected code for this error is <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a>.UNKNOWN_ERROR.</p>
+
+<p><code>options.type</code> can be 'narrow', or 'wide'.
+<code>options.item</code> can be 'months', or 'days'.</p>
+
+<p>The default options are <code>{type:'wide', item:'months'}</code>.
+The options parameter is optional.</p>
+
+<h2>
+<a name="globalization.getDateNames_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+<li>iPhone</li>
+<li>Windows Phone 8</li>
+</ul>
+<h2>
+<a name="globalization.getDateNames_quick_example">Quick Example</a>
+</h2>
+
+<p>In the case when the browser is set to the en_US locale, this should display a series of 12 popup dialogs, one per month, with text similar to "month: January"</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getDateNames"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getDateNames</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">names</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">names</span><span class="pun">.</span><span class="pln">value</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'month: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> names</span><span class="pun">.</span><span class="pln">value</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; </span><span class="pun">},</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting names\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; </span><span class="pun">{</span><span class="pln">type</span><span class="pun">:</span><span class="str">'wide'</span><span class="pun">,</span><span class="pln"> item</span><span class="pun">:</span><span class="str">'months'</span><span class="pun">}</span><span class="pln"><br></span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.getDateNames_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE HTML&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><span class="pln">Cordova</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> checkDateNames</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getDateNames"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getDateNames</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">names</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">names</span><span class="pun">.</span><span class="pln">value</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'month: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> names</span><span class="pun">.</span><span class="pln">value</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting names\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">{</span><span class="pln">type</span><span class="pun">:</span><span class="str">'wide'</span><span class="pun">,</span><span class="pln"> item</span><span class="pun">:</span><span class="str">'months'</span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">checkDateNames</span><span class="pun">()</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Click for date names</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+<hr>
+<h1><a name="globalization.isDayLightSavingsTime">globalization.isDayLightSavingsTime</a></h1>
+
+<p>Returns whether daylight savings time is in effect for a given date using the client's time zone and calendar.</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.isDayLightSavingsTime"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">isDayLightSavingsTime</span></a><span class="pun">(</span><span class="pln">date</span><span class="pun">,</span><span class="pln"> successCB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.isDayLightSavingsTime_description">Description</a>
+</h2>
+
+<p>It returns whether or not daylight savings time is in effect to the successCB callback with a properties object as a parameter. That object should have a <code>dst</code> property with a Boolean value. The value 'true' indicates that daylight savings time is in effect for the given date, and 'false' indicates that it is not.</p>
+
+<p>The inbound parameter <code>date</code> should be of type <code>Date</code>.</p>
+
+<p>If there is an error reading the date, then the errorCB callback is invoked. The expected code for this error is <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a>.UNKNOWN_ERROR.</p>
+
+<h2>
+<a name="globalization.isDayLightSavingsTime_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+<li>iPhone</li>
+<li>Windows Phone 8</li>
+</ul>
+<h2>
+<a name="globalization.isDayLightSavingsTime_quick_example">Quick Example</a>
+</h2>
+
+<p>In the case during the summer when the browser is set to a DST-enabled timezone, this should display a popup dialog with text similar to "dst: true".</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.isDayLightSavingsTime"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">isDayLightSavingsTime</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Date</span><span class="pun">(),</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">date</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'dst: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> date</span><span class="pun">.</span><span class="pln">dst </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting names\n'</span><span class="pun">);}</span><span class="pln"><br></span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.isDayLightSavingsTime_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE HTML&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><span class="pln">Cordova</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> checkDayLightSavings</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.isDayLightSavingsTime"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">isDayLightSavingsTime</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Date</span><span class="pun">(),</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">date</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'dst: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> date</span><span class="pun">.</span><span class="pln">dst </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting names\n'</span><span class="pun">);}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">checkDayLightSavings</span><span class="pun">()</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Click for daylight savings</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+<hr>
+<h1><a name="globalization.getFirstDayOfWeek">globalization.getFirstDayOfWeek</a></h1>
+
+<p>Returns the first day of the week according to the client's user preferences and calendar.</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getFirstDayOfWeek"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getFirstDayOfWeek</span></a><span class="pun">(</span><span class="pln">successCB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.getFirstDayOfWeek_description">Description</a>
+</h2>
+
+<p>The days of the week are numbered starting from 1 where 1 is considered to be Sunday. It returns the day to the successCB callback with a properties object as a parameter. That object should have a <code>value</code> property with a Number value.</p>
+
+<p>If there is an error obtaining the pattern, then the errorCB callback is invoked with a <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a> object as a parameter. The expected code for this error is <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a>.UNKNOWN_ERROR.</p>
+
+<h2>
+<a name="globalization.getFirstDayOfWeek_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+<li>iPhone</li>
+<li>Windows Phone 8</li>
+</ul>
+<h2>
+<a name="globalization.getFirstDayOfWeek_quick_example">Quick Example</a>
+</h2>
+
+<p>In the case when the browser is set to the en_US locale, this should display a popup dialog with text similar to "day: 1".</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getFirstDayOfWeek"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getFirstDayOfWeek</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">day</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'day: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> day</span><span class="pun">.</span><span class="pln">value </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting day\n'</span><span class="pun">);}</span><span class="pln"><br></span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.getFirstDayOfWeek_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE HTML&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><span class="pln">Cordova</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> checkFirstDay</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getFirstDayOfWeek"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getFirstDayOfWeek</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">day</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'day: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> day</span><span class="pun">.</span><span class="pln">value </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting day\n'</span><span class="pun">);}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">checkFirstDay</span><span class="pun">()</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Click for first day of week</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+<hr>
+<h1><a name="globalization.numberToString">globalization.numberToString</a></h1>
+
+<p>Returns a number formatted as a string according to the client's user preferences.</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.numberToString"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">numberToString</span></a><span class="pun">(</span><span class="pln">number</span><span class="pun">,</span><span class="pln"> successCB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.numberToString_description">Description</a>
+</h2>
+
+<p>It returns the formatted number string to the successCB callback with a properties object as a parameter. That object should have a <code>value</code> property with a String value.</p>
+
+<p>If there is an error formatting the number, then the errorCB callback is invoked with a <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a> object as a parameter. The expected code for this error is <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a>.FORMATTING_ERROR.</p>
+
+<p><code>options.type</code> can be 'decimal', 'percent', or 'currency'. The default options are <code>{type:'decimal'}</code>. The <code>options</code> parameter is optional.</p>
+
+<h2>
+<a name="globalization.numberToString_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+<li>iPhone</li>
+<li>Windows Phone 8</li>
+</ul>
+<h2>
+<a name="globalization.numberToString_quick_example">Quick Example</a>
+</h2>
+
+<p>In the case when the browser is set to the en_US locale, this should display a popup dialog with text similar to "number: 3.142"</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.numberToString"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">numberToString</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; </span><span class="lit">3.1415926</span><span class="pun">,</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">number</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'number: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> number</span><span class="pun">.</span><span class="pln">value </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting number\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; </span><span class="pun">{</span><span class="pln">type</span><span class="pun">:</span><span class="str">'decimal'</span><span class="pun">}</span><span class="pln"><br></span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.numberToString_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE HTML&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><span class="pln">Cordova</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> checkNumber</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.numberToString"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">numberToString</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="lit">3.1415926</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">number</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'number: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> number</span><span class="pun">.</span><span class="pln">value </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting number\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">{</span><span class="pln">type</span><span class="pun">:</span><span class="str">'decimal'</span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">checkNumber</span><span class="pun">()</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Click for number</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+<hr>
+<h1><a name="globalization.stringToNumber">globalization.stringToNumber</a></h1>
+
+<p>Parses a number formatted as a string according to the client's user preferences and returns the corresponding number.</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.stringToNumber"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">stringToNumber</span></a><span class="pun">(</span><span class="kwd">string</span><span class="pun">,</span><span class="pln"> successCB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.stringToNumber_description">Description</a>
+</h2>
+
+<p>It returns the number to the successCB callback with a properties object as a parameter. That object should have a <code>value</code> property with a Number value.</p>
+
+<p>If there is an error parsing the number string, then the errorCB callback is invoked with a <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a> object as a parameter. The expected code for this error is <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a>.PARSING_ERROR.</p>
+
+<p><code>options.type</code> can be 'decimal', 'percent', or 'currency'.
+The default options are <code>{type:'decimal'}</code>. The <code>options</code> parameter is optional.</p>
+
+<h2>
+<a name="globalization.stringToNumber_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+<li>iPhone</li>
+<li>Windows Phone 8</li>
+</ul>
+<h2>
+<a name="globalization.stringToNumber_quick_example">Quick Example</a>
+</h2>
+
+<p>In the case when the browser is set to the en_US locale, this should display a popup dialog with text similar to "number: 1234.56".</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.stringToNumber"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">stringToNumber</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; </span><span class="str">'1234.56'</span><span class="pun">,</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">number</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'number: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> number</span><span class="pun">.</span><span class="pln">value </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting number\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; </span><span class="pun">{</span><span class="pln">type</span><span class="pun">:</span><span class="str">'decimal'</span><span class="pun">}</span><span class="pln"><br></span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.stringToNumber_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE HTML&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><span class="pln">Cordova</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> checkNumber</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.stringToNumber"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">stringToNumber</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'1234.56'</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">number</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'number: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> number</span><span class="pun">.</span><span class="pln">value </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting number\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">{</span><span class="pln">type</span><span class="pun">:</span><span class="str">'decimal'</span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">checkNumber</span><span class="pun">()</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Click for parsed number</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+<hr>
+<h1><a name="globalization.getNumberPattern">globalization.getNumberPattern</a></h1>
+
+<p>Returns a pattern string for formatting and parsing numbers according to the client's user preferences.</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getNumberPattern"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getNumberPattern</span></a><span class="pun">(</span><span class="pln">successCB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.getNumberPattern_description">Description</a>
+</h2>
+
+<p>It returns the pattern to the successCB callback with a properties object as a parameter. That object should have the following properties:</p>
+
+<ul>
+<li>pattern {String}: The number pattern for formatting and parsing numbers.  The patterns follow Unicode Technical Standard #35. <a class="external" href="http://unicode.org/reports/tr35/tr35-4.html">http://unicode.org/reports/tr35/tr35-4.html</a>
+</li>
+<li>symbol {String}: The symbol to be used when formatting and parsing e.g., percent or currency symbol.</li>
+<li>fraction {Number}: The number of fractional digits to use when parsing and formatting numbers.</li>
+<li>rounding {Number}: The rounding increment to use when parsing and formatting.</li>
+<li>positive {String}: The symbol to use for positive numbers when parsing and formatting.</li>
+<li>negative: {String}: The symbol to use for negative numbers when parsing and formatting.</li>
+<li>decimal: {String}: The decimal symbol to use for parsing and formatting.</li>
+<li>grouping: {String}: The grouping symbol to use for parsing and formatting.</li>
+</ul>
+<p>If there is an error obtaining the pattern, then the errorCB callback is invoked with a <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a> object as a parameter. The expected code for this error is <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a>.PATTERN_ERROR.</p>
+
+<p><code>options.type</code> can be 'decimal', 'percent', or 'currency'.
+The default options are <code>{type:'decimal'}</code>. The <code>options</code> parameter is optional.</p>
+
+<h2>
+<a name="globalization.getNumberPattern_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+<li>iPhone</li>
+<li>Windows Phone 8</li>
+</ul>
+<h2>
+<a name="globalization.getNumberPattern_quick_example">Quick Example</a>
+</h2>
+
+<p>In the case when the browser is set to the en_US locale, this should display a popup dialog with text similar to:</p>
+
+<pre class="prettyprint"><code><span class="pln">pattern</span><span class="pun">:</span><span class="pln"> </span><span class="com">#,##0.###</span><span class="pln"><br>symbol</span><span class="pun">:</span><span class="pln"> </span><span class="pun">.</span><span class="pln"><br>fraction</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pln"><br>rounding</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pln"><br>positive</span><span class="pun">:</span><span class="pln"> <br>negative</span><span class="pun">:</span><span class="pln"> </span><span class="pun">-</span><span class="pln"><br></span><span class="kwd">decimal</span><span class="pun">:</span><span class="pln"> </span><span class="pun">.</span><span class="pln"><br>grouping</span><span class="pun">:</span><span class="pln"> </span><span class="pun">,</span><span class="pln"><br></span></code></pre>
+
+<p>.</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getNumberPattern"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getNumberPattern</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">pattern</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'pattern: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">pattern </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'symbol: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">symbol </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'fraction: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">fraction </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'rounding: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">rounding </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'positive: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">positive </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'negative: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">negative </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'decimal: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="kwd">decimal</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'grouping: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">grouping</span><span class="pun">);},</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting pattern\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; </span><span class="pun">{</span><span class="pln">type</span><span class="pun">:</span><span class="str">'decimal'</span><span class="pun">}</span><span class="pln"><br></span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.getNumberPattern_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE HTML&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><span class="pln">Cordova</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> checkPattern</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getNumberPattern"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getNumberPattern</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">pattern</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'pattern: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">pattern </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'symbol: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">symbol </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'fraction: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">fraction </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'rounding: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">rounding </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'positive: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">positive </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'negative: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">negative </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'decimal: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">decimal </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'grouping: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">grouping</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting pattern\n'</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">{</span><span class="pln">type</span><span class="pun">:</span><span class="str">'decimal'</span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">checkPattern</span><span class="pun">()</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Click for pattern</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.getNumberPattern_windows_phone_8_quirks">Windows Phone 8 Quirks</a>
+</h2>
+
+<ul>
+<li>
+<code>pattern</code> property is not supported; empty string is always returned.</li>
+<li>
+<code>fraction</code> property is not supported; zero is always returned.</li>
+</ul>
+<hr>
+<h1><a name="globalization.getCurrencyPattern">globalization.getCurrencyPattern</a></h1>
+
+<p>Returns a pattern string for formatting and parsing currency values according
+to the client's user preferences and ISO 4217 currency code.</p>
+
+<pre class="prettyprint"><code><span class="pln">&nbsp;navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getCurrencyPattern"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getCurrencyPattern</span></a><span class="pun">(</span><span class="pln">currencyCode</span><span class="pun">,</span><span class="pln"> successCB</span><span class="pun">,</span><span class="pln"> errorCB</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.getCurrencyPattern_description">Description</a>
+</h2>
+
+<p>It returns the pattern to the successCB callback with a properties object as a parameter. That object should have the following properties:</p>
+
+<ul>
+<li>pattern {String}: The currency pattern for formatting and parsing currency values.  The patterns follow Unicode Technical Standard #35. <a class="external" href="http://unicode.org/reports/tr35/tr35-4.html">http://unicode.org/reports/tr35/tr35-4.html</a>
+</li>
+<li>code {String}: The ISO 4217 currency code for the pattern.</li>
+<li>fraction {Number}: The number of fractional digits to use when parsing and formatting currency.</li>
+<li>rounding {Number}: The rounding increment to use when parsing and formatting.</li>
+<li>decimal: {String}: The decimal symbol to use for parsing and formatting.</li>
+<li>grouping: {String}: The grouping symbol to use for parsing and formatting.</li>
+</ul>
+<p>The inbound <code>currencyCode</code> parameter should be a String of one of the ISO 4217 currency codes, for example 'USD'.</p>
+
+<p>If there is an error obtaining the pattern, then the errorCB callback is invoked with a <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a> object as a parameter. The expected code for this error is <a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a>.FORMATTING_ERROR.</p>
+
+<h2>
+<a name="globalization.getCurrencyPattern_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+<li>iPhone</li>
+</ul>
+<h2>
+<a name="globalization.getCurrencyPattern_quick_example">Quick Example</a>
+</h2>
+
+<p>In the case when the browser is set to the en_US locale and the selected currency is United States Dollars, this should display a popup dialog with text similar to:</p>
+
+<pre class="prettyprint"><code><span class="pln">pattern</span><span class="pun">:</span><span class="pln"> $</span><span class="com">#,##0.##;($#,##0.##)</span><span class="pln"><br>code</span><span class="pun">:</span><span class="pln"> USD<br>fraction</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pln"><br>rounding</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pln"><br></span><span class="kwd">decimal</span><span class="pun">:</span><span class="pln"> </span><span class="pun">.</span><span class="pln"><br>grouping</span><span class="pun">:</span><span class="pln"> </span><span class="pun">,</span><span class="pln"><br></span></code></pre>
+
+<p>.</p>
+
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getCurrencyPattern"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getCurrencyPattern</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; </span><span class="str">'USD'</span><span class="pun">,</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">pattern</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'pattern: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">pattern </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'code: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">code </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'fraction: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">fraction </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'rounding: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">rounding </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'decimal: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="kwd">decimal</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'grouping: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">grouping</span><span class="pun">);},</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting pattern\n'</span><span class="pun">);}</span><span class="pln"><br></span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="globalization.getCurrencyPattern_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE HTML&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><span class="pln">Cordova</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> checkPattern</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.getCurrencyPattern"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">getCurrencyPattern</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'USD'</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">pattern</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'pattern: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">pattern </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'code: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">code </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'fraction: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">fraction </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'rounding: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">rounding </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'decimal: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">decimal </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'grouping: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> pattern</span><span class="pun">.</span><span class="pln">grouping</span><span class="pun">);},</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">alert</span><span class="pun">(</span><span class="str">'Error getting pattern\n'</span><span class="pun">);}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">checkPattern</span><span class="pun">()</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Click for pattern</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+<hr>
+<h1><a name="GlobalizationError">GlobalizationError</a></h1>
+
+<p>An object representing a error from the <a href="cordova_globalization_globalization.md.html#Globalization">Globalization</a> API.</p>
+
+<h2>
+<a name="GlobalizationError_properties">Properties</a>
+</h2>
+
+<ul>
+<li>
+<strong>code:</strong>  One of the following codes representing the error type (<code>Number</code>)
+<ul>
+<li>
+<a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a>.UNKNOWN_ERROR: 0</li>
+<li>
+<a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a>.FORMATTING_ERROR: 1</li>
+<li>
+<a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a>.PARSING_ERROR: 2</li>
+<li>
+<a href="cordova_globalization_globalization.md.html#GlobalizationError">GlobalizationError</a>.PATTERN_ERROR: 3</li>
+</ul>
+</li>
+<li>
+<strong>message:</strong>  A text message that includes the error explanation and/or details (<code>String</code>)</li>
+</ul>
+<h2>
+<a name="GlobalizationError_description">Description</a>
+</h2>
+
+<p>This object is created and populated by Cordova, and returned to a callback in the case of an error.</p>
+
+<h2>
+<a name="GlobalizationError_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+<li>iOS</li>
+</ul>
+<h2>
+<a name="GlobalizationError_quick_example">Quick Example</a>
+</h2>
+
+<p>When the following error callback is invoked, it should display a popup dialog with the text similar to "code: 3" and "message: ".</p>
+
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> errorCB</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'code: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'message: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">message </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="GlobalizationError_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE HTML&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><span class="pln">Cordova</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> successCB</span><span class="pun">(</span><span class="pln">date</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'month:'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> date</span><span class="pun">.</span><span class="pln">month </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">' day:'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> date</span><span class="pun">.</span><span class="pln">day </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">' year:'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> date</span><span class="pun">.</span><span class="pln">year </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> errorCB</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'code: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">code </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'message: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">message </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> checkError</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_globalization_globalization.md.html#globalization.stringToDate"><span class="pln">globalization</span><span class="pun">.</span><span class="pln">stringToDate</span></a><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'notADate'</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; successCB</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; errorCB</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">{</span><span class="pln">selector</span><span class="pun">:</span><span class="str">'foobar'</span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">checkError</span><span class="pun">()</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Click for error</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+</div>
+        </div>
+
+        <script type="text/javascript" src="../lib/iscroll.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+        <script type="text/javascript" src="prettify/prettify.js"></script>
+        <script type="text/javascript" src="doc.js"></script>
+</body>
+</html>

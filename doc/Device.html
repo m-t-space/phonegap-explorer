@@ -29,8 +29,8 @@
 </head>
 <body>
         <div id="wrapper">
-            <div id="content">
-                <h1><a name="Device">Device</a></h1>
+<div id="content">
+				<h1><a name="Device">Device</a></h1>
 
 <blockquote>
   <p>The <code>device</code> object describes the device's hardware and software.</p>
@@ -46,6 +46,7 @@
 <li><a href="cordova_device_device.md.html#device.platform">device.platform</a></li>
 <li><a href="cordova_device_device.md.html#device.uuid">device.uuid</a></li>
 <li><a href="cordova_device_device.md.html#device.version">device.version</a></li>
+<li><a href="cordova_device_device.model.md.html#device.model">device.model</a></li>
 </ul>
 <h2>
 <a name="Device_variable_scope">Variable Scope</a>
@@ -53,10 +54,7 @@
 
 <p>Since <code>device</code> is assigned to the <code>window</code> object, it is implicitly in the global scope.</p>
 
-<pre class="prettyprint"><code>// These reference the same `device`
-var phoneName = window.<a href="cordova_device_device.md.html#device.name">device.name</a>;
-var phoneName = <a href="cordova_device_device.md.html#device.name">device.name</a>;
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// These reference the same `device`</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> phoneName </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><a href="cordova_device_device.md.html#device.name"><span class="pln">device</span><span class="pun">.</span><span class="pln">name</span></a><span class="pun">;</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> phoneName </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.name"><span class="pln">device</span><span class="pun">.</span><span class="pln">name</span></a><span class="pun">;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="Device_permissions">Permissions</a>
@@ -64,70 +62,62 @@ var phoneName = <a href="cordova_device_device.md.html#device.name">device.name<
 
 <h3>Android</h3>
 
-<h4>app/res/xml/plugins.xml</h4>
+<h4>app/res/xml/config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;plugin name="<a href="cordova_device_device.md.html#Device">Device</a>" value="org.apache.cordova.<a href="cordova_device_device.md.html#Device">Device</a>" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_device_device.md.html#Device"><span class="atv">Device</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.</span><a href="cordova_device_device.md.html#Device"><span class="atv">Device</span></a><span class="atv">"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h4>app/AndroidManifest.xml</h4>
 
-<pre class="prettyprint"><code>&lt;uses-permission android:name="android.permission.READ_PHONE_STATE" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.READ_PHONE_STATE"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>Bada</h3>
 
 <h4>manifest.xml</h4>
 
-<pre class="prettyprint"><code>&lt;Privilege&gt;
-    &lt;Name&gt;SYSTEM_SERVICE&lt;/Name&gt;
-&lt;/Privilege&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;Privilege&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;Name&gt;</span><span class="pln">SYSTEM_SERVICE</span><span class="tag">&lt;/Name&gt;</span><span class="pln"><br></span><span class="tag">&lt;/Privilege&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>BlackBerry WebWorks</h3>
 
 <h4>www/plugins.xml</h4>
 
-<pre class="prettyprint"><code>&lt;plugin name="<a href="cordova_device_device.md.html#Device">Device</a>" value="org.apache.cordova.device.<a href="cordova_device_device.md.html#Device">Device</a>" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_device_device.md.html#Device"><span class="atv">Device</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.device.</span><a href="cordova_device_device.md.html#Device"><span class="atv">Device</span></a><span class="atv">"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h4>www/config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;feature id="blackberry.app" required="true" version="1.0.0.0" /&gt;
-&lt;rim:permissions&gt;
-    &lt;rim:permit&gt;read_device_identifying_information&lt;/rim:permit&gt;
-&lt;/rim:permissions&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;feature</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"blackberry.app"</span><span class="pln"> </span><span class="atn">required</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">version</span><span class="pun">=</span><span class="atv">"1.0.0.0"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;rim:permissions&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;rim:permit&gt;</span><span class="pln">read_device_identifying_information</span><span class="tag">&lt;/rim:permit&gt;</span><span class="pln"><br></span><span class="tag">&lt;/rim:permissions&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>iOS</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <h3>webOS</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <h3>Windows Phone</h3>
 
 <h4>Properties/WPAppManifest.xml</h4>
 
-<pre class="prettyprint"><code>&lt;Capabilities&gt;
-    &lt;Capability Name="ID_CAP_WEBBROWSERCOMPONENT" /&gt;
-    &lt;Capability Name="ID_CAP_IDENTITY_DEVICE" /&gt;
-    &lt;Capability Name="ID_CAP_IDENTITY_USER" /&gt;
-&lt;/Capabilities&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;Capabilities&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;Capability</span><span class="pln"> </span><span class="atn">Name</span><span class="pun">=</span><span class="atv">"ID_CAP_WEBBROWSERCOMPONENT"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;Capability</span><span class="pln"> </span><span class="atn">Name</span><span class="pun">=</span><span class="atv">"ID_CAP_IDENTITY_DEVICE"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;Capability</span><span class="pln"> </span><span class="atn">Name</span><span class="pun">=</span><span class="atv">"ID_CAP_IDENTITY_USER"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;/Capabilities&gt;</span><span class="pln"><br></span></code></pre>
 
 <p>Reference: <a class="external" href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
+
+<h3>Tizen</h3>
+
+<h4>config.xml</h4>
+
+<pre class="prettyprint"><code><span class="tag">&lt;feature</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"http://tizen.org/api/systeminfo"</span><span class="pln"> </span><span class="atn">required</span><span class="pun">=</span><span class="atv">"true"</span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
+
+<p>Reference: <a class="external" href="https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures">Application Manifest for Tizen Web Application</a></p>
 
 <hr>
 <h1><a name="device.name">device.name</a></h1>
 
+<p>WARNING: <a href="cordova_device_device.md.html#device.name">device.name</a> is deprecated as of version 2.3.0, use <a href="cordova_device_device.model.md.html#device.model">device.model</a> instead</p>
+
 <p>Get the device's model name.</p>
 
-<pre class="prettyprint"><code>var string = <a href="cordova_device_device.md.html#device.name">device.name</a>;
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> </span><span class="kwd">string</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.name"><span class="pln">device</span><span class="pun">.</span><span class="pln">name</span></a><span class="pun">;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="device.name_description">Description</a>
@@ -142,58 +132,24 @@ var phoneName = <a href="cordova_device_device.md.html#device.name">device.name<
 <ul>
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iPhone</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>iOS</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.x</li>
 <li>webOS</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="device.name_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>// Android:    Nexus One       returns "Passion" (Nexus One code name)
-//             Motorola Droid  returns "voles"
-// BlackBerry: Torch 9800      returns "9800"
-// iPhone:     All devices     returns a name set by iTunes e.g. "Joe's iPhone"
-//
-var name = <a href="cordova_device_device.md.html#device.name">device.name</a>;
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// Android: &nbsp; &nbsp;Nexus One &nbsp; &nbsp; &nbsp; returns "Passion" (Nexus One code name)</span><span class="pln"><br></span><span class="com">// &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Motorola Droid &nbsp;returns "voles"</span><span class="pln"><br></span><span class="com">// BlackBerry: Torch 9800 &nbsp; &nbsp; &nbsp;returns "9800"</span><span class="pln"><br></span><span class="com">// iOS: &nbsp; &nbsp; All devices &nbsp; &nbsp; returns either "iPhone", "iPod Touch", "iPhone Simulator", "iPad", "iPad Simulator"</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> name </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.name"><span class="pln">device</span><span class="pun">.</span><span class="pln">name</span></a><span class="pun">;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="device.name_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_device_device.md.html#Device">Device</a> Properties Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        var element = document.getElementById('deviceProperties');
-
-        element.innerHTML = '<a href="cordova_device_device.md.html#Device">Device</a> Name: '     + <a href="cordova_device_device.md.html#device.name">device.name</a>     + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> Cordova: '  + <a href="cordova_device_device.md.html#device.cordova">device.cordova</a> + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> Platform: ' + <a href="cordova_device_device.md.html#device.platform">device.platform</a> + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> UUID: '     + <a href="cordova_device_device.md.html#device.uuid">device.uuid</a>     + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> Version: '  + <a href="cordova_device_device.md.html#device.version">device.version</a>  + '&lt;br /&gt;';
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p id="deviceProperties"&gt;Loading device properties...&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_device_device.md.html#Device"><span class="pln">Device</span></a><span class="pln"> Properties Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'deviceProperties'</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; element</span><span class="pun">.</span><span class="pln">innerHTML </span><span class="pun">=</span><span class="pln"> </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Name: '</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.name"><span class="pln">device</span><span class="pun">.</span><span class="pln">name</span></a><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Cordova: '</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.cordova"><span class="pln">device</span><span class="pun">.</span><span class="pln">cordova</span></a><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Platform: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.platform"><span class="pln">device</span><span class="pun">.</span><span class="pln">platform</span></a><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> UUID: '</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.uuid"><span class="pln">device</span><span class="pun">.</span><span class="pln">uuid</span></a><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Model: '</span><span class="pln"> &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.model.md.html#device.model"><span class="pln">device</span><span class="pun">.</span><span class="pln">model</span></a><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Version: '</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.version"><span class="pln">device</span><span class="pun">.</span><span class="pln">version</span></a><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"deviceProperties"</span><span class="tag">&gt;</span><span class="pln">Loading device properties...</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="device.name_android_quirks">Android Quirks</a>
@@ -208,19 +164,7 @@ var name = <a href="cordova_device_device.md.html#device.name">device.name</a>;
 </li>
 </ul>
 <h2>
-<a name="device.name_iphone_quirks">iPhone Quirks</a>
-</h2>
-
-<ul>
-<li>Gets the <a class="external" href="http://developer.apple.com/iphone/library/documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html#//apple_ref/doc/uid/TP40006902-CH3-SW13">device's custom name</a> instead of the <a class="external" href="http://developer.apple.com/iphone/library/documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html#//apple_ref/doc/uid/TP40006902-CH3-SW1">device model name</a>.
-<ul>
-<li>The custom name is set by the owner in iTunes.</li>
-<li>e.g. "Joe's iPhone"</li>
-</ul>
-</li>
-</ul>
-<h2>
-<a name="device.name_windows_phone_7_quirks">Windows Phone 7 Quirks</a>
+<a name="device.name_windows_phone_7_and_8_quirks">Windows Phone 7 and 8 Quirks</a>
 </h2>
 
 <ul>
@@ -233,13 +177,19 @@ var name = <a href="cordova_device_device.md.html#device.name">device.name</a>;
 <ul>
 <li>returns the manufacturer model name. For example 'Samsung Wave S8500'</li>
 </ul>
+<h2>
+<a name="device.name_tizen_quirks">Tizen Quirks</a>
+</h2>
+
+<ul>
+<li>returns the <a href="#device%20model">device model</a> assigned by the vendor. For example 'TIZEN'</li>
+</ul>
 <hr>
 <h1><a name="device.cordova">device.cordova</a></h1>
 
 <p>Get the version of Cordova running on the device.</p>
 
-<pre class="prettyprint"><code>var string = <a href="cordova_device_device.md.html#device.cordova">device.cordova</a>;
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> </span><span class="kwd">string</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.cordova"><span class="pln">device</span><span class="pun">.</span><span class="pln">cordova</span></a><span class="pun">;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="device.cordova_description">Description</a>
@@ -255,59 +205,29 @@ var name = <a href="cordova_device_device.md.html#device.name">device.name</a>;
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iPhone</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.x</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="device.cordova_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>var name = <a href="cordova_device_device.md.html#device.cordova">device.cordova</a>;
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> name </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.cordova"><span class="pln">device</span><span class="pun">.</span><span class="pln">cordova</span></a><span class="pun">;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="device.cordova_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_device_device.md.html#Device">Device</a> Properties Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        var element = document.getElementById('deviceProperties');
-
-        element.innerHTML = '<a href="cordova_device_device.md.html#Device">Device</a> Name: '     + <a href="cordova_device_device.md.html#device.name">device.name</a>     + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> Cordova: '  + <a href="cordova_device_device.md.html#device.cordova">device.cordova</a>  + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> Platform: ' + <a href="cordova_device_device.md.html#device.platform">device.platform</a> + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> UUID: '     + <a href="cordova_device_device.md.html#device.uuid">device.uuid</a>     + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> Version: '  + <a href="cordova_device_device.md.html#device.version">device.version</a>  + '&lt;br /&gt;';
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p id="deviceProperties"&gt;Loading device properties...&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_device_device.md.html#Device"><span class="pln">Device</span></a><span class="pln"> Properties Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'deviceProperties'</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; element</span><span class="pun">.</span><span class="pln">innerHTML </span><span class="pun">=</span><span class="pln"> </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Name: '</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.name"><span class="pln">device</span><span class="pun">.</span><span class="pln">name</span></a><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Cordova: '</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.cordova"><span class="pln">device</span><span class="pun">.</span><span class="pln">cordova</span></a><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Platform: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.platform"><span class="pln">device</span><span class="pun">.</span><span class="pln">platform</span></a><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> UUID: '</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.uuid"><span class="pln">device</span><span class="pun">.</span><span class="pln">uuid</span></a><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Version: '</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.version"><span class="pln">device</span><span class="pun">.</span><span class="pln">version</span></a><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"deviceProperties"</span><span class="tag">&gt;</span><span class="pln">Loading device properties...</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="device.platform">device.platform</a></h1>
 
 <p>Get the device's operating system name.</p>
 
-<pre class="prettyprint"><code>var string = <a href="cordova_device_device.md.html#device.platform">device.platform</a>;
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> </span><span class="kwd">string</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.platform"><span class="pln">device</span><span class="pun">.</span><span class="pln">platform</span></a><span class="pun">;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="device.platform_supported_platforms">Supported Platforms</a>
@@ -316,65 +236,24 @@ var name = <a href="cordova_device_device.md.html#device.name">device.name</a>;
 <ul>
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iPhone</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>iOS</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.x</li>
 <li>webOS</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="device.platform_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>// Depending on the device, a few examples are:
-//   - "Android"
-//   - "BlackBerry"
-//   - "iPhone"
-//   - "webOS"
-//   - "WinCE"
-var devicePlatform = <a href="cordova_device_device.md.html#device.platform">device.platform</a>;
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// Depending on the device, a few examples are:</span><span class="pln"><br></span><span class="com">// &nbsp; - "Android"</span><span class="pln"><br></span><span class="com">// &nbsp; - "BlackBerry"</span><span class="pln"><br></span><span class="com">// &nbsp; - "iOS"</span><span class="pln"><br></span><span class="com">// &nbsp; - "webOS"</span><span class="pln"><br></span><span class="com">// &nbsp; - "WinCE"</span><span class="pln"><br></span><span class="com">// &nbsp; - "Tizen"</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> devicePlatform </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.platform"><span class="pln">device</span><span class="pun">.</span><span class="pln">platform</span></a><span class="pun">;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="device.platform_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_device_device.md.html#Device">Device</a> Properties Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        var element = document.getElementById('deviceProperties');
-
-        element.innerHTML = '<a href="cordova_device_device.md.html#Device">Device</a> Name: '     + <a href="cordova_device_device.md.html#device.name">device.name</a>     + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> Cordova: '  + <a href="cordova_device_device.md.html#device.cordova">device.cordova</a>  + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> Platform: ' + <a href="cordova_device_device.md.html#device.platform">device.platform</a> + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> UUID: '     + <a href="cordova_device_device.md.html#device.uuid">device.uuid</a>     + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> Version: '  + <a href="cordova_device_device.md.html#device.version">device.version</a>  + '&lt;br /&gt;';
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p id="deviceProperties"&gt;Loading device properties...&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-<h2>
-<a name="device.platform_iphone_quirks">iPhone Quirks</a>
-</h2>
-
-<p>The iPhone returns <code>iPhone</code> as the platform. The iPad returns <code>iPad</code> as the platform.  In the simulator they will return <code>iPhone Simulator</code> and <code>iPad Simulator</code> respectively.  These are inaccurate in all cases because Apple has rebranded the iPhone operating system as <code>iOS</code>.</p>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_device_device.md.html#Device"><span class="pln">Device</span></a><span class="pln"> Properties Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'deviceProperties'</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; element</span><span class="pun">.</span><span class="pln">innerHTML </span><span class="pun">=</span><span class="pln"> </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Name: '</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.name"><span class="pln">device</span><span class="pun">.</span><span class="pln">name</span></a><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Cordova: '</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.cordova"><span class="pln">device</span><span class="pun">.</span><span class="pln">cordova</span></a><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Platform: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.platform"><span class="pln">device</span><span class="pun">.</span><span class="pln">platform</span></a><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> UUID: '</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.uuid"><span class="pln">device</span><span class="pun">.</span><span class="pln">uuid</span></a><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Version: '</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.version"><span class="pln">device</span><span class="pun">.</span><span class="pln">version</span></a><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"deviceProperties"</span><span class="tag">&gt;</span><span class="pln">Loading device properties...</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="device.platform_blackberry_quirks">BlackBerry Quirks</a>
@@ -388,13 +267,18 @@ var devicePlatform = <a href="cordova_device_device.md.html#device.platform">dev
 
 <p>Windows Phone 7 devices report platform as 'WinCE'</p>
 
+<h2>
+<a name="device.platform_windows_phone_8_quirks">Windows Phone 8 Quirks</a>
+</h2>
+
+<p>Windows Phone 8 devices report platform as 'Win32NT'</p>
+
 <hr>
 <h1><a name="device.uuid">device.uuid</a></h1>
 
 <p>Get the device's Universally Unique Identifier (<a class="external" href="http://en.wikipedia.org/wiki/Universally_Unique_Identifier">UUID</a>).</p>
 
-<pre class="prettyprint"><code>var string = <a href="cordova_device_device.md.html#device.uuid">device.uuid</a>;
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> </span><span class="kwd">string</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.uuid"><span class="pln">device</span><span class="pun">.</span><span class="pln">uuid</span></a><span class="pun">;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="device.uuid_description">Description</a>
@@ -410,66 +294,23 @@ var devicePlatform = <a href="cordova_device_device.md.html#device.platform">dev
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iPhone</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.x</li>
 <li>webOS</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="device.uuid_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>// Android: Returns a random 64-bit integer (as a string, again!)
-//          The integer is generated on the device's first boot
-//
-// BlackBerry: Returns the PIN number of the device
-//             This is a nine-digit unique integer (as a string, though!)
-//
-// iPhone: (Paraphrased from the UIDevice Class documentation)
-//         Returns a string of hash values created from multiple hardware identifies.
-//         It is guaranteed to be unique for every device and cannot be tied
-//         to the user account.
-// Windows Phone 7 : Returns a hash of device+current user,
-// if the user is not defined, a guid is generated and will persist until the app is uninstalled
-//
-// webOS: returns the device NDUID
-var deviceID = <a href="cordova_device_device.md.html#device.uuid">device.uuid</a>;
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// Android: Returns a random 64-bit integer (as a string, again!)</span><span class="pln"><br></span><span class="com">// &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;The integer is generated on the device's first boot</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="com">// BlackBerry: Returns the PIN number of the device</span><span class="pln"><br></span><span class="com">// &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; This is a nine-digit unique integer (as a string, though!)</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="com">// iPhone: (Paraphrased from the UIDevice Class documentation)</span><span class="pln"><br></span><span class="com">// &nbsp; &nbsp; &nbsp; &nbsp; Returns a string of hash values created from multiple hardware identifies.</span><span class="pln"><br></span><span class="com">// &nbsp; &nbsp; &nbsp; &nbsp; It is guaranteed to be unique for every device and cannot be tied</span><span class="pln"><br></span><span class="com">// &nbsp; &nbsp; &nbsp; &nbsp; to the user account.</span><span class="pln"><br></span><span class="com">// Windows Phone 7 : Returns a hash of device+current user, </span><span class="pln"><br></span><span class="com">// if the user is not defined, a guid is generated and will persist until the app is uninstalled</span><span class="pln"><br></span><span class="com">// </span><span class="pln"><br></span><span class="com">// webOS: returns the device NDUID</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="com">// Tizen: returns the device IMEI (International Mobile Equipment Identity or IMEI is a number</span><span class="pln"><br></span><span class="com">// unique to every GSM and UMTS mobile phone.</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> deviceID </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.uuid"><span class="pln">device</span><span class="pun">.</span><span class="pln">uuid</span></a><span class="pun">;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="device.uuid_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_device_device.md.html#Device">Device</a> Properties Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        var element = document.getElementById('deviceProperties');
-
-        element.innerHTML = '<a href="cordova_device_device.md.html#Device">Device</a> Name: '     + <a href="cordova_device_device.md.html#device.name">device.name</a>     + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> Cordova: '  + <a href="cordova_device_device.md.html#device.cordova">device.cordova</a>  + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> Platform: ' + <a href="cordova_device_device.md.html#device.platform">device.platform</a> + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> UUID: '     + <a href="cordova_device_device.md.html#device.uuid">device.uuid</a>     + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> Version: '  + <a href="cordova_device_device.md.html#device.version">device.version</a>  + '&lt;br /&gt;';
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p id="deviceProperties"&gt;Loading device properties...&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_device_device.md.html#Device"><span class="pln">Device</span></a><span class="pln"> Properties Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'deviceProperties'</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; element</span><span class="pun">.</span><span class="pln">innerHTML </span><span class="pun">=</span><span class="pln"> </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Name: '</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.name"><span class="pln">device</span><span class="pun">.</span><span class="pln">name</span></a><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Cordova: '</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.cordova"><span class="pln">device</span><span class="pun">.</span><span class="pln">cordova</span></a><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Platform: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.platform"><span class="pln">device</span><span class="pun">.</span><span class="pln">platform</span></a><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> UUID: '</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.uuid"><span class="pln">device</span><span class="pun">.</span><span class="pln">uuid</span></a><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Version: '</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.version"><span class="pln">device</span><span class="pun">.</span><span class="pln">version</span></a><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"deviceProperties"</span><span class="tag">&gt;</span><span class="pln">Loading device properties...</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="device.uuid_ios_quirk">iOS Quirk</a>
@@ -478,18 +319,17 @@ var deviceID = <a href="cordova_device_device.md.html#device.uuid">device.uuid</
 <p>The uuid for iOS is not unique for a device, but is unique per application per install. This will change if you delete the app and re-install, and possibly also when you upgrade your iOS version, or even upgrade your app per version (as we've seen in iOS 5.1). Not a reliable value.</p>
 
 <h2>
-<a name="device.uuid_windows_phone_7_quirks">Windows Phone 7 Quirks</a>
+<a name="device.uuid_windows_phone_7_and_8_quirks">Windows Phone 7 and 8 Quirks</a>
 </h2>
 
-<p>The uuid for Windows Phone 7 requires the permission ID<em>CAP</em>IDENTITY_DEVICE.  Microsoft will likely be deprecating this property in the near future.  If the capablility is not available, the application generates a persistent guid, that will be maintained for the install-lifetime of the application on the device.</p>
+<p>The uuid for Windows Phone 7 requires the permission ID<em>CAP</em>IDENTITY_DEVICE.  Microsoft will likely be deprecating this property in the near future.  If the capability is not available, the application generates a persistent guid, that will be maintained for the install-lifetime of the application on the device.</p>
 
 <hr>
 <h1><a name="device.version">device.version</a></h1>
 
 <p>Get the operating system version.</p>
 
-<pre class="prettyprint"><code>var string = <a href="cordova_device_device.md.html#device.version">device.version</a>;
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> </span><span class="kwd">string</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.version"><span class="pln">device</span><span class="pun">.</span><span class="pln">version</span></a><span class="pun">;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="device.version_supported_platforms">Supported Platforms</a>
@@ -499,64 +339,25 @@ var deviceID = <a href="cordova_device_device.md.html#device.uuid">device.uuid</
 <li>Android 2.1+</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iPhone</li>
-<li>Windows Phone 7 ( Mango )</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.x</li>
 <li>webOS</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="device.version_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>// Android:    Froyo OS would return "2.2"
-//             Eclair OS would return "2.1", "2.0.1", or "2.0"
-//             Version can also return update level "2.1-update1"
-//
-// BlackBerry: Torch 9800 using OS 6.0 would return "6.0.0.600"
-//
-// iPhone:     iOS 3.2 returns "3.2"
-//
-// Windows Phone 7: returns current OS version number, ex. on Mango returns 7.10.7720
-// webOS: webOS 2.2.4 return 2.2.4
-var deviceVersion = <a href="cordova_device_device.md.html#device.version">device.version</a>;
-</code></pre>
+<pre class="prettyprint"><code><span class="com">// Android: &nbsp; &nbsp;Froyo OS would return "2.2"</span><span class="pln"><br></span><span class="com">// &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Eclair OS would return "2.1", "2.0.1", or "2.0"</span><span class="pln"><br></span><span class="com">// &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Version can also return update level "2.1-update1" </span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="com">// BlackBerry: Torch 9800 using OS 6.0 would return "6.0.0.600"</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="com">// iPhone: &nbsp; &nbsp; iOS 3.2 returns "3.2"</span><span class="pln"><br></span><span class="com">//</span><span class="pln"><br></span><span class="com">// Windows Phone 7: returns current OS version number, ex. on Mango returns 7.10.7720</span><span class="pln"><br></span><span class="com">// webOS: webOS 2.2.4 return 2.2.4</span><span class="pln"><br></span><span class="com">// Tizen: returns "TIZEN_20120425_2"</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> deviceVersion </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.version"><span class="pln">device</span><span class="pun">.</span><span class="pln">version</span></a><span class="pun">;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="device.version_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_device_device.md.html#Device">Device</a> Properties Example&lt;/title&gt;
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_device_device.md.html#Device"><span class="pln">Device</span></a><span class="pln"> Properties Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'deviceProperties'</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; element</span><span class="pun">.</span><span class="pln">innerHTML </span><span class="pun">=</span><span class="pln"> </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Name: '</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.name"><span class="pln">device</span><span class="pun">.</span><span class="pln">name</span></a><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Cordova: '</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.cordova"><span class="pln">device</span><span class="pun">.</span><span class="pln">cordova</span></a><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Platform: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.platform"><span class="pln">device</span><span class="pun">.</span><span class="pln">platform</span></a><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> UUID: '</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.uuid"><span class="pln">device</span><span class="pun">.</span><span class="pln">uuid</span></a><span class="pln"> &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_device_device.md.html#Device"><span class="str">Device</span></a><span class="str"> Version: '</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><a href="cordova_device_device.md.html#device.version"><span class="pln">device</span><span class="pun">.</span><span class="pln">version</span></a><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"deviceProperties"</span><span class="tag">&gt;</span><span class="pln">Loading device properties...</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        var element = document.getElementById('deviceProperties');
-
-        element.innerHTML = '<a href="cordova_device_device.md.html#Device">Device</a> Name: '     + <a href="cordova_device_device.md.html#device.name">device.name</a>     + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> Cordova: '  + <a href="cordova_device_device.md.html#device.cordova">device.cordova</a>  + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> Platform: ' + <a href="cordova_device_device.md.html#device.platform">device.platform</a> + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> UUID: '     + <a href="cordova_device_device.md.html#device.uuid">device.uuid</a>     + '&lt;br /&gt;' +
-                            '<a href="cordova_device_device.md.html#Device">Device</a> Version: '  + <a href="cordova_device_device.md.html#device.version">device.version</a>  + '&lt;br /&gt;';
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p id="deviceProperties"&gt;Loading device properties...&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-            </div>
+</div>
         </div>
 
         <script type="text/javascript" src="../lib/iscroll.js"></script>

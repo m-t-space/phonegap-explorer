@@ -29,8 +29,8 @@
 <body>
 <div id="wrapper">
 
-            <div id="content">
-                <h1><a name="Accelerometer">Accelerometer</a></h1>
+<div id="content">
+				<h1><a name="Accelerometer">Accelerometer</a></h1>
 
 <blockquote>
   <p>Captures device motion in the x, y, and z direction.</p>
@@ -67,63 +67,52 @@
 
 <h3>Android</h3>
 
-<h4>app/res/xml/plugins.xml</h4>
+<h4>app/res/xml/config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;plugin name="<a href="cordova_accelerometer_accelerometer.md.html#Accelerometer">Accelerometer</a>" value="org.apache.cordova.AccelListener" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_accelerometer_accelerometer.md.html#Accelerometer"><span class="atv">Accelerometer</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.AccelListener"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>Bada</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <h3>BlackBerry WebWorks</h3>
 
 <h4>www/plugins.xml</h4>
 
-<pre class="prettyprint"><code>&lt;plugin name="<a href="cordova_accelerometer_accelerometer.md.html#Accelerometer">Accelerometer</a>" value="org.apache.cordova.accelerometer.<a href="cordova_accelerometer_accelerometer.md.html#Accelerometer">Accelerometer</a>" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_accelerometer_accelerometer.md.html#Accelerometer"><span class="atv">Accelerometer</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.accelerometer.</span><a href="cordova_accelerometer_accelerometer.md.html#Accelerometer"><span class="atv">Accelerometer</span></a><span class="atv">"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h4>www/config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;feature id="blackberry.system"  required="true" version="1.0.0.0" /&gt;
-&lt;feature id="org.apache.cordova" required="true" version="1.0.0" /&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;feature</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"blackberry.system"</span><span class="pln"> &nbsp;</span><span class="atn">required</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">version</span><span class="pun">=</span><span class="atv">"1.0.0.0"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;feature</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"org.apache.cordova"</span><span class="pln"> </span><span class="atn">required</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">version</span><span class="pun">=</span><span class="atv">"1.0.0"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>iOS</h3>
 
-<h4>App/Supporting Files/Cordova.plist</h4>
+<h4>config.xml</h4>
 
-<pre class="prettyprint"><code>&lt;key&gt;Plugins&lt;/key&gt;
-&lt;dict&gt;
-    &lt;key&gt;<a href="cordova_accelerometer_accelerometer.md.html#Accelerometer">Accelerometer</a>&lt;/key&gt;
-    &lt;string&gt;CDVAccelerometer&lt;/string&gt;
-&lt;/dict&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_accelerometer_accelerometer.md.html#Accelerometer"><span class="atv">Accelerometer</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"CDVAccelerometer"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
 
 <h3>webOS</h3>
 
-<pre class="prettyprint"><code>No permissions are required.
-</code></pre>
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <h3>Windows Phone</h3>
 
 <h4>Properties/WPAppManifest.xml</h4>
 
-<pre class="prettyprint"><code>&lt;Capabilities&gt;
-    &lt;Capability Name="ID_CAP_SENSORS" /&gt;
-&lt;/Capabilities&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="tag">&lt;Capabilities&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;Capability</span><span class="pln"> </span><span class="atn">Name</span><span class="pun">=</span><span class="atv">"ID_CAP_SENSORS"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;/Capabilities&gt;</span><span class="pln"><br></span></code></pre>
 
 <p>Reference: <a class="external" href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
+
+<h3>Tizen</h3>
+
+<pre class="prettyprint"><code><span class="typ">No</span><span class="pln"> permissions are required</span><span class="pun">.</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="accelerometer.getCurrentAcceleration">accelerometer.getCurrentAcceleration</a></h1>
 
 <p>Get the current acceleration along the x, y, and z axis.</p>
 
-<pre class="prettyprint"><code>navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.getCurrentAcceleration">accelerometer.getCurrentAcceleration</a>(<a href="cordova_accelerometer_accelerometer.md.html#accelerometerSuccess">accelerometerSuccess</a>, <a href="cordova_accelerometer_accelerometer.md.html#accelerometerError">accelerometerError</a>);
-</code></pre>
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_accelerometer_accelerometer.md.html#accelerometer.getCurrentAcceleration"><span class="pln">accelerometer</span><span class="pun">.</span><span class="pln">getCurrentAcceleration</span></a><span class="pun">(</span><a href="cordova_accelerometer_accelerometer.md.html#accelerometerSuccess"><span class="pln">accelerometerSuccess</span></a><span class="pun">,</span><span class="pln"> </span><a href="cordova_accelerometer_accelerometer.md.html#accelerometerError"><span class="pln">accelerometerError</span></a><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="accelerometer.getCurrentAcceleration_description">Description</a>
@@ -141,72 +130,22 @@
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iPhone</li>
-<li>Windows Phone 7 (Mango)</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.x</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="accelerometer.getCurrentAcceleration_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function onSuccess(acceleration) {
-    alert('<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> X: ' + acceleration.x + '\n' +
-          '<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Y: ' + acceleration.y + '\n' +
-          '<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Z: ' + acceleration.z + '\n' +
-          'Timestamp: '      + acceleration.timestamp + '\n');
-};
-
-function onError() {
-    alert('onError!');
-};
-
-navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.getCurrentAcceleration">accelerometer.getCurrentAcceleration</a>(onSuccess, onError);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">acceleration</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> X: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">x </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> Y: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">y </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> Z: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">z </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Timestamp: '</span><span class="pln"> &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">timestamp </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br>navigator</span><span class="pun">.</span><a href="cordova_accelerometer_accelerometer.md.html#accelerometer.getCurrentAcceleration"><span class="pln">accelerometer</span><span class="pun">.</span><span class="pln">getCurrentAcceleration</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="accelerometer.getCurrentAcceleration_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.getCurrentAcceleration">accelerometer.getCurrentAcceleration</a>(onSuccess, onError);
-    }
-
-    // onSuccess: Get a snapshot of the current acceleration
-    //
-    function onSuccess(acceleration) {
-        alert('<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> X: ' + acceleration.x + '\n' +
-              '<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Y: ' + acceleration.y + '\n' +
-              '<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Z: ' + acceleration.z + '\n' +
-              'Timestamp: '      + acceleration.timestamp + '\n');
-    }
-
-    // onError: Failed to get the acceleration
-    //
-    function onError() {
-        alert('onError!');
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;getCurrentAcceleration&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="pln">Acceleration</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_accelerometer_accelerometer.md.html#accelerometer.getCurrentAcceleration"><span class="pln">accelerometer</span><span class="pun">.</span><span class="pln">getCurrentAcceleration</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSuccess: Get a snapshot of the current acceleration</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">acceleration</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> X: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">x </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> Y: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">y </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> Z: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">z </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Timestamp: '</span><span class="pln"> &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">timestamp </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onError: Failed to get the acceleration</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><span class="pln">getCurrentAcceleration</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="accelerometer.getCurrentAcceleration_iphone_quirks">iPhone Quirks</a>
@@ -222,10 +161,7 @@ navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.get
 
 <p>At a regular interval, get the acceleration along the x, y, and z axis.</p>
 
-<pre class="prettyprint"><code>var watchID = navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.watchAcceleration">accelerometer.watchAcceleration</a>(<a href="cordova_accelerometer_accelerometer.md.html#accelerometerSuccess">accelerometerSuccess</a>,
-                                                       <a href="cordova_accelerometer_accelerometer.md.html#accelerometerError">accelerometerError</a>,
-                                                       [<a href="cordova_accelerometer_accelerometer.md.html#accelerometerOptions">accelerometerOptions</a>]);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> watchID </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_accelerometer_accelerometer.md.html#accelerometer.watchAcceleration"><span class="pln">accelerometer</span><span class="pun">.</span><span class="pln">watchAcceleration</span></a><span class="pun">(</span><a href="cordova_accelerometer_accelerometer.md.html#accelerometerSuccess"><span class="pln">accelerometerSuccess</span></a><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><a href="cordova_accelerometer_accelerometer.md.html#accelerometerError"><span class="pln">accelerometerError</span></a><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">[</span><a href="cordova_accelerometer_accelerometer.md.html#accelerometerOptions"><span class="pln">accelerometerOptions</span></a><span class="pun">]);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="accelerometer.watchAcceleration_description">Description</a>
@@ -235,7 +171,7 @@ navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.get
 
 <p>The <code><a href="cordova_accelerometer_accelerometer.md.html#accelerometer.watchAcceleration">accelerometer.watchAcceleration</a></code> gets the device's current acceleration at a regular interval. Each time the <code><a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a></code> is retrieved, the <code><a href="cordova_accelerometer_accelerometer.md.html#accelerometerSuccess">accelerometerSuccess</a></code> callback function is executed. Specify the interval in milliseconds via the <code>frequency</code> parameter in the <code>acceleratorOptions</code> object.</p>
 
-<p>The returned watch ID references references the accelerometer watch interval. The watch ID can be used with <code><a href="cordova_accelerometer_accelerometer.md.html#accelerometer.clearWatch">accelerometer.clearWatch</a></code> to stop watching the accelerometer.</p>
+<p>The returned watch ID references the accelerometer watch interval. The watch ID can be used with <code><a href="cordova_accelerometer_accelerometer.md.html#accelerometer.clearWatch">accelerometer.clearWatch</a></code> to stop watching the accelerometer.</p>
 
 <h2>
 <a name="accelerometer.watchAcceleration_supported_platforms">Supported Platforms</a>
@@ -245,96 +181,22 @@ navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.get
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iPhone</li>
-<li>Windows Phone 7 (Mango)</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.x</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="accelerometer.watchAcceleration_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function onSuccess(acceleration) {
-    alert('<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> X: ' + acceleration.x + '\n' +
-          '<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Y: ' + acceleration.y + '\n' +
-          '<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Z: ' + acceleration.z + '\n' +
-          'Timestamp: '      + acceleration.timestamp + '\n');
-};
-
-function onError() {
-    alert('onError!');
-};
-
-var options = { frequency: 3000 };  // Update every 3 seconds
-
-var watchID = navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.watchAcceleration">accelerometer.watchAcceleration</a>(onSuccess, onError, options);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">acceleration</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> X: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">x </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> Y: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">y </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> Z: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">z </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Timestamp: '</span><span class="pln"> &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">timestamp </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> frequency</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3000</span><span class="pln"> </span><span class="pun">};</span><span class="pln"> &nbsp;</span><span class="com">// Update every 3 seconds</span><span class="pln"><br><br></span><span class="kwd">var</span><span class="pln"> watchID </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_accelerometer_accelerometer.md.html#accelerometer.watchAcceleration"><span class="pln">accelerometer</span><span class="pun">.</span><span class="pln">watchAcceleration</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="accelerometer.watchAcceleration_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // The watch id references the current `watchAcceleration`
-    var watchID = null;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        startWatch();
-    }
-
-    // Start watching the acceleration
-    //
-    function startWatch() {
-
-        // Update acceleration every 3 seconds
-        var options = { frequency: 3000 };
-
-        watchID = navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.watchAcceleration">accelerometer.watchAcceleration</a>(onSuccess, onError, options);
-    }
-
-    // Stop watching the acceleration
-    //
-    function stopWatch() {
-        if (watchID) {
-            navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.clearWatch">accelerometer.clearWatch</a>(watchID);
-            watchID = null;
-        }
-    }
-
-    // onSuccess: Get a snapshot of the current acceleration
-    //
-    function onSuccess(acceleration) {
-        var element = document.getElementById('accelerometer');
-        element.innerHTML = '<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> X: ' + acceleration.x + '&lt;br /&gt;' +
-                            '<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Y: ' + acceleration.y + '&lt;br /&gt;' +
-                            '<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Z: ' + acceleration.z + '&lt;br /&gt;' +
-                            'Timestamp: '      + acceleration.timestamp + '&lt;br /&gt;';
-    }
-
-    // onError: Failed to get the acceleration
-    //
-    function onError() {
-        alert('onError!');
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div id="accelerometer"&gt;Waiting for accelerometer...&lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="pln">Acceleration</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// The watch id references the current `watchAcceleration`</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> watchID </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; startWatch</span><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Start watching the acceleration</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> startWatch</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// Update acceleration every 3 seconds</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> frequency</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3000</span><span class="pln"> </span><span class="pun">};</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; watchID </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_accelerometer_accelerometer.md.html#accelerometer.watchAcceleration"><span class="pln">accelerometer</span><span class="pun">.</span><span class="pln">watchAcceleration</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Stop watching the acceleration</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> stopWatch</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">watchID</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_accelerometer_accelerometer.md.html#accelerometer.clearWatch"><span class="pln">accelerometer</span><span class="pun">.</span><span class="pln">clearWatch</span></a><span class="pun">(</span><span class="pln">watchID</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; watchID </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSuccess: Get a snapshot of the current acceleration</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">acceleration</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'accelerometer'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; element</span><span class="pun">.</span><span class="pln">innerHTML </span><span class="pun">=</span><span class="pln"> </span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> X: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">x </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> Y: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">y </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> Z: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">z </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Timestamp: '</span><span class="pln"> &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">timestamp </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onError: Failed to get the acceleration</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"accelerometer"</span><span class="tag">&gt;</span><span class="pln">Waiting for accelerometer...</span><span class="tag">&lt;/div&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="accelerometer.watchAcceleration_iphone_quirks"> iPhone Quirks</a>
@@ -353,8 +215,7 @@ var watchID = navigator.<a href="cordova_accelerometer_accelerometer.md.html#acc
 
 <p>Stop watching the <code><a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a></code> referenced by the watch ID parameter.</p>
 
-<pre class="prettyprint"><code>navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.clearWatch">accelerometer.clearWatch</a>(watchID);
-</code></pre>
+<pre class="prettyprint"><code><span class="pln">navigator</span><span class="pun">.</span><a href="cordova_accelerometer_accelerometer.md.html#accelerometer.clearWatch"><span class="pln">accelerometer</span><span class="pun">.</span><span class="pln">clearWatch</span></a><span class="pun">(</span><span class="pln">watchID</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <ul>
 <li>
@@ -368,88 +229,22 @@ var watchID = navigator.<a href="cordova_accelerometer_accelerometer.md.html#acc
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iPhone</li>
-<li>Windows Phone 7 (Mango)</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.x</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="accelerometer.clearWatch_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>var watchID = navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.watchAcceleration">accelerometer.watchAcceleration</a>(onSuccess, onError, options);
-
-// ... later on ...
-
-navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.clearWatch">accelerometer.clearWatch</a>(watchID);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> watchID </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_accelerometer_accelerometer.md.html#accelerometer.watchAcceleration"><span class="pln">accelerometer</span><span class="pun">.</span><span class="pln">watchAcceleration</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br><br></span><span class="com">// ... later on ...</span><span class="pln"><br><br>navigator</span><span class="pun">.</span><a href="cordova_accelerometer_accelerometer.md.html#accelerometer.clearWatch"><span class="pln">accelerometer</span><span class="pun">.</span><span class="pln">clearWatch</span></a><span class="pun">(</span><span class="pln">watchID</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="accelerometer.clearWatch_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // The watch id references the current `watchAcceleration`
-    var watchID = null;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        startWatch();
-    }
-
-    // Start watching the acceleration
-    //
-    function startWatch() {
-
-        // Update acceleration every 3 seconds
-        var options = { frequency: 3000 };
-
-        watchID = navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.watchAcceleration">accelerometer.watchAcceleration</a>(onSuccess, onError, options);
-    }
-
-    // Stop watching the acceleration
-    //
-    function stopWatch() {
-        if (watchID) {
-            navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.clearWatch">accelerometer.clearWatch</a>(watchID);
-            watchID = null;
-        }
-    }
-
-    // onSuccess: Get a snapshot of the current acceleration
-    //
-    function onSuccess(acceleration) {
-        var element = document.getElementById('accelerometer');
-        element.innerHTML = '<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> X: ' + acceleration.x + '&lt;br /&gt;' +
-                            '<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Y: ' + acceleration.y + '&lt;br /&gt;' +
-                            '<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Z: ' + acceleration.z + '&lt;br /&gt;' +
-                            'Timestamp: '      + acceleration.timestamp + '&lt;br /&gt;';
-    }
-
-    // onError: Failed to get the acceleration
-    //
-    function onError() {
-        alert('onError!');
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div id="accelerometer"&gt;Waiting for accelerometer...&lt;/div&gt;
-    &lt;button onclick="stopWatch();"&gt;Stop Watching&lt;/button&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="pln">Acceleration</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// The watch id references the current `watchAcceleration`</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> watchID </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; startWatch</span><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Start watching the acceleration</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> startWatch</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// Update acceleration every 3 seconds</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> options </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> frequency</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3000</span><span class="pln"> </span><span class="pun">};</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; watchID </span><span class="pun">=</span><span class="pln"> navigator</span><span class="pun">.</span><a href="cordova_accelerometer_accelerometer.md.html#accelerometer.watchAcceleration"><span class="pln">accelerometer</span><span class="pun">.</span><span class="pln">watchAcceleration</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Stop watching the acceleration</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> stopWatch</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">watchID</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_accelerometer_accelerometer.md.html#accelerometer.clearWatch"><span class="pln">accelerometer</span><span class="pun">.</span><span class="pln">clearWatch</span></a><span class="pun">(</span><span class="pln">watchID</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; watchID </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSuccess: Get a snapshot of the current acceleration</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">acceleration</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'accelerometer'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; element</span><span class="pun">.</span><span class="pln">innerHTML </span><span class="pun">=</span><span class="pln"> </span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> X: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">x </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> Y: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">y </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> Z: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">z </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Timestamp: '</span><span class="pln"> &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">timestamp </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;br /&gt;'</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onError: Failed to get the acceleration</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"accelerometer"</span><span class="tag">&gt;</span><span class="pln">Waiting for accelerometer...</span><span class="tag">&lt;/div&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">stopWatch</span><span class="pun">();</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Stop Watching</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="Acceleration">Acceleration</a></h1>
@@ -484,83 +279,30 @@ navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.cle
 <li>Android</li>
 <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 <li>iOS</li>
-<li>Windows Phone 7 (Mango)</li>
+<li>Windows Phone 7 and 8</li>
 <li>Bada 1.2 &amp; 2.x</li>
 <li>webOS</li>
+<li>Tizen</li>
+<li>Windows 8</li>
 </ul>
 <h2>
 <a name="Acceleration_quick_example">Quick Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function onSuccess(acceleration) {
-    alert('<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> X: ' + acceleration.x + '\n' +
-          '<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Y: ' + acceleration.y + '\n' +
-          '<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Z: ' + acceleration.z + '\n' +
-          'Timestamp: '      + acceleration.timestamp + '\n');
-};
-
-function onError() {
-    alert('onError!');
-};
-
-navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.getCurrentAcceleration">accelerometer.getCurrentAcceleration</a>(onSuccess, onError);
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">acceleration</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> X: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">x </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> Y: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">y </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> Z: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">z </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Timestamp: '</span><span class="pln"> &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">timestamp </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br>navigator</span><span class="pun">.</span><a href="cordova_accelerometer_accelerometer.md.html#accelerometer.getCurrentAcceleration"><span class="pln">accelerometer</span><span class="pun">.</span><span class="pln">getCurrentAcceleration</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="Acceleration_full_example">Full Example</a>
 </h2>
 
-<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Example&lt;/title&gt;
-
-    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.getCurrentAcceleration">accelerometer.getCurrentAcceleration</a>(onSuccess, onError);
-    }
-
-    // onSuccess: Get a snapshot of the current acceleration
-    //
-    function onSuccess(acceleration) {
-        alert('<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> X: ' + acceleration.x + '\n' +
-              '<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Y: ' + acceleration.y + '\n' +
-              '<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Z: ' + acceleration.z + '\n' +
-              'Timestamp: '      + acceleration.timestamp + '\n');
-    }
-
-    // onError: Failed to get the acceleration
-    //
-    function onError() {
-        alert('onError!');
-    }
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Example&lt;/h1&gt;
-    &lt;p&gt;getCurrentAcceleration&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="pln">Acceleration</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; navigator</span><span class="pun">.</span><a href="cordova_accelerometer_accelerometer.md.html#accelerometer.getCurrentAcceleration"><span class="pln">accelerometer</span><span class="pun">.</span><span class="pln">getCurrentAcceleration</span></a><span class="pun">(</span><span class="pln">onSuccess</span><span class="pun">,</span><span class="pln"> onError</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onSuccess: Get a snapshot of the current acceleration</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">acceleration</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> X: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">x </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> Y: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">y </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> Z: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">z </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Timestamp: '</span><span class="pln"> &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">timestamp </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// onError: Failed to get the acceleration</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onError</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'onError!'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">Example</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><span class="pln">getCurrentAcceleration</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="accelerometerSuccess">accelerometerSuccess</a></h1>
 
 <p>onSuccess callback function that provides the <a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> information.</p>
 
-<pre class="prettyprint"><code>function(acceleration) {
-    // Do something
-}
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pun">(</span><span class="pln">acceleration</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// Do something</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
 
 <h2>
 <a name="accelerometerSuccess_parameters">Parameters</a>
@@ -574,23 +316,14 @@ navigator.<a href="cordova_accelerometer_accelerometer.md.html#accelerometer.get
 <a name="accelerometerSuccess_example">Example</a>
 </h2>
 
-<pre class="prettyprint"><code>function onSuccess(acceleration) {
-    alert('<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> X: ' + acceleration.x + '\n' +
-          '<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Y: ' + acceleration.y + '\n' +
-          '<a href="cordova_accelerometer_accelerometer.md.html#Acceleration">Acceleration</a> Z: ' + acceleration.z + '\n' +
-          'Timestamp: '      + acceleration.timestamp + '\n');
-};
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> onSuccess</span><span class="pun">(</span><span class="pln">acceleration</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> X: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">x </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> Y: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">y </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'</span><a href="cordova_accelerometer_accelerometer.md.html#Acceleration"><span class="str">Acceleration</span></a><span class="str"> Z: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">z </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Timestamp: '</span><span class="pln"> &nbsp; &nbsp; &nbsp;</span><span class="pun">+</span><span class="pln"> acceleration</span><span class="pun">.</span><span class="pln">timestamp </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="accelerometerError">accelerometerError</a></h1>
 
 <p>onError callback function for acceleration functions.</p>
 
-<pre class="prettyprint"><code>function() {
-    // Handle the error
-}
-</code></pre>
+<pre class="prettyprint"><code><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// Handle the error</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
 
 <hr>
 <h1><a name="accelerometerOptions">accelerometerOptions</a></h1>

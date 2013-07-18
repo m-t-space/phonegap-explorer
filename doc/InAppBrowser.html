@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+--><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+<meta name="generator" content="joDoc">
+<title>Apache Cordova API Documentation</title>
+<link rel="stylesheet" type="text/css" href="index.css">
+<link rel="stylesheet" type="text/css" href="mobile.css" media="only screen and (max-device-width: 1024px)">
+<link rel="stylesheet" type="text/css" href="prettify/prettify.css">
+</head>
+<body>
+        <div id="wrapper">
+<div id="content">
+                <h1><a name="InAppBrowser">InAppBrowser</a></h1>
+
+<blockquote>
+  <p>The <a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a> is a web-browser that is shown in your app when you use the <code><a href="cordova_inappbrowser_inappbrowser.md.html#window.open">window.open</a></code> call.</p>
+</blockquote>
+
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> </span><span class="kwd">ref</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_inappbrowser_inappbrowser.md.html#window.open"><span class="pln">window</span><span class="pun">.</span><span class="pln">open</span></a><span class="pun">(</span><span class="str">'http://apache.org'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'_blank'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'location=yes'</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="InAppBrowser_description">Description</a>
+</h2>
+
+<p>The object returned from a call to <code><a href="cordova_inappbrowser_inappbrowser.md.html#window.open">window.open</a></code>.</p>
+
+<h2>
+<a name="InAppBrowser_methods">Methods</a>
+</h2>
+
+<ul>
+<li><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener">addEventListener</a></li>
+<li><a href="cordova_inappbrowser_inappbrowser.md.html#removeEventListener">removeEventListener</a></li>
+<li><a href="cordova_inappbrowser_inappbrowser.md.html#close">close</a></li>
+</ul>
+<h2>
+<a name="InAppBrowser_permissions">Permissions</a>
+</h2>
+
+<h3>Android</h3>
+
+<h4>app/res/xml/config.xml</h4>
+
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="atv">InAppBrowser</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"org.apache.cordova.</span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="atv">InAppBrowser</span></a><span class="atv">"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
+
+<h3>iOS</h3>
+
+<h4>config.xml</h4>
+
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="atv">InAppBrowser</span></a><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"CDVInAppBrowser"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
+
+<h3>Windows Phone 7 + 8</h3>
+
+<h4>config.xml</h4>
+
+<pre class="prettyprint"><code><span class="tag">&lt;plugin</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"</span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="atv">InAppBrowser</span></a><span class="atv">"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></code></pre>
+
+<h1><a name="addEventListener">addEventListener</a></h1>
+
+<blockquote>
+  <p>Adds a listener for an event from the <a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a>.</p>
+</blockquote>
+
+<pre class="prettyprint"><code><span class="kwd">ref</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="pln">eventname</span><span class="pun">,</span><span class="pln"> callback</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<ul>
+<li>
+<strong>ref:</strong> reference to the <a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a> window (<code><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a></code>)</li>
+<li>
+<p><strong>eventname:</strong> the event to listen for (<code>String</code>)</p>
+
+<pre class="prettyprint"><code><span class="pln">loadstart </span><span class="pun">-</span><span class="pln"> </span><span class="kwd">event</span><span class="pln"> fired </span><span class="kwd">when</span><span class="pln"> the </span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="typ">InAppBrowser</span></a><span class="pln"> starts to load a URL<br>loadstop </span><span class="pun">-</span><span class="pln"> </span><span class="kwd">event</span><span class="pln"> fired </span><span class="kwd">when</span><span class="pln"> the </span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="typ">InAppBrowser</span></a><span class="pln"> finished loading a URL<br>loaderror </span><span class="pun">-</span><span class="pln"> </span><span class="kwd">event</span><span class="pln"> fired </span><span class="kwd">when</span><span class="pln"> the </span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="typ">InAppBrowser</span></a><span class="pln"> encounters an error loading a URL<br></span><span class="kwd">exit</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="kwd">event</span><span class="pln"> fired </span><span class="kwd">when</span><span class="pln"> the </span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="typ">InAppBrowser</span></a><span class="pln"> window </span><span class="kwd">is</span><span class="pln"> closed<br></span></code></pre>
+</li>
+<li><p><strong>callback:</strong> the function that is called when the event is fired.
+The function is passed an <code><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowserEvent">InAppBrowserEvent</a></code> object.</p></li>
+</ul>
+<h2>
+<a name="addEventListener_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>iOS</li>
+<li>Windows Phone 7 + 8</li>
+</ul>
+<h2>
+<a name="addEventListener_quick_example">Quick Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> </span><span class="kwd">ref</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_inappbrowser_inappbrowser.md.html#window.open"><span class="pln">window</span><span class="pun">.</span><span class="pln">open</span></a><span class="pun">(</span><span class="str">'http://apache.org'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'_blank'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'location=yes'</span><span class="pun">);</span><span class="pln"><br></span><span class="kwd">ref</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">'loadstart'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> alert</span><span class="pun">(</span><span class="kwd">event</span><span class="pun">.</span><span class="pln">url</span><span class="pun">);</span><span class="pln"> </span><span class="pun">});</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="addEventListener_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="pln">InAppBrowser</span></a><span class="pln">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="kwd">var</span><span class="pln"> ref </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_inappbrowser_inappbrowser.md.html#window.open"><span class="pln">window</span><span class="pun">.</span><span class="pln">open</span></a><span class="pun">(</span><span class="str">'http://apache.org'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'_blank'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'location=yes'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ref</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">'loadstart'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">event</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> alert</span><span class="pun">(</span><span class="str">'start: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> event</span><span class="pun">.</span><span class="pln">url</span><span class="pun">);</span><span class="pln"> </span><span class="pun">});</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ref</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">'loadstop'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">event</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> alert</span><span class="pun">(</span><span class="str">'stop: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> event</span><span class="pun">.</span><span class="pln">url</span><span class="pun">);</span><span class="pln"> </span><span class="pun">});</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ref</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">'loaderror'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">event</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> alert</span><span class="pun">(</span><span class="str">'error: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> event</span><span class="pun">.</span><span class="pln">message</span><span class="pun">);</span><span class="pln"> </span><span class="pun">});</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ref</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">'exit'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">event</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> alert</span><span class="pun">(</span><span class="pln">event</span><span class="pun">.</span><span class="pln">type</span><span class="pun">);</span><span class="pln"> </span><span class="pun">});</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+<h1><a name="removeEventListener">removeEventListener</a></h1>
+
+<blockquote>
+  <p>Removes a listener for an event from the <a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a>.</p>
+</blockquote>
+
+<pre class="prettyprint"><code><span class="kwd">ref</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#removeEventListener"><span class="pln">removeEventListener</span></a><span class="pun">(</span><span class="pln">eventname</span><span class="pun">,</span><span class="pln"> callback</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<ul>
+<li>
+<strong>ref:</strong> reference to the <a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a> window (<code><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a></code>)</li>
+<li>
+<p><strong>eventname:</strong> the event to stop listening for (<code>String</code>)</p>
+
+<pre class="prettyprint"><code><span class="pln">loadstart </span><span class="pun">-</span><span class="pln"> </span><span class="kwd">event</span><span class="pln"> fired </span><span class="kwd">when</span><span class="pln"> the </span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="typ">InAppBrowser</span></a><span class="pln"> starts to load a URL<br>loadstop </span><span class="pun">-</span><span class="pln"> </span><span class="kwd">event</span><span class="pln"> fired </span><span class="kwd">when</span><span class="pln"> the </span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="typ">InAppBrowser</span></a><span class="pln"> finished loading a URL<br>loaderror </span><span class="pun">-</span><span class="pln"> </span><span class="kwd">event</span><span class="pln"> fired </span><span class="kwd">when</span><span class="pln"> the </span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="typ">InAppBrowser</span></a><span class="pln"> encounters an error loading a URL<br></span><span class="kwd">exit</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="kwd">event</span><span class="pln"> fired </span><span class="kwd">when</span><span class="pln"> the </span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="typ">InAppBrowser</span></a><span class="pln"> window </span><span class="kwd">is</span><span class="pln"> closed<br></span></code></pre>
+</li>
+<li><p><strong>callback:</strong> the function that was to be called when the event is fired.
+The function is passed an <code><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowserEvent">InAppBrowserEvent</a></code> object.</p></li>
+</ul>
+<h2>
+<a name="removeEventListener_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>iOS</li>
+<li>Windows Phone 7 + 8</li>
+</ul>
+<h2>
+<a name="removeEventListener_quick_example">Quick Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> </span><span class="kwd">ref</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_inappbrowser_inappbrowser.md.html#window.open"><span class="pln">window</span><span class="pun">.</span><span class="pln">open</span></a><span class="pun">(</span><span class="str">'http://apache.org'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'_blank'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'location=yes'</span><span class="pun">);</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> myCallback </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> alert</span><span class="pun">(</span><span class="kwd">event</span><span class="pun">.</span><span class="pln">url</span><span class="pun">);</span><span class="pln"> </span><span class="pun">}</span><span class="pln"><br></span><span class="kwd">ref</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">'loadstart'</span><span class="pun">,</span><span class="pln"> myCallback</span><span class="pun">);</span><span class="pln"><br></span><span class="kwd">ref</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#removeEventListener"><span class="pln">removeEventListener</span></a><span class="pun">(</span><span class="str">'loadstart'</span><span class="pun">,</span><span class="pln"> myCallback</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="removeEventListener_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="pln">InAppBrowser</span></a><span class="pln">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#removeEventListener"><span class="pln">removeEventListener</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Global </span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="com">InAppBrowser</span></a><span class="com"> reference</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> iabRef </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> iabLoadStart</span><span class="pun">(</span><span class="pln">event</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="pln">event</span><span class="pun">.</span><span class="pln">type </span><span class="pun">+</span><span class="pln"> </span><span class="str">' - '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> event</span><span class="pun">.</span><span class="pln">url</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> iabLoadStop</span><span class="pun">(</span><span class="pln">event</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="pln">event</span><span class="pun">.</span><span class="pln">type </span><span class="pun">+</span><span class="pln"> </span><span class="str">' - '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> event</span><span class="pun">.</span><span class="pln">url</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> iabLoadError</span><span class="pun">(</span><span class="pln">event</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="pln">event</span><span class="pun">.</span><span class="pln">type </span><span class="pun">+</span><span class="pln"> </span><span class="str">' - '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> event</span><span class="pun">.</span><span class="pln">message</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> iabClose</span><span class="pun">(</span><span class="pln">event</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alert</span><span class="pun">(</span><span class="pln">event</span><span class="pun">.</span><span class="pln">type</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#removeEventListener"><span class="pln">removeEventListener</span></a><span class="pun">(</span><span class="str">'loadstart'</span><span class="pun">,</span><span class="pln"> iabLoadStart</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#removeEventListener"><span class="pln">removeEventListener</span></a><span class="pun">(</span><span class="str">'loadstop'</span><span class="pun">,</span><span class="pln"> iabLoadStop</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#removeEventListener"><span class="pln">removeEventListener</span></a><span class="pun">(</span><span class="str">'loaderror'</span><span class="pun">,</span><span class="pln"> iabLoadError</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#removeEventListener"><span class="pln">removeEventListener</span></a><span class="pun">(</span><span class="str">'exit'</span><span class="pun">,</span><span class="pln"> iabClose</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_inappbrowser_inappbrowser.md.html#window.open"><span class="pln">window</span><span class="pun">.</span><span class="pln">open</span></a><span class="pun">(</span><span class="str">'http://apache.org'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'_blank'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'location=yes'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">'loadstart'</span><span class="pun">,</span><span class="pln"> iabLoadStart</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">'loadstop'</span><span class="pun">,</span><span class="pln"> iabLoadStop</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#removeEventListener"><span class="pln">removeEventListener</span></a><span class="pun">(</span><span class="str">'loaderror'</span><span class="pun">,</span><span class="pln"> iabLoadError</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">'exit'</span><span class="pun">,</span><span class="pln"> iabClose</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+<h1><a name="close">close</a></h1>
+
+<blockquote>
+  <p>Closes the <a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a> window.</p>
+</blockquote>
+
+<pre class="prettyprint"><code><span class="kwd">ref</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#close"><span class="pln">close</span></a><span class="pun">();</span><span class="pln"><br></span></code></pre>
+
+<ul>
+<li>
+<strong>ref:</strong> reference to the <a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a> window (<code><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a></code>)</li>
+</ul>
+<h2>
+<a name="close_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>iOS</li>
+<li>Windows Phone 7 + 8</li>
+<li>BlackBerry 10</li>
+</ul>
+<h2>
+<a name="close_quick_example">Quick Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> </span><span class="kwd">ref</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_inappbrowser_inappbrowser.md.html#window.open"><span class="pln">window</span><span class="pun">.</span><span class="pln">open</span></a><span class="pun">(</span><span class="str">'http://apache.org'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'_blank'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'location=yes'</span><span class="pun">);</span><span class="pln"><br></span><span class="kwd">ref</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#close"><span class="pln">close</span></a><span class="pun">();</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="close_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="pln">InAppBrowser</span></a><span class="pln">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#close"><span class="pln">close</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="kwd">var</span><span class="pln"> ref </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_inappbrowser_inappbrowser.md.html#window.open"><span class="pln">window</span><span class="pun">.</span><span class="pln">open</span></a><span class="pun">(</span><span class="str">'http://apache.org'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'_blank'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'location=yes'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">// </span><a href="cordova_inappbrowser_inappbrowser.md.html#close"><span class="com">close</span></a><span class="com"> </span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="com">InAppBrowser</span></a><span class="com"> after 5 seconds</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;setTimeout</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ref</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#close"><span class="pln">close</span></a><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">},</span><span class="pln"> </span><span class="lit">5000</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+<h1><a name="executeScript">executeScript</a></h1>
+
+<blockquote>
+  <p>Injects JavaScript code into the <a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a> window</p>
+</blockquote>
+
+<pre class="prettyprint"><code><span class="kwd">ref</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#executeScript"><span class="pln">executeScript</span></a><span class="pun">(</span><span class="pln">details</span><span class="pun">,</span><span class="pln"> callback</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<ul>
+<li>
+<strong>ref:</strong> reference to the <a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a> window (<code><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a></code>)</li>
+<li>
+<p><strong>injectDetails:</strong> details of the script ot run (<code>Object</code>)</p>
+
+<ul>
+<li>
+<p>Supported keys:  (exactly one of "file" or "code" should be present)</p>
+
+<pre class="prettyprint"><code><span class="str">"file"</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> URL of the script to inject<br></span><span class="str">"code"</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="typ">Text</span><span class="pln"> of the script to inject<br></span></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>callback:</strong> the function that is to be called in the Cordova application after the JavaScript code is injected.</p>
+
+<ul>
+<li>If the injected script is of type "code", then the callback will be called with a single argument, which is
+the return value of the script, wrapped in an Array. (For multi-line scripts, this is the return value of the
+last statement, or the last expression evaluated.)</li>
+</ul>
+</li>
+</ul>
+<h2>
+<a name="executeScript_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>iOS</li>
+</ul>
+<h2>
+<a name="executeScript_quick_example">Quick Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> </span><span class="kwd">ref</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_inappbrowser_inappbrowser.md.html#window.open"><span class="pln">window</span><span class="pun">.</span><span class="pln">open</span></a><span class="pun">(</span><span class="str">'http://apache.org'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'_blank'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'location=yes'</span><span class="pun">);</span><span class="pln"><br></span><span class="kwd">ref</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">'loadstop'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">ref</span><span class="pun">.</span><span class="pln">executeSript</span><span class="pun">({</span><span class="pln">file</span><span class="pun">:</span><span class="pln"> </span><span class="str">"myscript.js"</span><span class="pun">});</span><span class="pln"><br></span><span class="pun">});</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="executeScript_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="pln">InAppBrowser</span></a><span class="pln">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#executeScript"><span class="pln">executeScript</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-2.5.0.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Global </span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="com">InAppBrowser</span></a><span class="com"> reference</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> iabRef </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Inject our custom JavaScript into the </span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="com">InAppBrowser</span></a><span class="com"> window</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> replaceHeaderImage</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; iabRef</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#executeScript"><span class="pln">executeScript</span></a><span class="pun">({</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; code</span><span class="pun">:</span><span class="pln"> </span><span class="str">"var img=document.querySelector('#header img'); img.src='http://cordova.apache.org/images/cordova_bot.png';"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">},</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Image Element Successfully Hijacked"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> iabClose</span><span class="pun">(</span><span class="pln">event</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#removeEventListener"><span class="pln">removeEventListener</span></a><span class="pun">(</span><span class="str">'loadstop'</span><span class="pun">,</span><span class="pln"> replaceHeaderImage</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#removeEventListener"><span class="pln">removeEventListener</span></a><span class="pun">(</span><span class="str">'exit'</span><span class="pun">,</span><span class="pln"> iabClose</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_inappbrowser_inappbrowser.md.html#window.open"><span class="pln">window</span><span class="pun">.</span><span class="pln">open</span></a><span class="pun">(</span><span class="str">'http://apache.org'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'_blank'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'location=yes'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">'loadstop'</span><span class="pun">,</span><span class="pln"> replaceHeaderImage</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">'exit'</span><span class="pun">,</span><span class="pln"> iabClose</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+<h1><a name="insertCSS">insertCSS</a></h1>
+
+<blockquote>
+  <p>Injects CSS into the <a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a> window</p>
+</blockquote>
+
+<pre class="prettyprint"><code><span class="kwd">ref</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#insertCSS"><span class="pln">insertCSS</span></a><span class="pun">(</span><span class="pln">details</span><span class="pun">,</span><span class="pln"> callback</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<ul>
+<li>
+<strong>ref:</strong> reference to the <a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a> window (<code><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a></code>)</li>
+<li>
+<p><strong>injectDetails:</strong> details of the script ot run (<code>Object</code>)</p>
+
+<ul>
+<li>
+<p>Supported keys:  (exactly one of "file" or "code" should be present)</p>
+
+<pre class="prettyprint"><code><span class="str">"file"</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> URL of the stylesheet to inject<br></span><span class="str">"code"</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="typ">Text</span><span class="pln"> of the stylesheet to inject<br></span></code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>callback:</strong> the function that is to be called in the Cordova application after the CSS is injected.</p></li>
+</ul>
+<h2>
+<a name="insertCSS_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>iOS</li>
+</ul>
+<h2>
+<a name="insertCSS_quick_example">Quick Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> </span><span class="kwd">ref</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_inappbrowser_inappbrowser.md.html#window.open"><span class="pln">window</span><span class="pun">.</span><span class="pln">open</span></a><span class="pun">(</span><span class="str">'http://apache.org'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'_blank'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'location=yes'</span><span class="pun">);</span><span class="pln"><br></span><span class="kwd">ref</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">'loadstop'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">ref</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#insertCSS"><span class="pln">insertCSS</span></a><span class="pun">({</span><span class="pln">file</span><span class="pun">:</span><span class="pln"> </span><span class="str">"mystyles.css"</span><span class="pun">});</span><span class="pln"><br></span><span class="pun">});</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="insertCSS_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="pln">InAppBrowser</span></a><span class="pln">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#executeScript"><span class="pln">executeScript</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-2.5.0.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Global </span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="com">InAppBrowser</span></a><span class="com"> reference</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> iabRef </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Inject our custom CSS into the </span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="com">InAppBrowser</span></a><span class="com"> window</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> changeBackgroundColor</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; iabRef</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#executeScript"><span class="pln">executeScript</span></a><span class="pun">({</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; code</span><span class="pun">:</span><span class="pln"> </span><span class="str">"body { background: #ffff00"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">},</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Styles Altered"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> iabClose</span><span class="pun">(</span><span class="pln">event</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#removeEventListener"><span class="pln">removeEventListener</span></a><span class="pun">(</span><span class="str">'loadstop'</span><span class="pun">,</span><span class="pln"> changeBackgroundColor</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#removeEventListener"><span class="pln">removeEventListener</span></a><span class="pun">(</span><span class="str">'exit'</span><span class="pun">,</span><span class="pln"> iabClose</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_inappbrowser_inappbrowser.md.html#window.open"><span class="pln">window</span><span class="pun">.</span><span class="pln">open</span></a><span class="pun">(</span><span class="str">'http://apache.org'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'_blank'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'location=yes'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">'loadstop'</span><span class="pun">,</span><span class="pln"> changeBackgroundColor</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iabRef</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">'exit'</span><span class="pun">,</span><span class="pln"> iabClose</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+<h1><a name="InAppBrowserEvent">InAppBrowserEvent</a></h1>
+
+<p>The object that is passed to the callback function from an <a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener">addEventListener</a> call on an <a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a> object.</p>
+
+<h2>
+<a name="InAppBrowserEvent_properties">Properties</a>
+</h2>
+
+<ul>
+<li>
+<strong>type:</strong> the eventname (<code>String</code>) - one of loadstart, loadstop, loaderror or exit</li>
+<li>
+<strong>url:</strong> the URL that was loaded (<code>String</code>)</li>
+<li>
+<strong>code:</strong> the error code (<code>Number</code>) - only in the case of loaderror</li>
+<li>
+<strong>message:</strong> the error message (<code>String</code>) - only in the case of loaderror</li>
+</ul>
+<hr>
+<h1><a name="window.open">window.open</a></h1>
+
+<p>Opens a URL in a new <a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a> instance, the current browser instance, or the system browser.</p>
+
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> </span><span class="kwd">ref</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_inappbrowser_inappbrowser.md.html#window.open"><span class="pln">window</span><span class="pun">.</span><span class="pln">open</span></a><span class="pun">(</span><span class="pln">url</span><span class="pun">,</span><span class="pln"> target</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<ul>
+<li>
+<strong>ref:</strong> reference to the <a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a> window (<code><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a></code>)</li>
+<li>
+<strong>url:</strong> the URL to load (<code>String</code>). Call encodeURI() on this if you have Unicode characters in your URL.</li>
+<li>
+<p><strong>target:</strong> the target to load the URL in (<code>String</code>) (Optional, Default: "_self")</p>
+
+<pre class="prettyprint"><code><span class="pln">_self </span><span class="pun">-</span><span class="pln"> opens </span><span class="kwd">in</span><span class="pln"> the </span><span class="typ">Cordova</span><span class="pln"> </span><span class="typ">WebView</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> url </span><span class="kwd">is</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> the white</span><span class="pun">-</span><span class="pln">list</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> it opens </span><span class="kwd">in</span><span class="pln"> the </span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="typ">InAppBrowser</span></a><span class="pln"> <br>_blank </span><span class="pun">-</span><span class="pln"> always open </span><span class="kwd">in</span><span class="pln"> the </span><a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser"><span class="typ">InAppBrowser</span></a><span class="pln"> <br>_system </span><span class="pun">-</span><span class="pln"> always open </span><span class="kwd">in</span><span class="pln"> the system web browser<br></span></code></pre>
+</li>
+<li>
+<p><strong>options:</strong> options for the <a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a> (<code>String</code>) (Optional, Default: "location=yes")</p>
+
+<p>The options string must not contain any blank space, each feature name and value must be separated by a comma. Feature names are case insensitive. Only the value below is supported on all platforms:</p>
+
+<ul>
+<li>
+<strong>location</strong> - set to 'yes' or 'no' to turn the location bar on or off for the <a href="cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a>
+</li>
+</ul>
+<h2>iOS only</h2>
+
+<ul>
+<li>
+<strong>enableViewportScale</strong> -  set to 'yes' or 'no' to prevent viewport scaling through a meta tag (defaults to 'no')</li>
+<li>
+<strong>mediaPlaybackRequiresUserAction</strong> - set to 'yes' or 'no' to not allow autoplayed HTML5 video (defaults to 'no')</li>
+<li>
+<strong>allowInlineMediaPlayback</strong> - set to 'yes' or 'no' to allow inline HTML5 media playback, also, the video element in the HTML document must also include the webkit-playsinline attribute (defaults to 'no')</li>
+<li>
+<strong>keyboardDisplayRequiresUserAction</strong> - set to 'yes' or 'no' to open the keyboard when form elements get focus via the JavaScript focus() call (defaults to 'yes')</li>
+<li>
+<strong>suppressesIncrementalRendering</strong> - set to 'yes' or 'no' to wait until all new view content has been received before it is rendered (defaults to 'no')</li>
+<li>
+<strong>presentationstyle</strong> -  set to 'pagesheet', 'formsheet' or 'fullscreen' to set the <a class="external" href="http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalPresentationStyle">presentation style</a> (defaults to 'fullscreen')</li>
+<li>
+<strong>transitionstyle</strong> - set to 'fliphorizontal', 'crossdissolve' or 'coververtical' to set the <a class="external" href="http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalTransitionStyle">transition style</a> (defaults to 'coververtical')</li>
+</ul>
+</li>
+</ul>
+<h2>
+<a name="window.open_supported_platforms">Supported Platforms</a>
+</h2>
+
+<ul>
+<li>Android</li>
+<li>iOS</li>
+<li>BlackBerry 10</li>
+<li>Windows Phone 7 + 8</li>
+</ul>
+<h2>
+<a name="window.open_quick_example">Quick Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> </span><span class="kwd">ref</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_inappbrowser_inappbrowser.md.html#window.open"><span class="pln">window</span><span class="pun">.</span><span class="pln">open</span></a><span class="pun">(</span><span class="str">'http://apache.org'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'_blank'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'location=yes'</span><span class="pun">);</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> ref2 </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_inappbrowser_inappbrowser.md.html#window.open"><span class="pln">window</span><span class="pun">.</span><span class="pln">open</span></a><span class="pun">(</span><span class="pln">encodeURI</span><span class="pun">(</span><span class="str">'http://ja.m.wikipedia.org/wiki/????'</span><span class="pun">),</span><span class="pln"> </span><span class="str">'_blank'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'location=yes'</span><span class="pun">);</span><span class="pln"><br></span></code></pre>
+
+<h2>
+<a name="window.open_full_example">Full Example</a>
+</h2>
+
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;head&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><a href="cordova_inappbrowser_inappbrowser.md.html#window.open"><span class="pln">window.open</span></a><span class="pln"> Example</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"cordova-x.x.x.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Wait for Cordova to load</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; document</span><span class="pun">.</span><a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener"><span class="pln">addEventListener</span></a><span class="pun">(</span><span class="str">"</span><a href="cordova_events_events.md.html#deviceready"><span class="str">deviceready</span></a><span class="str">"</span><span class="pun">,</span><span class="pln"> onDeviceReady</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Cordova is ready</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">//</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">function</span><span class="pln"> onDeviceReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// external url</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> ref </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_inappbrowser_inappbrowser.md.html#window.open"><span class="pln">window</span><span class="pun">.</span><span class="pln">open</span></a><span class="pun">(</span><span class="pln">encodeURI</span><span class="pun">(</span><span class="str">'http://apache.org'</span><span class="pun">),</span><span class="pln"> </span><span class="str">'_blank'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'location=yes'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// relative document</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; ref </span><span class="pun">=</span><span class="pln"> </span><a href="cordova_inappbrowser_inappbrowser.md.html#window.open"><span class="pln">window</span><span class="pun">.</span><span class="pln">open</span></a><span class="pun">(</span><span class="str">'next.html'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'_self'</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;/script&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/head&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span><span class="pln"><br></span></code></pre>
+
+</div>
+        </div>
+
+        <script type="text/javascript" src="../lib/iscroll.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+        <script type="text/javascript" src="prettify/prettify.js"></script>
+        <script type="text/javascript" src="doc.js"></script>
+</body>
+</html>
