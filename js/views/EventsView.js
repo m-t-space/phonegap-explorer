@@ -5,24 +5,22 @@ window.EventsView = Backbone.View.extend({
         var self = this;
         this.render();
 
-        this.logListener("pause");
+        document.addEventListener('deviceready', this.deviceHandler, false);
         document.addEventListener("pause", this.pauseHandler, false);
-        this.logListener("resume");
         document.addEventListener("resume", this.resumeHandler, false);
-        this.logListener("online");
+	document.addEventListener('menubutton', this.menuHandler, false);
+	document.addEventListener('backbutton', this.backHandler, false);
+	document.addEventListener('searchbutton', this.searchHandler, false);
         document.addEventListener("online", this.onlineHandler, false);
-        this.logListener("offline");
         document.addEventListener("offline", this.offlineHandler, false);
-        this.logListener("batterystatus");
+	document.addEventListener('localechange', this.localeHandler, false);
         document.addEventListener("batterystatus", this.batterystatusHandler, false);
-        this.logListener("batterylow");
         document.addEventListener("batterylow", this.batterylowHandler, false);
-        this.logListener("batterycritical");
         document.addEventListener("batterycritical", this.batterycriticalHandler, false);
-        this.logListener("startcallbutton");
-        document.addEventListener("startcallbutton", this.startcallHandler, false);
-        this.logListener("endcallbutton");
+	document.addEventListener("startcallbutton", this.startcallHandler, false);
         document.addEventListener("endcallbutton", this.endcallHandler, false);
+        document.addEventListener("volumeupbutton", this.volUpHandler, false);
+        document.addEventListener("volumedownbutton", this.volDownHandler, false);
     },
 
     render: function () {
@@ -35,7 +33,7 @@ window.EventsView = Backbone.View.extend({
     },
 
     logListener: function(name) {
-        this.log('Adding event listener "' + name + '"');
+        
     },
 
     pauseHandler: function() {
@@ -67,23 +65,59 @@ window.EventsView = Backbone.View.extend({
     },
 
     startcallHandler: function() {
-        this.log('startcall');
+        this.log('startcallbutton');
+    },
+    
+    endcallHandler: function() {
+            this.log('endcallbutton');
     },
 
-    endcallHandler: function() {
-        this.log('endcall');
+    menuHandler: function() {
+        this.log('menubutton');
     },
+    
+    backHandler: function() {
+        this.log('backbutton');
+    },
+    
+    deviceHandler: function() {
+        this.log('deviceready');
+    },
+    
+    localeHandler: function() {
+        this.log('localechange');
+    },
+    
+    volUpHandler: function() {
+        this.log('volumeupbutton');
+    },
+
+    volDownHandler: function() {
+        this.log('volumedownbutton');
+    },
+    
+    searchHandler: function() {
+        this.log('searchbutton');
+    },
+    
 
     close: function() {
         document.removeEventListener('pause', this.pauseHandler);
         document.removeEventListener('resume', this.resumeHandler);
         document.removeEventListener('online', this.onlineHandler);
         document.removeEventListener('offline', this.offlineHandler);
+        document.removeEventListener('menubutton', this.menuHandler);
+        document.removeEventListener('backbutton', this.backHandler);
+        document.removeEventListener('searchbutton', this.searchHandler);
+        document.removeEventListener('localechange', this.localeHandler);
+        document.removeEventListener('deviceready', this.deviceHandler);
         document.removeEventListener('batterystatus', this.batterystatusHandler);
         document.removeEventListener('batterylow', this.batterylowHandler());
         document.removeEventListener('batterycritical', this.batterycritical);
-        document.removeEventListener('startcall', this.startcall);
-        document.removeEventListener('endcall', this.endcall);
+        document.removeEventListener('startcallbutton', this.startcall);
+        document.removeEventListener('endcallbutton', this.endcall);
+        document.removeEventListener("volumeupbutton", this.volUpHandler);
+        document.removeEventListener("volumedownbutton", this.volDownHandler);
     }
 
 });
