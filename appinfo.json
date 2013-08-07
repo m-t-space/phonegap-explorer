@@ -4,7 +4,7 @@
 	"vendor": "LG",
 	"type": "web",
 	"main": "index.html",
-	"title": "PhoneGap Explorer",
+	"title": "Cordova Explorer",
 	"icon": "img/icon-64x64.png",
 	"splashicon": "img/icon-256x256.png",
 	"uiRevision": 2
