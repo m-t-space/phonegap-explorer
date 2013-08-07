@@ -3,7 +3,11 @@ window.DatabaseView = Backbone.View.extend({
     initialize: function () {
         _.bindAll(this);
         this.render();
-        this.db = window.openDatabase("demodb", "1.0", "Demo DB", 1000000);
+        try {
+            this.db = window.openDatabase("demodb", "1.0", "Demo DB", 1000000);
+        } catch(e) {
+            showAlert(e.message, "Error");
+        }
     },
 
     events: {

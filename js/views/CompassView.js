@@ -65,8 +65,12 @@ window.CompassView = Backbone.View.extend({
     },
 
     errorHandler: function (error) {
-        showAlert('code: ' + error.code + '\n' +
-            'message: ' + error.message + '\n', 'Error');
+    	if(!error.message && error.code==20) {
+            error.message = "Compass not supported";
+    	} else if(!error.message && error.code==0) {
+            error.message = "Internal compass error";
+    	}
+        showAlert(error.message, 'Error ' + error.code);
     },
 
     close: function() {

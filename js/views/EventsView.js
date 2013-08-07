@@ -21,6 +21,8 @@ window.EventsView = Backbone.View.extend({
         document.addEventListener("endcallbutton", this.endcallHandler, false);
         document.addEventListener("volumeupbutton", this.volUpHandler, false);
         document.addEventListener("volumedownbutton", this.volDownHandler, false);
+        document.addEventListener("webOSLaunch", this.launchHandler, false);
+        document.addEventListener("webOSRelaunch", this.relaunchHandler, false);
     },
 
     render: function () {
@@ -100,6 +102,13 @@ window.EventsView = Backbone.View.extend({
         this.log('searchbutton');
     },
     
+    launchHandler: function() {
+            this.log('webOSLaunch');
+    },
+        
+    relaunchHandler: function() {
+            this.log('webOSRelaunch');
+    },
 
     close: function() {
         document.removeEventListener('pause', this.pauseHandler);
@@ -118,6 +127,8 @@ window.EventsView = Backbone.View.extend({
         document.removeEventListener('endcallbutton', this.endcall);
         document.removeEventListener("volumeupbutton", this.volUpHandler);
         document.removeEventListener("volumedownbutton", this.volDownHandler);
+        document.removeEventListener("webOSLaunch", this.launchHandler);
+        document.removeEventListener("webOSRelaunch", this.relaunchHandler);
     }
 
 });

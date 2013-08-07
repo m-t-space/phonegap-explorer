@@ -52,12 +52,7 @@ window.GeolocationView = Backbone.View.extend({
     },
 
     errorHandler: function(error) {
-        navigator.notification.alert(
-            "Can't get your current location. Make sure the geolocation service is enabled for this app.",
-            null,
-            'Geolocation',
-            'OK'
-        );
+        showAlert(error.message, "Error " + error.code);
     },
 
     close: function() {

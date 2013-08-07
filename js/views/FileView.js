@@ -36,11 +36,11 @@ window.FileView = Backbone.View.extend({
                             $('#fileContent').val(event.target.result);
                         };
                         reader.onerror = function(event) {
-                            showAlert('Error loading file');
+                            showAlert('Error loading file', "Error");
                         };
                         reader.readAsText(file);
                     },
-                    function() {
+                    function(err) {
                         navigator.notification.alert(
                             'The file does not exist. Press Save As to create it.',  // message
                             null,

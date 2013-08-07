@@ -1,3 +1,11 @@
+html, body {
+	cursor: default;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: -moz-none;
+	user-select: none;
+}
+
 body,
 label,
 select,

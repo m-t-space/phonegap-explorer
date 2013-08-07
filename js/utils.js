@@ -24,13 +24,17 @@ window.templateLoader = {
 };
 
 function showAlert(message, title) {
-    if (navigator.notification) {
-        navigator.notification.alert(
+    if (navigator.notification && navigator.notification.showToast) {
+        /*navigator.notification.alert(
             message,
             null, // callback
             title,
             'OK' // Button label
-        );
+        );*/
+        navigator.notification.showToast({
+            message: message,
+            icon: "/usr/palm/applications/org.apache.cordova.webos/icon.png"
+        }, function() {});
     } else {
         alert(title + ": " + message);
     }

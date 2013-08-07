@@ -58,8 +58,7 @@ window.AccelerometerView = Backbone.View.extend({
     },
 
     errorHandler: function (error) {
-        showAlert('code: ' + error.code + '\n' +
-            'message: ' + error.message + '\n', 'Error');
+        showAlert(error.message, 'Error ' + error.code);
     },
 
     close: function() {
